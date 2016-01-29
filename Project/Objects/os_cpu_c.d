@@ -1,0 +1,10 @@
+.\objects\os_cpu_c.o: ..\uCOS-II\PORT\os_cpu_c.c
+.\objects\os_cpu_c.o: ..\USER\includes.h
+.\objects\os_cpu_c.o: C:\Keil\MDK\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\os_cpu_c.o: C:\Keil\MDK\ARM\ARMCC\Bin\..\include\string.h
+.\objects\os_cpu_c.o: C:\Keil\MDK\ARM\ARMCC\Bin\..\include\ctype.h
+.\objects\os_cpu_c.o: C:\Keil\MDK\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\os_cpu_c.o: C:\Keil\MDK\ARM\ARMCC\Bin\..\include\stdarg.h
+.\objects\os_cpu_c.o: ..\uCOS-II\CORE\ucos_ii.h
+.\objects\os_cpu_c.o: ..\uCOS-II\CONFIG\os_cfg.h
+.\objects\os_cpu_c.o: ..\uCOS-II\PORT\os_cpu.h

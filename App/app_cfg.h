@@ -1,0 +1,19 @@
+#ifndef __APP_CFG_H__
+#define __APP_CFG_H__
+
+
+#define TASK_SENSOR_SCAN_PRIO	  6
+#define TASK_PID_CAL_PRIO		  4
+#define TASK_USART3_PRIO	      3
+#define TASK_RECOED_DISTANCE_PRIO 5
+//#define TASK_SPEED_CTRL_PRIO	5
+
+
+#define STARTUP_TASK_STK_SIZE		   256 //…Ë÷√’ª¥Û–°
+#define TASK_SENSOR_SCAN_STK_SIZE      512
+#define TASK_PID_CAL_STK_SIZE		   512
+#define TASK_USART3_STK_SIZE		   512
+#define TASK_RECOED_DISTANCE_STK_SIZE  512
+//#define TASK_SPEED_CTRL_STK_SIZE	   256
+
+#endif
