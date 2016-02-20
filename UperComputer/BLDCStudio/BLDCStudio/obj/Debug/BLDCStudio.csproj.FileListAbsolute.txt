@@ -1,1 +1,10 @@
 D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\UperComputer\BLDCStudio\BLDCStudio\bin\Debug\BLDCStudio.exe.config
+D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\UperComputer\BLDCStudio\BLDCStudio\bin\Debug\BLDCStudio.exe
+D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\UperComputer\BLDCStudio\BLDCStudio\bin\Debug\BLDCStudio.pdb
+D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\UperComputer\BLDCStudio\BLDCStudio\obj\Debug\BLDCStudio.csprojResolveAssemblyReference.cache
+D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\UperComputer\BLDCStudio\BLDCStudio\obj\Debug\BLDCStudio.MainForm.resources
+D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\UperComputer\BLDCStudio\BLDCStudio\obj\Debug\BLDCStudio.Properties.Resources.resources
+D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\UperComputer\BLDCStudio\BLDCStudio\obj\Debug\BLDCStudio.csproj.GenerateResource.Cache
+D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\UperComputer\BLDCStudio\BLDCStudio\obj\Debug\BLDCStudio.exe
+D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\UperComputer\BLDCStudio\BLDCStudio\obj\Debug\BLDCStudio.pdb
+D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\UperComputer\BLDCStudio\BLDCStudio\obj\Debug\BLDCStudio.Form_Code.MainPanel.resources

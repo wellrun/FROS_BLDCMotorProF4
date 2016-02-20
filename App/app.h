@@ -24,7 +24,7 @@
 #include "EncoderTask.h"
 
 void Start_Task_Create(void);
-void Start_Task(void *pdata); //开始任务
+static void Start_Task(void *pdata); //开始任务
 
 #endif
 /****************** end of this file ********************************************

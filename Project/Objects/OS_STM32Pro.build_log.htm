@@ -32,109 +32,76 @@ compiling Control_Task.c...
 compiling USART_Task.c...
 compiling EncoderTask.c...
 compiling bsp_Init.c...
-..\BSP\bsp_Init.c(185): warning:  #223-D: function "EXTI_GetITStatus" declared implicitly
+..\BSP\bsp_Init.c(186): warning:  #223-D: function "EXTI_GetITStatus" declared implicitly
       if (EXTI_GetITStatus(KeyA_Exit_Line) != RESET) //确保是否产生了EXTI Line中断
-..\BSP\bsp_Init.c(185): error:  #20: identifier "KeyA_Exit_Line" is undefined
+..\BSP\bsp_Init.c(186): error:  #20: identifier "KeyA_Exit_Line" is undefined
       if (EXTI_GetITStatus(KeyA_Exit_Line) != RESET) //确保是否产生了EXTI Line中断
-..\BSP\bsp_Init.c(187): warning:  #223-D: function "EXTI_ClearITPendingBit" declared implicitly
+..\BSP\bsp_Init.c(188): warning:  #223-D: function "EXTI_ClearITPendingBit" declared implicitly
           EXTI_ClearITPendingBit(KeyA_Exit_Line);     //清除中断标志位
 ..\BSP\bsp_Init.c: 2 warnings, 1 error
 compiling bsp_TIM.c...
-..\Bsp\bsp_TIM.c(36): warning:  #177-D: variable "TIM_TimeBaseStructure" was declared but never referenced
-      TIM_TimeBaseInitTypeDef  TIM_TimeBaseStructure;
-..\Bsp\bsp_TIM.c(37): warning:  #177-D: variable "TIM_OCInitStructure" was declared but never referenced
-      TIM_OCInitTypeDef        TIM_OCInitStructure;
-..\Bsp\bsp_TIM.c(38): warning:  #177-D: variable "TIM_BDTRInitStructure" was declared but never referenced
-      TIM_BDTRInitTypeDef      TIM_BDTRInitStructure;
-..\Bsp\bsp_TIM.c(175): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+..\Bsp\bsp_TIM.c(250): error:  #20: identifier "NVIC_InitStructure" is undefined
+      NVIC_InitStructure.NVIC_IRQChannel = TIM4_IRQn;
+..\Bsp\bsp_TIM.c(286): warning:  #1035-D: single-precision operand implicitly converted to double-precision
       pulse = (u16)(tim1_perikd * myDuty / 100.0);
-..\Bsp\bsp_TIM.c(246): error:  #20: identifier "TIM1_TRG_COM_IRQn" is undefined
-      NVIC_InitStructure.NVIC_IRQChannel = TIM1_TRG_COM_IRQn;
-..\Bsp\bsp_TIM.c(262): warning:  #177-D: variable "GPIO_InitStructure" was declared but never referenced
+..\Bsp\bsp_TIM.c(373): warning:  #177-D: variable "GPIO_InitStructure" was declared but never referenced
       GPIO_InitTypeDef GPIO_InitStructure;
-..\Bsp\bsp_TIM.c: 5 warnings, 1 error
+..\Bsp\bsp_TIM.c(407): warning:  #177-D: function "Hall_TIM_Config" was declared but never referenced
+  static void Hall_TIM_Config(void)
+..\Bsp\bsp_TIM.c: 3 warnings, 1 error
 compiling bsp_HallInput.c...
-..\Bsp\bsp_HallInput.c(92): error:  #20: identifier "EXTI_InitTypeDef" is undefined
+..\Bsp\bsp_HallInput.c(85): error:  #20: identifier "EXTI_InitTypeDef" is undefined
       EXTI_InitTypeDef EXTI_InitStructure;
-..\Bsp\bsp_HallInput.c(91): warning:  #177-D: variable "GPIO_InitStructure" was declared but never referenced
+..\Bsp\bsp_HallInput.c(84): warning:  #177-D: variable "GPIO_InitStructure" was declared but never referenced
       GPIO_InitTypeDef GPIO_InitStructure;
-..\Bsp\bsp_HallInput.c(175): warning:  #223-D: function "EXTI_GetITStatus" declared implicitly
+..\Bsp\bsp_HallInput.c(168): warning:  #223-D: function "EXTI_GetITStatus" declared implicitly
       if (EXTI_GetITStatus(HallC_Exit_Line) != RESET) //确保是否产生了EXTI Line中断
-..\Bsp\bsp_HallInput.c(175): error:  #20: identifier "HallC_Exit_Line" is undefined
+..\Bsp\bsp_HallInput.c(168): error:  #20: identifier "HallC_Exit_Line" is undefined
       if (EXTI_GetITStatus(HallC_Exit_Line) != RESET) //确保是否产生了EXTI Line中断
-..\Bsp\bsp_HallInput.c(177): warning:  #223-D: function "EXTI_ClearITPendingBit" declared implicitly
+..\Bsp\bsp_HallInput.c(170): warning:  #223-D: function "EXTI_ClearITPendingBit" declared implicitly
           EXTI_ClearITPendingBit(HallC_Exit_Line);     //清除中断标志位
-..\Bsp\bsp_HallInput.c(180): warning:  #223-D: function "EXTI_GetITStatus" declared implicitly
+..\Bsp\bsp_HallInput.c(173): warning:  #223-D: function "EXTI_GetITStatus" declared implicitly
       if (EXTI_GetITStatus(HallB_Exit_Line) != RESET) //确保是否产生了EXTI Line中断
-..\Bsp\bsp_HallInput.c(180): error:  #20: identifier "HallB_Exit_Line" is undefined
+..\Bsp\bsp_HallInput.c(173): error:  #20: identifier "HallB_Exit_Line" is undefined
       if (EXTI_GetITStatus(HallB_Exit_Line) != RESET) //确保是否产生了EXTI Line中断
-..\Bsp\bsp_HallInput.c(182): warning:  #223-D: function "EXTI_ClearITPendingBit" declared implicitly
+..\Bsp\bsp_HallInput.c(175): warning:  #223-D: function "EXTI_ClearITPendingBit" declared implicitly
           EXTI_ClearITPendingBit(HallB_Exit_Line);     //清除中断标志位
-..\Bsp\bsp_HallInput.c(197): warning:  #223-D: function "EXTI_GetITStatus" declared implicitly
+..\Bsp\bsp_HallInput.c(190): warning:  #223-D: function "EXTI_GetITStatus" declared implicitly
       if (EXTI_GetITStatus(HallA_Exit_Line) != RESET) //确保是否产生了EXTI Line中断
-..\Bsp\bsp_HallInput.c(197): error:  #20: identifier "HallA_Exit_Line" is undefined
+..\Bsp\bsp_HallInput.c(190): error:  #20: identifier "HallA_Exit_Line" is undefined
       if (EXTI_GetITStatus(HallA_Exit_Line) != RESET) //确保是否产生了EXTI Line中断
-..\Bsp\bsp_HallInput.c(199): warning:  #223-D: function "EXTI_ClearITPendingBit" declared implicitly
+..\Bsp\bsp_HallInput.c(192): warning:  #223-D: function "EXTI_ClearITPendingBit" declared implicitly
           EXTI_ClearITPendingBit(HallA_Exit_Line);     //清除中断标志位
-..\Bsp\bsp_HallInput.c(216): error:  #20: identifier "HallA_Port" is undefined
+..\Bsp\bsp_HallInput.c(209): error:  #20: identifier "HallA_Port" is undefined
       u16 newhallpos = GPIO_ReadInputDataBit(HallA_Port, HallA_Pin)
-..\Bsp\bsp_HallInput.c(216): error:  #20: identifier "HallA_Pin" is undefined
+..\Bsp\bsp_HallInput.c(209): error:  #20: identifier "HallA_Pin" is undefined
       u16 newhallpos = GPIO_ReadInputDataBit(HallA_Port, HallA_Pin)
-..\Bsp\bsp_HallInput.c(217): error:  #20: identifier "HallB_Port" is undefined
+..\Bsp\bsp_HallInput.c(210): error:  #20: identifier "HallB_Port" is undefined
                        + GPIO_ReadInputDataBit(HallB_Port, HallB_Pin) * 2
-..\Bsp\bsp_HallInput.c(217): error:  #20: identifier "HallB_Pin" is undefined
+..\Bsp\bsp_HallInput.c(210): error:  #20: identifier "HallB_Pin" is undefined
                        + GPIO_ReadInputDataBit(HallB_Port, HallB_Pin) * 2
-..\Bsp\bsp_HallInput.c(218): error:  #20: identifier "HallC_Port" is undefined
+..\Bsp\bsp_HallInput.c(211): error:  #20: identifier "HallC_Port" is undefined
                        + GPIO_ReadInputDataBit(HallC_Port, HallC_Pin) * 4;
-..\Bsp\bsp_HallInput.c(218): error:  #20: identifier "HallC_Pin" is undefined
+..\Bsp\bsp_HallInput.c(211): error:  #20: identifier "HallC_Pin" is undefined
                        + GPIO_ReadInputDataBit(HallC_Port, HallC_Pin) * 4;
-..\Bsp\bsp_HallInput.c(294): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+..\Bsp\bsp_HallInput.c(284): warning:  #1035-D: single-precision operand implicitly converted to double-precision
       Motor_SetedSpeed = speed / 10.0;
-..\Bsp\bsp_HallInput.c(312): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+..\Bsp\bsp_HallInput.c(302): warning:  #1035-D: single-precision operand implicitly converted to double-precision
           temp_duty = hall_state[ii] * Motor_SetedSpeed/ 2.0;      
-..\Bsp\bsp_HallInput.c(333): warning:  #177-D: function "GraytoDecimal" was declared but never referenced
+..\Bsp\bsp_HallInput.c(323): warning:  #177-D: function "GraytoDecimal" was declared but never referenced
   static u16 GraytoDecimal(u16 x) 
 ..\Bsp\bsp_HallInput.c: 10 warnings, 10 errors
 compiling bsp_Bluetooth.c...
 compiling bsp_Encoder.c...
 compiling bsp_CAN.c...
-..\Bsp\bsp_CAN.c(53): error:  #20: identifier "USED_CAN" is undefined
-        My_CAN_Init(USED_CAN);
-..\Bsp\bsp_CAN.c(134): warning:  #177-D: variable "NVIC_InitStructure" was declared but never referenced
-      NVIC_InitTypeDef         NVIC_InitStructure;
-..\Bsp\bsp_CAN.c: 1 warning, 1 error
 compiling bsp_ADC.c...
 ..\Bsp\bsp_ADC.c(223): error:  #20: identifier "ADC_USED_ConvertedValue2" is undefined
       DMA_DoubleBufferModeConfig(DMA2_Stream0, (uint32_t)ADC_USED_ConvertedValue2, DMA_Memory_0);
 ..\Bsp\bsp_ADC.c(270): error:  #20: identifier "DMA_HT_Flag" is undefined
           DMA_HT_Flag = 1;
 ..\Bsp\bsp_ADC.c: 0 warnings, 2 errors
-compiling sal_PID.c...
-compiling sal_KalmanFilter.c...
 compiling main.c...
-compiling stm32f4xx_it.c...
-compiling list.c...
-compiling port.c...
-..\FreeRTOS\src\port.c(494): warning: A1581W: Added 2 bytes of padding at address 0xae
-compiling queue.c...
-compiling tasks.c...
-compiling timers.c...
-compiling heap_4.c...
-compiling event_groups.c...
-compiling os_free_task.c...
-compiling misc.c...
-compiling stm32f4xx_adc.c...
-compiling stm32f4xx_can.c...
-compiling stm32f4xx_dma.c...
-compiling stm32f4xx_flash.c...
-compiling stm32f4xx_fsmc.c...
-compiling stm32f4xx_gpio.c...
-compiling stm32f4xx_rcc.c...
-compiling stm32f4xx_tim.c...
-compiling stm32f4xx_usart.c...
-assembling startup_stm32f40_41xxx.s...
-compiling system_stm32f4xx.c...
-".\Objects\OS_STM32Pro.axf" - 15 Error(s), 19 Warning(s).
+".\Objects\OS_STM32Pro.axf" - 14 Error(s), 15 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -147,19 +114,19 @@ Package Vendor: ARM
 
 Package Vendor: Keil
                 http://www.keil.com/pack/Keil.STM32F4xx_DFP.1.0.8.pack
-                Keil::Device:StdPeriph Drivers:Framework:1.3.1
+                Keil::Device:Startup:1.3.1
                 STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
-   * Component: Framework Version: 1.3.1
-   * Component: CAN Version: 1.3.0
    * Component: Startup Version: 1.3.1
+   * Component: Framework Version: 1.3.1
    * Component: ADC Version: 1.3.0
-   * Component: FSMC Version: 1.3.0
-   * Component: RCC Version: 1.3.0
-   * Component: GPIO Version: 1.3.0
-   * Component: DMA Version: 1.3.0
+   * Component: CAN Version: 1.3.0
    * Component: Flash Version: 1.3.0
+   * Component: GPIO Version: 1.3.0
    * Component: TIM Version: 1.3.0
    * Component: USART Version: 1.3.0
+   * Component: DMA Version: 1.3.0
+   * Component: FSMC Version: 1.3.0
+   * Component: RCC Version: 1.3.0
 
 <h2>Collection of Component include folders:</h2>
   D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE
@@ -174,50 +141,38 @@ Package Vendor: Keil
       Source file:   CMSIS\UserCodeTemplates\ARM\ITM_Retarget.c
 
    * Component: ARM::CMSIS:DSP:1.4.2
-      Library file:  CMSIS\Lib\ARM\arm_cortexM4lf_math.lib
       Include file:  CMSIS\Include\arm_math.h
-
-   * Component: Keil::Device:StdPeriph Drivers:Framework:1.3.1
-      Source file:   Device\StdPeriph_Driver\templates\stm32f4xx_it.c
-      Source file:   Device\StdPeriph_Driver\templates\stm32f4xx_conf.h
-      Source file:   Device\StdPeriph_Driver\src\misc.c
-      Include file:  Device\StdPeriph_Driver\templates\stm32f4xx_it.h
-
-   * Component: Keil::Device:StdPeriph Drivers:CAN:1.3.0
-      Source file:   Device\StdPeriph_Driver\src\stm32f4xx_can.c
-      Include file:  Device\StdPeriph_Driver\inc\stm32f4xx_can.h
+      Library file:  CMSIS\Lib\ARM\arm_cortexM4lf_math.lib
 
    * Component: Keil::Device:Startup:1.3.1
       Source file:   Device\Source\ARM\STM32F40xxx_41xxx_OPT.s
-      Source file:   Device\Source\system_stm32f4xx.c
-      Include file:  RTE_Driver\Config\RTE_Device.h
       Source file:   Device\Source\ARM\STM32F4xx_OTP.s
       Include file:  Device\Include\stm32f4xx.h
       Source file:   Device\Source\ARM\startup_stm32f40_41xxx.s
+      Include file:  RTE_Driver\Config\RTE_Device.h
+      Source file:   Device\Source\system_stm32f4xx.c
+
+   * Component: Keil::Device:StdPeriph Drivers:Framework:1.3.1
+      Source file:   Device\StdPeriph_Driver\templates\stm32f4xx_it.c
+      Include file:  Device\StdPeriph_Driver\templates\stm32f4xx_it.h
+      Source file:   Device\StdPeriph_Driver\templates\stm32f4xx_conf.h
+      Source file:   Device\StdPeriph_Driver\src\misc.c
 
    * Component: Keil::Device:StdPeriph Drivers:ADC:1.3.0
-      Include file:  Device\StdPeriph_Driver\inc\stm32f4xx_adc.h
       Source file:   Device\StdPeriph_Driver\src\stm32f4xx_adc.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f4xx_adc.h
 
-   * Component: Keil::Device:StdPeriph Drivers:FSMC:1.3.0
-      Include file:  Device\StdPeriph_Driver\inc\stm32f4xx_fsmc.h
-      Source file:   Device\StdPeriph_Driver\src\stm32f4xx_fsmc.c
-
-   * Component: Keil::Device:StdPeriph Drivers:RCC:1.3.0
-      Include file:  Device\StdPeriph_Driver\inc\stm32f4xx_rcc.h
-      Source file:   Device\StdPeriph_Driver\src\stm32f4xx_rcc.c
-
-   * Component: Keil::Device:StdPeriph Drivers:GPIO:1.3.0
-      Source file:   Device\StdPeriph_Driver\src\stm32f4xx_gpio.c
-      Include file:  Device\StdPeriph_Driver\inc\stm32f4xx_gpio.h
-
-   * Component: Keil::Device:StdPeriph Drivers:DMA:1.3.0
-      Include file:  Device\StdPeriph_Driver\inc\stm32f4xx_dma.h
-      Source file:   Device\StdPeriph_Driver\src\stm32f4xx_dma.c
+   * Component: Keil::Device:StdPeriph Drivers:CAN:1.3.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f4xx_can.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f4xx_can.c
 
    * Component: Keil::Device:StdPeriph Drivers:Flash:1.3.0
       Include file:  Device\StdPeriph_Driver\inc\stm32f4xx_flash.h
       Source file:   Device\StdPeriph_Driver\src\stm32f4xx_flash.c
+
+   * Component: Keil::Device:StdPeriph Drivers:GPIO:1.3.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f4xx_gpio.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f4xx_gpio.c
 
    * Component: Keil::Device:StdPeriph Drivers:TIM:1.3.0
       Include file:  Device\StdPeriph_Driver\inc\stm32f4xx_tim.h
@@ -226,6 +181,18 @@ Package Vendor: Keil
    * Component: Keil::Device:StdPeriph Drivers:USART:1.3.0
       Source file:   Device\StdPeriph_Driver\src\stm32f4xx_usart.c
       Include file:  Device\StdPeriph_Driver\inc\stm32f4xx_usart.h
+
+   * Component: Keil::Device:StdPeriph Drivers:DMA:1.3.0
+      Source file:   Device\StdPeriph_Driver\src\stm32f4xx_dma.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f4xx_dma.h
+
+   * Component: Keil::Device:StdPeriph Drivers:FSMC:1.3.0
+      Source file:   Device\StdPeriph_Driver\src\stm32f4xx_fsmc.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f4xx_fsmc.h
+
+   * Component: Keil::Device:StdPeriph Drivers:RCC:1.3.0
+      Source file:   Device\StdPeriph_Driver\src\stm32f4xx_rcc.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f4xx_rcc.h
 Target not created.
 </pre>
 </body>

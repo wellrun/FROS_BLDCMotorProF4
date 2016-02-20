@@ -39,7 +39,7 @@ void Start_Task_Create(void)
  * @入口参数  pdata
  * @出口参数  无
 *********************************************************************************/
-void Start_Task(void *pvParameters)
+static void Start_Task(void *pvParameters)
 {
     (void)pvParameters;
     taskENTER_CRITICAL();             //关中断
