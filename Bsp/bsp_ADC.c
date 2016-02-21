@@ -220,7 +220,7 @@ static void ADC_DMA_Config(void)
     DMA_InitStructure.DMA_FIFOThreshold = DMA_FIFOThreshold_HalfFull;
     DMA_InitStructure.DMA_MemoryBurst = DMA_MemoryBurst_Single;
     DMA_InitStructure.DMA_PeripheralBurst = DMA_PeripheralBurst_Single;
-    DMA_DoubleBufferModeConfig(DMA2_Stream0, (uint32_t)ADC_USED_ConvertedValue2, DMA_Memory_0);
+//    DMA_DoubleBufferModeConfig(DMA2_Stream0, (uint32_t)ADC_USED_ConvertedValue2, DMA_Memory_0);
     DMA_DoubleBufferModeCmd(DMA2_Stream0, ENABLE);
     
     DMA_Init(DMA2_Stream0, &DMA_InitStructure);
@@ -267,7 +267,7 @@ void DMA_ADC_IRQPendle(void)
     if(DMA_GetITStatus(DMA2_Stream0,DMA_IT_HTIF0))
     {
         DMA_ClearITPendingBit(DMA2_Stream0,DMA_IT_HTIF0);
-        DMA_HT_Flag = 1;
+//        DMA_HT_Flag = 1;
     } 
 #endif
 #ifdef _STM32F10x_

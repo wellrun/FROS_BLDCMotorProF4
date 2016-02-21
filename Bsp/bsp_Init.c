@@ -53,11 +53,9 @@ void Bsp_Init(void)
     Hall_GPIO_Init();
     Bsp_ADC_Init();
     Bsp_Encoder_Config();
-//    Key_GPIO_Init();
 //    Bsp_CAN_Init();
 
     Bsp_NVIC_Config();/*中断配置*/
-//    SysTick_init();		/* FreeRTOS已经自动配置了Systick*/
     
     Hall_PrepareCommutation();//预处理
 
@@ -72,27 +70,13 @@ void Bsp_Init(void)
  *******************************************************************************/
 void Bsp_NVIC_Config(void)
 {
-//    NVIC_InitTypeDef NVIC_InitStructure;
 
     /*中断分组配置*/
     NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
 
-	  /*外部文件有 void USART3_NVIC_Config(u8 myPreePrio,u8 mySubPrio)*/
-	  /*在这里调用外部函数进行中断初始化,这里可以把中断配置函数写在其他文件里
-	    又方便在这里统一管理中断的优先级 
-	  */
     EXTI9_5_NVIC_Config(0,0);
 	EXTI4_NVIC_Config(1,0);
     BLE_NVIC_Config(2,0);
-//    EXTI15_10_NVIC_Config(4,0);    
-//    CAN1_RX_NVIC(3,0);
-   /*	
-    NVIC_InitStructure.NVIC_IRQChannel = USART3_IRQn;
-    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
-    NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
-    NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
-    NVIC_Init(&NVIC_InitStructure);
-	*/
 }
 
 /********************************************************************************
@@ -183,18 +167,18 @@ void EXTI15_10_NVIC_Config(u8 preemPriority, u8 subPriority)
  */
 void EXTI15_10_IRQPander(void)
 {
-    if (EXTI_GetITStatus(KeyA_Exit_Line) != RESET) //确保是否产生了EXTI Line中断
-    {
-        EXTI_ClearITPendingBit(KeyA_Exit_Line);     //清除中断标志位
-        if(ComData[0] == 0 )
-        {
-            ComData[0] = 200;           
-        }
-        else
-        {
-            ComData[0] = 0;                       
-        }
-    }
+//    if (EXTI_GetITStatus(KeyA_Exit_Line) != RESET) //确保是否产生了EXTI Line中断
+//    {
+//        EXTI_ClearITPendingBit(KeyA_Exit_Line);     //清除中断标志位
+//        if(ComData[0] == 0 )
+//        {
+//            ComData[0] = 200;           
+//        }
+//        else
+//        {
+//            ComData[0] = 0;                       
+//        }
+//    }
 
 }
 /****************** end of this file ********************************************

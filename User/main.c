@@ -12,7 +12,11 @@
    首字母小写剩于单词首字母大写的变量为形参,如myValue
    全小写的变量为局部变量,如temp_value
 *注    意:
-       启动文件已经被修改过了
+       启动文件已经被修改过了,如果FreeRTOSConfig.h最后有三个定义如下
+           #define vPortSVCHandler SVC_Handler
+           #define xPortPendSVHandler PendSV_Handler
+           #define xPortSysTickHandler SysTick_Handler
+       则不用修改启动文件.
        system_stm32f4xx.c默认外部晶振25M需改成8M,不然后RCC就会出问题
  ********************************************************************************/
 /*#includes**********************************************************************/
@@ -21,7 +25,7 @@
 
 /*#define************************************************************************/
 #define Delay(n)  while(n--)
-//#define OS_Debug
+#define OS_Debug
 
 #ifndef OS_Debug  //实际用
 

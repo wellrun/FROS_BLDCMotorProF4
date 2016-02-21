@@ -81,10 +81,11 @@ static const s8 BLDC_STATE_TAB_Fan[8][3] =  //反向表
  */
 void Hall_GPIO_Init(void)
 {
-    GPIO_InitTypeDef GPIO_InitStructure;
-    EXTI_InitTypeDef EXTI_InitStructure;
 
 #ifdef  _STM32F10x_
+    GPIO_InitTypeDef GPIO_InitStructure;
+    EXTI_InitTypeDef EXTI_InitStructure;
+    
     RCC_APB2PeriphClockCmd(RCC_HallA_Port | RCC_HallB_Port | RCC_HallC_Port, ENABLE);
 
     GPIO_InitStructure.GPIO_Pin = HallA_Pin;
@@ -165,16 +166,16 @@ void EXTI4_NVIC_Config(u8 preemPriority, u8 subPriority)
  */
 void EXTI9_5_IRQPander(void)
 {
-    if (EXTI_GetITStatus(HallC_Exit_Line) != RESET) //确保是否产生了EXTI Line中断
-    {
-        EXTI_ClearITPendingBit(HallC_Exit_Line);     //清除中断标志位
-        Hall_PrepareCommutation();
-    }
-    if (EXTI_GetITStatus(HallB_Exit_Line) != RESET) //确保是否产生了EXTI Line中断
-    {
-        EXTI_ClearITPendingBit(HallB_Exit_Line);     //清除中断标志位
-        Hall_PrepareCommutation();
-    }
+//    if (EXTI_GetITStatus(HallC_Exit_Line) != RESET) //确保是否产生了EXTI Line中断
+//    {
+//        EXTI_ClearITPendingBit(HallC_Exit_Line);     //清除中断标志位
+//        Hall_PrepareCommutation();
+//    }
+//    if (EXTI_GetITStatus(HallB_Exit_Line) != RESET) //确保是否产生了EXTI Line中断
+//    {
+//        EXTI_ClearITPendingBit(HallB_Exit_Line);     //清除中断标志位
+//        Hall_PrepareCommutation();
+//    }
 
 }
 /*
@@ -187,11 +188,11 @@ void EXTI9_5_IRQPander(void)
  */
 void EXTI4_IRQPander(void)
 {
-    if (EXTI_GetITStatus(HallA_Exit_Line) != RESET) //确保是否产生了EXTI Line中断
-    {
-        EXTI_ClearITPendingBit(HallA_Exit_Line);     //清除中断标志位
-        Hall_PrepareCommutation();
-    }
+//    if (EXTI_GetITStatus(HallA_Exit_Line) != RESET) //确保是否产生了EXTI Line中断
+//    {
+//        EXTI_ClearITPendingBit(HallA_Exit_Line);     //清除中断标志位
+//        Hall_PrepareCommutation();
+//    }
 }
 /*
  *@ <function name=>Hall_PrepareCommutation() </function>
@@ -206,9 +207,10 @@ void Hall_PrepareCommutation(void)
     static u16 lasthallpos = 0;
 //    float temp_duty = 0;  //临时占空比
     s8 hall_state[3] = {0, 0, 0}; //ABC三相状态数组
-    u16 newhallpos = GPIO_ReadInputDataBit(HallA_Port, HallA_Pin)
-                     + GPIO_ReadInputDataBit(HallB_Port, HallB_Pin) * 2
-                     + GPIO_ReadInputDataBit(HallC_Port, HallC_Pin) * 4;
+    u16 newhallpos = 0;
+//    GPIO_ReadInputDataBit(HallA_Port, HallA_Pin)
+//                     + GPIO_ReadInputDataBit(HallB_Port, HallB_Pin) * 2
+//                     + GPIO_ReadInputDataBit(HallC_Port, HallC_Pin) * 4;
     State_TabIndex = newhallpos;
 
     if (newhallpos == lasthallpos)

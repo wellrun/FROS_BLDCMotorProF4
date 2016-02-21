@@ -55,16 +55,13 @@ Heap_Size       EQU     0x00000200
 __heap_base
 Heap_Mem        SPACE   Heap_Size
 __heap_limit
-
-				IMPORT xPortPendSVHandler    ;FreeRTOS needs
-				IMPORT xPortSysTickHandler   ;FreeRTOS needs
-				IMPORT vPortSVCHandler       ;FreeRTOS needs
-				;IMPORT vUARTInterruptHandler ;FreeRTOS needs
-				;IMPORT vTimer2IntHandler     ;FreeRTOS needs
-
                 PRESERVE8
                 THUMB
-
+				;IMPORT xPortPendSVHandler    ;FreeRTOS needs
+				;IMPORT xPortSysTickHandler   ;FreeRTOS needs
+				;IMPORT vPortSVCHandler       ;FreeRTOS needs
+				;IMPORT vUARTInterruptHandler ;FreeRTOS needs
+				;IMPORT vTimer2IntHandler     ;FreeRTOS needs
 
 ; Vector Table Mapped to Address 0 at Reset
                 AREA    RESET, DATA, READONLY
@@ -83,11 +80,11 @@ __Vectors       DCD     __initial_sp               ; Top of Stack
                 DCD     0                          ; Reserved
                 DCD     0                          ; Reserved
                 DCD     0                          ; Reserved
-                DCD     vPortSVCHandler            ; SVCall Handler
+                DCD     SVC_Handler            ; SVCall Handler
                 DCD     DebugMon_Handler           ; Debug Monitor Handler
                 DCD     0                          ; Reserved
-                DCD     xPortPendSVHandler         ; PendSV Handler
-                DCD     xPortSysTickHandler        ; SysTick Handler
+                DCD     PendSV_Handler         ; PendSV Handler
+                DCD     SysTick_Handler        ; SysTick Handler
 
                 ; External Interrupts
                 DCD     WWDG_IRQHandler                   ; Window WatchDog                                        
