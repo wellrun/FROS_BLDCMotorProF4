@@ -13,11 +13,12 @@
 
 
 void TIM1_PWM_Config(void);
+void TIM1_TRG_COM_NVIC_Config(u8 preemPriority, u8 subPriority);
+
 void TIM1_Set_PWMDuty(u8 myChannel, float myDuty);
 void TIM1_Set_PWMOutput_EnableState(u8 myChannel, u8 pState,u8 nState);
 
 static void TIM1_GPIO_Config(void);
-static void Hall_TimerConfig(void);
 
 #endif
 /****************** end of this file ********************************************

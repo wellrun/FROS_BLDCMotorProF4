@@ -24,10 +24,10 @@
 #include "app.h"
 
 /*#define************************************************************************/
-#define Delay(n)  while(n--)
-#define OS_Debug
+#define  MyDelay(n)  while(n--)
+#define  OS_Debug
 
-#ifndef OS_Debug  //实际用
+#ifndef  OS_Debug  //实际用
 
 /*********************************************************************************
  * @函数名称  main()
@@ -41,7 +41,6 @@ int main(void)
 
     if(queue != NULL)
     {
-        Bsp_Init();  //各种初始化
         Start_Task_Create();  //创建开始任务       
         vTaskStartScheduler();   //启动调度器，开始执行任务
     }
@@ -58,9 +57,20 @@ int main(void)
 *********************************************************************************/
 int main(void)
 {
-    Bsp_Init();  //各种初始化
+    u32 ii = 0;
+    u8 n = 0;
+    StateLED_Init();
+    Bsp_NVIC_Config();
+    TIM1_PWM_Config();
+    RCC_ClocksTypeDef mysystemclock;
+    RCC_GetClocksFreq(&mysystemclock);
+
     while (1)   //可以在这里对某些功能进行单独的测试
     {
+        ii = 0x00ffffff;
+        MyDelay(ii);
+        TurnStateLED(n);
+        n = !n;
     }
 }
 #endif

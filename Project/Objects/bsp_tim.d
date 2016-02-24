@@ -45,6 +45,7 @@
 .\objects\bsp_tim.o: ..\Bsp\bsp_CAN.h
 .\objects\bsp_tim.o: ..\Bsp\bsp_Init.h
 .\objects\bsp_tim.o: ..\Bsp\bsp_ADC.h
-.\objects\bsp_tim.o: ..\Bsp\bsp_HallInput.h
+.\objects\bsp_tim.o: ..\Bsp\bsp_Commutation.h
 .\objects\bsp_tim.o: ..\Bsp\bsp_Bluetooth.h
 .\objects\bsp_tim.o: ..\Bsp\bsp_Encoder.h
+.\objects\bsp_tim.o: ..\Bsp\bsp_HallTIM.h

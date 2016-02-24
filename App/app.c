@@ -43,6 +43,8 @@ static void Start_Task(void *pvParameters)
 {
     (void)pvParameters;
     taskENTER_CRITICAL();             //关中断
+    
+    Bsp_Init();  //各种初始化
 
     /*在这里创建其他任务*/
     Main_Task_Create(MAIN_TASK_PRIO);

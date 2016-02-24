@@ -23,16 +23,19 @@
 #include "bsp_CAN.h"
 #include "bsp_ADC.h"
 
-#include "bsp_HallInput.h"
+#include "bsp_Commutation.h"
 #include "bsp_Bluetooth.h"
 #include "bsp_Encoder.h"
+#include "bsp_HallTIM.h"
+
 
 void Bsp_Init(void);
 void Bsp_NVIC_Config(void);
 void SysTick_init(void);
-void LED_GPIO_Config(void);
+void StateLED_Init(void);
 void EXTI15_10_NVIC_Config(u8 preemPriority, u8 subPriority);
 void Key_GPIO_Init(void);
+void  TurnStateLED(u8 n);
 #endif
 /****************** end of this file ********************************************
 

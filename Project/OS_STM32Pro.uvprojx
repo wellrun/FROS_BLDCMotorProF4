@@ -175,7 +175,7 @@
           </Flash1>
           <bUseTDR>1</bUseTDR>
           <Flash2>BIN\UL2CM3.DLL</Flash2>
-          <Flash3></Flash3>
+          <Flash3>"" ()</Flash3>
           <Flash4></Flash4>
           <pFcarmOut></pFcarmOut>
           <pFcarmGrp></pFcarmGrp>
@@ -449,21 +449,6 @@
               <FilePath>..\Bsp\bsp_TIM.c</FilePath>
             </File>
             <File>
-              <FileName>bsp_HallInput.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Bsp\bsp_HallInput.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_Bluetooth.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Bsp\bsp_Bluetooth.c</FilePath>
-            </File>
-            <File>
-              <FileName>bsp_Encoder.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Bsp\bsp_Encoder.c</FilePath>
-            </File>
-            <File>
               <FileName>bsp_CAN.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Bsp\bsp_CAN.c</FilePath>
@@ -472,6 +457,26 @@
               <FileName>bsp_ADC.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Bsp\bsp_ADC.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_HallTIM.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Bsp\bsp_HallTIM.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_Encoder.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Bsp\bsp_Encoder.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_Bluetooth.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Bsp\bsp_Bluetooth.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_Commutation.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Bsp\bsp_Commutation.c</FilePath>
             </File>
           </Files>
         </Group>
