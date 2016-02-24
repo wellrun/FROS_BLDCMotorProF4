@@ -180,7 +180,7 @@ void Send_Array(u8 * Array, u16 Len)
  */
 void Send_Data(float myValue, uint8_t myUUID)
 {
-#if 0
+#if 0  //直接发送
     s32 num;
     static u8 SEND_BUF[8] = {0x55, 0xaa,0, 0, 0, 0, 0, 0xff};
 	num = (s32)(myValue*100);
@@ -191,7 +191,7 @@ void Send_Data(float myValue, uint8_t myUUID)
     SEND_BUF[6] = (num)&0xff;
     Send_Array(SEND_BUF, 8);
 #endif
-#if 1
+#if 1  //添加到发送队列
 	u16 temp_rear;
     s32 num;
 	num = (s32)(myValue*100);	
@@ -230,7 +230,6 @@ void Send_Data(float myValue, uint8_t myUUID)
  *@ <param name="void">null</param>
  *@ <returns> null </returns>
  */
-#if 1
 void BLE_IRQPandler(void)
 {
     static u8 ii = 2;
@@ -266,12 +265,9 @@ void BLE_IRQPandler(void)
 				}
 				ii = 2;
 			}
-		}
-		
+		}		
 	}
-
 }
-#endif
 /****************** end of this file ********************************************
 
 

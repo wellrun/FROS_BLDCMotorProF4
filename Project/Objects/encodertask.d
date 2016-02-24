@@ -46,9 +46,10 @@
 .\objects\encodertask.o: ..\BSP\bsp_init.h
 .\objects\encodertask.o: ..\BSP\bsp_CAN.h
 .\objects\encodertask.o: ..\BSP\bsp_ADC.h
-.\objects\encodertask.o: ..\BSP\bsp_HallInput.h
+.\objects\encodertask.o: ..\BSP\bsp_Commutation.h
 .\objects\encodertask.o: ..\BSP\bsp_Bluetooth.h
 .\objects\encodertask.o: ..\BSP\bsp_Encoder.h
+.\objects\encodertask.o: ..\BSP\bsp_HallTIM.h
 .\objects\encodertask.o: ..\App\MainTask.h
 .\objects\encodertask.o: ..\App\app.h
 .\objects\encodertask.o: ..\App\Control_Task.h

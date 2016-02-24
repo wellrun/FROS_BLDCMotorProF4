@@ -166,19 +166,19 @@ void UsageFault_Handler(void)
 /*void PPP_IRQHandler(void)
 {
 }*/
-extern void EXTI9_5_IRQPander(void);
-void EXTI9_5_IRQHandler(void)
-{
-    EXTI9_5_IRQPander();
-}
+//extern void EXTI9_5_IRQPander(void);
+//void EXTI9_5_IRQHandler(void)
+//{
+//    EXTI9_5_IRQPander();
+//}
 /**
   * @}
   */
-extern void EXTI4_IRQPander(void);
-void EXTI4_IRQHandler(void)
-{
-    EXTI4_IRQPander();
-}
+//extern void EXTI4_IRQPander(void);
+//void EXTI4_IRQHandler(void)
+//{
+//    EXTI4_IRQPander();
+//}
 /**
   * @}
   */
@@ -195,11 +195,15 @@ void CAN1_RX1_IRQHandler(void)
 {
     CAN1_RX0_IRQPendle();
 }
-
-extern void EXTI15_10_IRQPander(void);
-void EXTI15_10_IRQHandler(void)
+extern void Hall_TIM_IRQPandler(void);
+void TIM3_IRQHandler(void)
 {
-    EXTI15_10_IRQPander();
+    Hall_TIM_IRQPandler();
+}
+extern void  TIM1_TRG_COM_IRQPandler(void);
+void TIM1_TRG_COM_TIM11_IRQHandler(void)
+{
+    TIM1_TRG_COM_IRQPandler();
 }
 
 /******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/

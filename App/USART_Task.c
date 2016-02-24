@@ -44,7 +44,7 @@ static void USART_Task(void *pdata)
     (void)pdata;
 	while(1)
 	{
-        vTaskDelay(1);
+        vTaskDelay(5);
 		for(u8 jj = 0;jj<30;jj++)
 		{
 			if(BLE_USART_QUEUE.Rear != BLE_USART_QUEUE.Front) //»º³åÇø²»Îª¿Õ

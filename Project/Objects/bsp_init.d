@@ -44,6 +44,7 @@
 .\objects\bsp_init.o: ..\BSP\bsp_init.h
 .\objects\bsp_init.o: ..\BSP\bsp_CAN.h
 .\objects\bsp_init.o: ..\BSP\bsp_ADC.h
-.\objects\bsp_init.o: ..\BSP\bsp_HallInput.h
+.\objects\bsp_init.o: ..\BSP\bsp_Commutation.h
 .\objects\bsp_init.o: ..\BSP\bsp_Bluetooth.h
 .\objects\bsp_init.o: ..\BSP\bsp_Encoder.h
+.\objects\bsp_init.o: ..\BSP\bsp_HallTIM.h

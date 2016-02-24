@@ -32,7 +32,10 @@
 //#define RCC_KeyC_Port          RCC_APB2Periph_GPIOA  //| RCC_APB2Periph_AFIO
 #endif
 #ifdef  _STM32F4xx_
-
+#define      StateLED_Port          GPIOB
+#define      StateLED_Pin           GPIO_Pin_6
+#define      RCC_StateLED           RCC_AHB1Periph_GPIOB// | RCC_APB2Periph_AFIO
+#define      _TurnStateLED(n)       GPIO_WriteBit(StateLED_Port,StateLED_Pin,(BitAction)n)
 #endif
 
 
@@ -47,15 +50,13 @@
  *******************************************************************************/
 void Bsp_Init(void)
 {
-
+    Bsp_NVIC_Config();/*中断配置*/
+    
     TIM1_PWM_Config();
     BlueToothInit();
-    Hall_GPIO_Init();
     Bsp_ADC_Init();
     Bsp_Encoder_Config();
 //    Bsp_CAN_Init();
-
-    Bsp_NVIC_Config();/*中断配置*/
     
     Hall_PrepareCommutation();//预处理
 
@@ -65,8 +66,7 @@ void Bsp_Init(void)
  *@函数功能    中断向量表配置
  *@入口参数    无
  *@出口参数    无
- *@说    明    所有的工程的中断都要在此配置,
-               为了实现多人合作的写法,推荐采取以下的示例写法
+ *@说    明    所有的工程的中断都要在此配置
  *******************************************************************************/
 void Bsp_NVIC_Config(void)
 {
@@ -74,8 +74,8 @@ void Bsp_NVIC_Config(void)
     /*中断分组配置*/
     NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
 
-    EXTI9_5_NVIC_Config(0,0);
-	EXTI4_NVIC_Config(1,0);
+    Hall_TIM_NVIC_Config(0,0);
+	TIM1_TRG_COM_NVIC_Config(1,0);
     BLE_NVIC_Config(2,0);
 }
 
@@ -91,7 +91,32 @@ void SysTick_init(void)
     RCC_GetClocksFreq(&rcc_clocks); /*获取系统主频*/
     /*systick的中断函数是用来切换任务的*/
 //    SysTick_Config(rcc_clocks.HCLK_Frequency/OS_TICKS_PER_SEC);//初始化并使能SysTick定时器
-}/*
+}
+/*
+ *@ <function name=> StateLED_Init() </function>
+ *@ <summary>
+     config the gpio for the state LED
+ *@ </summary>
+ *@ <param name="void">null</param>
+ *@ <returns> null </returns>
+ */
+void StateLED_Init(void)
+{
+    GPIO_InitTypeDef GPIO_InitStructure;
+    RCC_AHB1PeriphClockCmd(RCC_StateLED, ENABLE);
+    GPIO_InitStructure.GPIO_Pin = StateLED_Pin;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
+    GPIO_InitStructure.GPIO_OType = GPIO_OType_OD;
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
+    GPIO_Init(StateLED_Port, &GPIO_InitStructure); 
+}
+void  TurnStateLED(u8 n)        
+{
+    GPIO_WriteBit(StateLED_Port,StateLED_Pin,(BitAction)n);
+}
+
+/*
  *@ <function name=>Key_GPIO_Init() </function>
  *@ <summary>
      config the gpio for the presskey
@@ -155,31 +180,6 @@ void EXTI15_10_NVIC_Config(u8 preemPriority, u8 subPriority)
     NVIC_InitStructure.NVIC_IRQChannelSubPriority = subPriority;
     NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
     NVIC_Init(&NVIC_InitStructure);
-}
-
-/*
- *@ <function name=>EXTI15_10_IRQPander() </function>
- *@ <summary>
-      引脚中断子函数,在stm32f10x_it.c中调用
- *@ </summary>
- *@ <param name="void">null</param>
- *@ <returns> null </returns>
- */
-void EXTI15_10_IRQPander(void)
-{
-//    if (EXTI_GetITStatus(KeyA_Exit_Line) != RESET) //确保是否产生了EXTI Line中断
-//    {
-//        EXTI_ClearITPendingBit(KeyA_Exit_Line);     //清除中断标志位
-//        if(ComData[0] == 0 )
-//        {
-//            ComData[0] = 200;           
-//        }
-//        else
-//        {
-//            ComData[0] = 0;                       
-//        }
-//    }
-
 }
 /****************** end of this file ********************************************
 
