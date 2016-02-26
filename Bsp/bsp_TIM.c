@@ -50,8 +50,9 @@ void TIM1_TRG_COM_NVIC_Config(u8 preemPriority, u8 subPriority)
  */
 void TIM1_TRG_COM_IRQPandler(void)
 {
-    TIM_ClearITPendingBit(TIM1, TIM_IT_COM);
-    // commutationCount++;
+    static u32 temp = 0;
+    TIM_ClearITPendingBit(TIM1, TIM_IT_COM);      
+    temp++;
 }
 
 /*
@@ -127,6 +128,9 @@ void TIM1_PWM_Config(void)
             // TIM_SelectInputTrigger(TIM8, TIM_TS_ITR1);// MotorTimer = TIM8, HallTimer = TIM2
             // TIM_SelectInputTrigger(TIM8, TIM_TS_ITR2);// MotorTimer = TIM8, HallTimer = TIM4
             // TIM_SelectInputTrigger(TIM8, TIM_TS_ITR3);// MotorTimer = TIM8, HallTimer = TIM5
+            TIM_ClearITPendingBit(TIM1, TIM_IT_COM);
+            TIM_ITConfig(TIM1, TIM_IT_COM, ENABLE);
+            TIM_ClearITPendingBit(TIM1, TIM_IT_COM);            
         #endif
         TIM_ARRPreloadConfig(TIM1, ENABLE);   //使能定时器重装载
         TIM_Cmd(TIM1, ENABLE);   //使能定时器1

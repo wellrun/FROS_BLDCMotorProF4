@@ -15,6 +15,7 @@
 void Hall_TimerConfig(void);
 void Hall_TIM_NVIC_Config(u8 preemPriority, u8 subPriority);
 
+u8 Get_HallInputValue(void);
 #endif
 /****************** end of this file ********************************************
 

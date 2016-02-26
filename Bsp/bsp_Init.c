@@ -54,7 +54,7 @@ void Bsp_Init(void)
     
     TIM1_PWM_Config();
     BlueToothInit();
-    Bsp_ADC_Init();
+//    Bsp_ADC_Init();
     Bsp_Encoder_Config();
 //    Bsp_CAN_Init();
     

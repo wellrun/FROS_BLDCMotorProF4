@@ -21,14 +21,11 @@
     #define RCC_ADC_DMA           RCC_AHBPeriph_DMA1
 #endif
 #ifdef  _STM32F4xx_  //未修改
-    #define Encoder_TIM                TIM3
-    #define RCC_Encoder_TIM            RCC_APB1Periph_TIM3
-    #define ADC_USED_Port              GPIOB
-    #define ADC_USED_Pin               GPIO_Pin_11
-    #define RCC_ADC_USED_Port          RCC_APB2Periph_GPIOB | RCC_APB2Periph_AFIO
-    #define ADC_USED_Port              GPIOB
-    #define ADC_USED_Pin               GPIO_Pin_11
-    #define RCC_ADC_USED_Port          RCC_APB2Periph_GPIOB | RCC_APB2Periph_AFIO
+    #define USED_ADC                   ADC1
+    #define RCC_USED_ADC               RCC_APB2Periph_ADC1
+    #define USED_ADC_Port              GPIOA
+    #define USED_ADC_Pin               GPIO_Pin_0|GPIO_Pin_1|GPIO_Pin_2|GPIO_Pin_3
+    #define RCC_USED_ADC_Port          RCC_AHB1Periph_GPIOA
 #endif
 /*全局变量声明********************************************************************/
 uint16_t  ADC_USED_ConvertedValue1[ADC_Converted_Num];//缓冲区1
@@ -76,13 +73,14 @@ static void ADC_GPIO_Config(void)
 #endif
 #ifdef _STM32F4xx_
     GPIO_InitTypeDef GPIO_InitStructure;
-    RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
+    RCC_AHB1PeriphClockCmd(RCC_USED_ADC_Port, ENABLE);
 
-    /* Configure ADC3 Channel12 pin as analog input*/
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1|GPIO_Pin_2;
+    /* Configure ADC Channel pin as analog input*/
+    GPIO_InitStructure.GPIO_Pin = USED_ADC_Pin;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AN;
     GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL ;
-    GPIO_Init(GPIOA, &GPIO_InitStructure);
+    GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;    
+    GPIO_Init(USED_ADC_Port, &GPIO_InitStructure);
 #endif
 }
 /*
@@ -135,7 +133,7 @@ static void ADC_Config(void)
     ADC_InitTypeDef  ADC_InitStructure;
     ADC_CommonInitTypeDef ADC_CommonInitStructure;
     
-    RCC_APB2PeriphClockCmd(RCC_APB2Periph_ADC1, ENABLE);
+    RCC_APB2PeriphClockCmd(RCC_USED_ADC, ENABLE);
     ADC_DeInit();
     /* ADC Common Init **********************************************************/
     ADC_CommonInitStructure.ADC_Mode = ADC_Mode_Independent;//独立模式
@@ -143,26 +141,28 @@ static void ADC_Config(void)
     ADC_CommonInitStructure.ADC_DMAAccessMode = ADC_DMAAccessMode_Disabled;//关闭DMA闪取
     ADC_CommonInitStructure.ADC_TwoSamplingDelay = ADC_TwoSamplingDelay_9Cycles;//采样间隔
     ADC_CommonInit(&ADC_CommonInitStructure);
-    /* ADC3 Init ****************************************************************/
+    /* ADC Init ****************************************************************/
     ADC_InitStructure.ADC_Resolution = ADC_Resolution_12b;//12位转换方式
     ADC_InitStructure.ADC_ScanConvMode = ENABLE;//扫描模式
     ADC_InitStructure.ADC_ContinuousConvMode = ENABLE;//连续模式 
     ADC_InitStructure.ADC_ExternalTrigConvEdge = ADC_ExternalTrigConvEdge_None;
     ADC_InitStructure.ADC_DataAlign = ADC_DataAlign_Right;
-    ADC_InitStructure.ADC_NbrOfConversion = 1;//多通道转换时应修改此处
-    ADC_Init(ADC1, &ADC_InitStructure);
+    ADC_InitStructure.ADC_NbrOfConversion = 4;//多通道转换时应修改此处
+    ADC_Init(USED_ADC, &ADC_InitStructure);
     /* ADC regular channel12 configuration *************************************/
-    ADC_RegularChannelConfig(ADC1, ADC_Channel_1, 1, ADC_SampleTime_84Cycles);//设置ADC常规通道序列
-//    ADC_RegularChannelConfig(ADC1, ADC_Channel_2, 2, ADC_SampleTime_84Cycles);//设置ADC常规通道序列
+    ADC_RegularChannelConfig(USED_ADC, ADC_Channel_1, 1, ADC_SampleTime_84Cycles);//设置ADC常规通道序列
+    ADC_RegularChannelConfig(USED_ADC, ADC_Channel_2, 2, ADC_SampleTime_84Cycles);//设置ADC常规通道序列
+    ADC_RegularChannelConfig(USED_ADC, ADC_Channel_1, 3, ADC_SampleTime_84Cycles);//设置ADC常规通道序列
+    ADC_RegularChannelConfig(USED_ADC, ADC_Channel_2, 4, ADC_SampleTime_84Cycles);//设置ADC常规通道序列
 
     /* Enable DMA request after last transfer (Single-ADC mode) */
-    ADC_DMARequestAfterLastTransferCmd(ADC1, ENABLE);//ADC转换完成后立即启//动DMA功能
+    ADC_DMARequestAfterLastTransferCmd(USED_ADC, ENABLE);//ADC转换完成后立即启//动DMA功能
     /* Enable ADC DMA */
-    ADC_DMACmd(ADC1, ENABLE);
+    ADC_DMACmd(USED_ADC, ENABLE);
     /* Enable ADC*/
-    ADC_Cmd(ADC1, ENABLE); 
+    ADC_Cmd(USED_ADC, ENABLE); 
     //软件启动ADC  
-    ADC_SoftwareStartConv(ADC1);   
+    ADC_SoftwareStartConv(USED_ADC);   
 #endif    
 }
 /*

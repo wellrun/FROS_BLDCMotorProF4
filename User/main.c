@@ -58,7 +58,7 @@ int main(void)
 int main(void)
 {
     u32 ii = 0;
-    u8 n = 0;
+    u8 n = 0,index = 0,lastvalue = 0;
     StateLED_Init();
     Bsp_NVIC_Config();
     TIM1_PWM_Config();
@@ -67,9 +67,10 @@ int main(void)
 
     while (1)   //可以在这里对某些功能进行单独的测试
     {
-        ii = 0x00ffffff;
+        ii = 0x01f0000f;
         MyDelay(ii);
         TurnStateLED(n);
+//        TIM_GenerateEvent(TIM1,TIM_EventSource_COM);
         n = !n;
     }
 }
