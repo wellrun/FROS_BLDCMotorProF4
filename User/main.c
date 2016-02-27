@@ -55,23 +55,36 @@ int main(void)
  * @入口参数  无
  * @出口参数  无
 *********************************************************************************/
+float temp_speed = 0;
 int main(void)
 {
     u32 ii = 0;
-    u8 n = 0,index = 0,lastvalue = 0;
+    u8 n = 0;
     StateLED_Init();
     Bsp_NVIC_Config();
     TIM1_PWM_Config();
+    
     RCC_ClocksTypeDef mysystemclock;
     RCC_GetClocksFreq(&mysystemclock);
-
+    Set_MotorSpeed(-300);
+    Hall_PrepareCommutation();/*预换相,启动时需要*/
+    Manual_COMevent();
+//    temp_speed = 300;
     while (1)   //可以在这里对某些功能进行单独的测试
     {
+        Set_MotorSpeed(temp_speed);
         ii = 0x01f0000f;
         MyDelay(ii);
         TurnStateLED(n);
-//        TIM_GenerateEvent(TIM1,TIM_EventSource_COM);
         n = !n;
+//        if(n)
+//        {
+//            temp_speed = 300;
+//        }
+//        else
+//        {
+//            temp_speed = -300;            
+//        }
     }
 }
 #endif

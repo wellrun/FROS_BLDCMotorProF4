@@ -119,7 +119,7 @@ void Hall_TimerConfig(void)
     TIM_SelectSlaveMode(Hall_TIM, TIM_SlaveMode_Reset);
 
     TIM_SelectMasterSlaveMode(Hall_TIM, TIM_MasterSlaveMode_Enable);
-//    TIM_SelectOutputTrigger(Hall_TIM, TIM_TRGOSource_OC1);
+    TIM_SelectOutputTrigger(Hall_TIM, TIM_TRGOSource_OC1);
     // timer2 output compate signal is connected to TRIGO
 //    TIM_SelectOutputTrigger(Hall_TIM, TIM_TRGOSource_OC2Ref);
     
@@ -165,32 +165,14 @@ void Hall_TIM_NVIC_Config(u8 preemPriority, u8 subPriority)
  *@ <param name="void">null</param>
  *@ <returns> null </returns>
  */
-u8 Temp_value = 0;
-u8 value[10] = {0};
 void Hall_TIM_IRQPandler(void)
 {
-    static u8 index = 0,lastvalue = 0;
     if(TIM_GetITStatus(Hall_TIM,TIM_IT_CC1))
     {
         TIM_ClearITPendingBit(Hall_TIM, TIM_IT_CC1);
-        Temp_value = Get_HallInputValue();
-        if(index < 9)
-        {
-            if(lastvalue != Temp_value)
-            {
-                index++;
-                value[index] = Temp_value;
-            }
-        }
-        lastvalue = Temp_value;
-    
-
+        /*在此添加换相配置的程序*/   
+        Hall_PrepareCommutation();        
     }
-    if(TIM_GetITStatus(Hall_TIM,TIM_IT_CC2))
-    {
-        TIM_ClearITPendingBit(Hall_TIM, TIM_IT_CC2);
-    }
-
 }
 /*
  *@ <function name=> Get_HallInputValue() </function>
@@ -209,6 +191,7 @@ u8 Get_HallInputValue(void)
     ref = (u8) (temp & 0x07);
     return ref;
 }
+
 /****************** end of this file ********************************************
 
 

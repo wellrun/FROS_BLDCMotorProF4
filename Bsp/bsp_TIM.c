@@ -39,6 +39,18 @@ void TIM1_TRG_COM_NVIC_Config(u8 preemPriority, u8 subPriority)
     NVIC_Init(&NVIC_InitStructure);
 }
 /*
+ *@ <function name=> Manual_COMevent() </function>
+ *@ <summary>
+     手动触发COM事件,手动需要换相时最后要调用此函数触发COM事件
+ *@ </summary>
+ *@ <param name="void">null</param>
+ *@ <returns> null </returns>
+ */
+void Manual_COMevent(void)
+{
+    TIM_GenerateEvent(TIM1,TIM_EventSource_COM);
+}
+/*
  *@ <function name=>BLE_IRQPandler() </function>
  *@ <summary>
      This function handles motor timer trigger and commutation interrupts
@@ -48,10 +60,21 @@ void TIM1_TRG_COM_NVIC_Config(u8 preemPriority, u8 subPriority)
  *@ <param name="void">null</param>
  *@ <returns> null </returns>
  */
+u8 Temp_value = 0;
+u8 value[10] = {0};
 void TIM1_TRG_COM_IRQPandler(void)
 {
+    static u8 index = 0,lastvalue = 0;
     static u32 temp = 0;
-    TIM_ClearITPendingBit(TIM1, TIM_IT_COM);      
+    TIM_ClearITPendingBit(TIM1, TIM_IT_COM); 
+    Temp_value = Get_HallInputValue();
+    value[index] = Temp_value;
+    index++;
+    if(index > 9)
+    {
+        index = 0;
+    }
+    lastvalue = Temp_value;    
     temp++;
 }
 
@@ -82,7 +105,7 @@ void TIM1_PWM_Config(void)
 
         /* Channel 1, 2,3 and 4 Configuration in PWM mode */
         TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM1;
-        TIM_OCInitStructure.TIM_Pulse = 0;  //占空比
+        TIM_OCInitStructure.TIM_Pulse = 500;  //占空比
         TIM_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_High;//输出极性设置
         TIM_OCInitStructure.TIM_OCIdleState = TIM_OCIdleState_Reset;//空闲状态时正向通道死区之后输出电平
         TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;//正向输出使能
@@ -101,7 +124,7 @@ void TIM1_PWM_Config(void)
           DeadTime value 7 => 98ns
            ... see programmers reference manual
            DeadTime[ns] = value * (1/SystemCoreFreq) (on 72MHz: 7 is 98ns)*/
-        TIM_BDTRInitStructure.TIM_DeadTime = 400;  //400对应死区时间2us大概
+        TIM_BDTRInitStructure.TIM_DeadTime = 100;  //100对应死区时间600ns,200~2.3us
         /* Automatic Output enable, Break, dead time and lock configuration*/
         TIM_BDTRInitStructure.TIM_AutomaticOutput = TIM_AutomaticOutput_Enable;//AOE使能
         TIM_BDTRInitStructure.TIM_OSSRState  = TIM_OSSRState_Disable;  //Run状态定时器不工作时的输出
@@ -137,12 +160,13 @@ void TIM1_PWM_Config(void)
         TIM_CtrlPWMOutputs(TIM1, ENABLE); //高级定时器才要加这一句
     #endif
 #endif
-    TIM1_Set_PWMOutput_EnableState(1, 1, 1);
-    TIM1_Set_PWMOutput_EnableState(2, 1, 1);
-    TIM1_Set_PWMOutput_EnableState(3, 1, 1);
-    TIM1_Set_PWMDuty(1, 50);
-    TIM1_Set_PWMDuty(2, 50);
-    TIM1_Set_PWMDuty(3, 50);
+//    TIM1_Set_PWMOutput_EnableState(1, 1, 1);
+//    TIM1_Set_PWMOutput_EnableState(2, 1, 1);
+//    TIM1_Set_PWMOutput_EnableState(3, 1, 1);    
+    TIM1_Set_PWMDuty(1, 500);
+    TIM1_Set_PWMDuty(2, 500);
+    TIM1_Set_PWMDuty(3, 500);
+    
 }
 
 
@@ -247,7 +271,7 @@ static void TIM1_GPIO_Config(void)
         GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
         GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
         GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
-        GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
+        GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_DOWN;
         GPIO_Init(GPIOA, &GPIO_InitStructure);
         GPIO_InitStructure.GPIO_Pin = GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15;
         GPIO_Init(GPIOB, &GPIO_InitStructure);
