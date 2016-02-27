@@ -66,25 +66,25 @@ int main(void)
     
     RCC_ClocksTypeDef mysystemclock;
     RCC_GetClocksFreq(&mysystemclock);
-    Set_MotorSpeed(-300);
+    temp_speed = -150;    
+    Set_MotorSpeed(temp_speed);
     Hall_PrepareCommutation();/*预换相,启动时需要*/
     Manual_COMevent();
-//    temp_speed = 300;
     while (1)   //可以在这里对某些功能进行单独的测试
     {
         Set_MotorSpeed(temp_speed);
-        ii = 0x01f0000f;
+        ii = 0x04f0000f;
         MyDelay(ii);
         TurnStateLED(n);
         n = !n;
-//        if(n)
-//        {
-//            temp_speed = 300;
-//        }
-//        else
-//        {
-//            temp_speed = -300;            
-//        }
+        if(n)
+        {
+            temp_speed = 150;
+        }
+        else
+        {
+            temp_speed = -150;            
+        }
     }
 }
 #endif

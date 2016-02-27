@@ -17,7 +17,8 @@ void EXTI4_NVIC_Config(u8 preemPriority,u8 subPriority);
 void EXTI9_5_NVIC_Config(u8 preemPriority,u8 subPriority);
 void Hall_PrepareCommutation(void);
 void Set_MotorSpeed(float speed);
-static u16 GraytoDecimal(u16 x);
+static u16 GrayCode2Decimal(u16 x);
+static u8 HallCode2Decimal(u8 x);
 
 #endif
 /****************** end of this file ********************************************

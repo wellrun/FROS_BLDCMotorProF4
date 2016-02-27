@@ -44,7 +44,7 @@ I (..\USER\Johnbee_dbg.h)(0x56AAEFC6)
 I (..\BSP\bsp_TIM.h)(0x56D14D78)
 I (..\BSP\bsp_CAN.h)(0x56531813)
 I (..\BSP\bsp_ADC.h)(0x566EE3B6)
-I (..\BSP\bsp_Commutation.h)(0x56CD61F8)
+I (..\BSP\bsp_Commutation.h)(0x56D18719)
 I (..\BSP\bsp_Bluetooth.h)(0x56531AD7)
 I (..\BSP\bsp_Encoder.h)(0x56546181)
 I (..\BSP\bsp_HallTIM.h)(0x56D14D7C)
@@ -100,7 +100,7 @@ I (..\USER\Johnbee_dbg.h)(0x56AAEFC6)
 I (..\BSP\bsp_TIM.h)(0x56D14D78)
 I (..\BSP\bsp_CAN.h)(0x56531813)
 I (..\BSP\bsp_ADC.h)(0x566EE3B6)
-I (..\BSP\bsp_Commutation.h)(0x56CD61F8)
+I (..\BSP\bsp_Commutation.h)(0x56D18719)
 I (..\BSP\bsp_Bluetooth.h)(0x56531AD7)
 I (..\BSP\bsp_Encoder.h)(0x56546181)
 I (..\BSP\bsp_HallTIM.h)(0x56D14D7C)
@@ -155,7 +155,7 @@ I (..\USER\Johnbee_dbg.h)(0x56AAEFC6)
 I (..\BSP\bsp_TIM.h)(0x56D14D78)
 I (..\BSP\bsp_CAN.h)(0x56531813)
 I (..\BSP\bsp_ADC.h)(0x566EE3B6)
-I (..\BSP\bsp_Commutation.h)(0x56CD61F8)
+I (..\BSP\bsp_Commutation.h)(0x56D18719)
 I (..\BSP\bsp_Bluetooth.h)(0x56531AD7)
 I (..\BSP\bsp_Encoder.h)(0x56546181)
 I (..\BSP\bsp_HallTIM.h)(0x56D14D7C)
@@ -210,7 +210,7 @@ I (..\USER\Johnbee_dbg.h)(0x56AAEFC6)
 I (..\BSP\bsp_TIM.h)(0x56D14D78)
 I (..\BSP\bsp_CAN.h)(0x56531813)
 I (..\BSP\bsp_ADC.h)(0x566EE3B6)
-I (..\BSP\bsp_Commutation.h)(0x56CD61F8)
+I (..\BSP\bsp_Commutation.h)(0x56D18719)
 I (..\BSP\bsp_Bluetooth.h)(0x56531AD7)
 I (..\BSP\bsp_Encoder.h)(0x56546181)
 I (..\BSP\bsp_HallTIM.h)(0x56D14D7C)
@@ -266,7 +266,7 @@ I (..\USER\Johnbee_dbg.h)(0x56AAEFC6)
 I (..\BSP\bsp_TIM.h)(0x56D14D78)
 I (..\BSP\bsp_CAN.h)(0x56531813)
 I (..\BSP\bsp_ADC.h)(0x566EE3B6)
-I (..\BSP\bsp_Commutation.h)(0x56CD61F8)
+I (..\BSP\bsp_Commutation.h)(0x56D18719)
 I (..\BSP\bsp_Bluetooth.h)(0x56531AD7)
 I (..\BSP\bsp_Encoder.h)(0x56546181)
 I (..\BSP\bsp_HallTIM.h)(0x56D14D7C)
@@ -319,7 +319,7 @@ I (..\USER\Johnbee_dbg.h)(0x56AAEFC6)
 I (..\BSP\bsp_TIM.h)(0x56D14D78)
 I (..\BSP\bsp_CAN.h)(0x56531813)
 I (..\BSP\bsp_ADC.h)(0x566EE3B6)
-I (..\BSP\bsp_Commutation.h)(0x56CD61F8)
+I (..\BSP\bsp_Commutation.h)(0x56D18719)
 I (..\BSP\bsp_Bluetooth.h)(0x56531AD7)
 I (..\BSP\bsp_Encoder.h)(0x56546181)
 I (..\BSP\bsp_HallTIM.h)(0x56D14D7C)
@@ -367,7 +367,7 @@ I (..\FreeRTOS\inc\semphr.h)(0x55208B6D)
 I (..\USER\Johnbee_dbg.h)(0x56AAEFC6)
 I (..\Bsp\bsp_CAN.h)(0x56531813)
 I (..\Bsp\bsp_ADC.h)(0x566EE3B6)
-I (..\Bsp\bsp_Commutation.h)(0x56CD61F8)
+I (..\Bsp\bsp_Commutation.h)(0x56D18719)
 I (..\Bsp\bsp_Bluetooth.h)(0x56531AD7)
 I (..\Bsp\bsp_Encoder.h)(0x56546181)
 I (..\Bsp\bsp_HallTIM.h)(0x56D14D7C)
@@ -415,7 +415,7 @@ I (..\USER\Johnbee_dbg.h)(0x56AAEFC6)
 I (..\Bsp\bsp_TIM.h)(0x56D14D78)
 I (..\Bsp\bsp_CAN.h)(0x56531813)
 I (..\Bsp\bsp_ADC.h)(0x566EE3B6)
-I (..\Bsp\bsp_Commutation.h)(0x56CD61F8)
+I (..\Bsp\bsp_Commutation.h)(0x56D18719)
 I (..\Bsp\bsp_Bluetooth.h)(0x56531AD7)
 I (..\Bsp\bsp_Encoder.h)(0x56546181)
 I (..\Bsp\bsp_HallTIM.h)(0x56D14D7C)
@@ -463,7 +463,7 @@ I (..\FreeRTOS\inc\semphr.h)(0x55208B6D)
 I (..\USER\Johnbee_dbg.h)(0x56AAEFC6)
 I (..\Bsp\bsp_TIM.h)(0x56D14D78)
 I (..\Bsp\bsp_CAN.h)(0x56531813)
-I (..\Bsp\bsp_Commutation.h)(0x56CD61F8)
+I (..\Bsp\bsp_Commutation.h)(0x56D18719)
 I (..\Bsp\bsp_Bluetooth.h)(0x56531AD7)
 I (..\Bsp\bsp_Encoder.h)(0x56546181)
 I (..\Bsp\bsp_HallTIM.h)(0x56D14D7C)
@@ -512,7 +512,7 @@ I (..\USER\Johnbee_dbg.h)(0x56AAEFC6)
 I (..\Bsp\bsp_TIM.h)(0x56D14D78)
 I (..\Bsp\bsp_CAN.h)(0x56531813)
 I (..\Bsp\bsp_ADC.h)(0x566EE3B6)
-I (..\Bsp\bsp_Commutation.h)(0x56CD61F8)
+I (..\Bsp\bsp_Commutation.h)(0x56D18719)
 I (..\Bsp\bsp_Bluetooth.h)(0x56531AD7)
 I (..\Bsp\bsp_Encoder.h)(0x56546181)
 F (..\Bsp\bsp_Encoder.c)(0x56AB0243)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\bsp_encoder.o --omf_browse .\objects\bsp_encoder.crf --depend .\objects\bsp_encoder.d)
@@ -560,7 +560,7 @@ I (..\USER\Johnbee_dbg.h)(0x56AAEFC6)
 I (..\Bsp\bsp_TIM.h)(0x56D14D78)
 I (..\Bsp\bsp_CAN.h)(0x56531813)
 I (..\Bsp\bsp_ADC.h)(0x566EE3B6)
-I (..\Bsp\bsp_Commutation.h)(0x56CD61F8)
+I (..\Bsp\bsp_Commutation.h)(0x56D18719)
 I (..\Bsp\bsp_Bluetooth.h)(0x56531AD7)
 I (..\Bsp\bsp_HallTIM.h)(0x56D14D7C)
 F (..\Bsp\bsp_Bluetooth.c)(0x56CD61F7)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\bsp_bluetooth.o --omf_browse .\objects\bsp_bluetooth.crf --depend .\objects\bsp_bluetooth.d)
@@ -608,11 +608,11 @@ I (..\USER\Johnbee_dbg.h)(0x56AAEFC6)
 I (..\Bsp\bsp_TIM.h)(0x56D14D78)
 I (..\Bsp\bsp_CAN.h)(0x56531813)
 I (..\Bsp\bsp_ADC.h)(0x566EE3B6)
-I (..\Bsp\bsp_Commutation.h)(0x56CD61F8)
+I (..\Bsp\bsp_Commutation.h)(0x56D18719)
 I (..\Bsp\bsp_Encoder.h)(0x56546181)
 I (..\Bsp\bsp_HallTIM.h)(0x56D14D7C)
-F (..\Bsp\bsp_Commutation.c)(0x56D17D5F)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\bsp_commutation.o --omf_browse .\objects\bsp_commutation.crf --depend .\objects\bsp_commutation.d)
-I (..\Bsp\bsp_Commutation.h)(0x56CD61F8)
+F (..\Bsp\bsp_Commutation.c)(0x56D19A26)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\bsp_commutation.o --omf_browse .\objects\bsp_commutation.crf --depend .\objects\bsp_commutation.d)
+I (..\Bsp\bsp_Commutation.h)(0x56D18719)
 I (..\Bsp\bsp_init.h)(0x56CD61F7)
 I (..\USER\includes.h)(0x5625076A)
 I (C:\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x5475F300)
@@ -665,7 +665,7 @@ I (C:\Keil\MDK\ARM\ARMCC\include\math.h)(0x5475F2FE)
 F (..\Sal\sal_KalmanFilter.c)(0x566EE3B6)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\sal_kalmanfilter.o --omf_browse .\objects\sal_kalmanfilter.crf --depend .\objects\sal_kalmanfilter.d)
 I (..\Sal\sal_KalmanFilter.h)(0x566EE3B6)
 I (C:\Keil\MDK\ARM\ARMCC\include\math.h)(0x5475F2FE)
-F (..\USER\main.c)(0x56D17C99)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (..\USER\main.c)(0x56D19984)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (..\BSP\bsp_init.h)(0x56CD61F7)
 I (..\USER\includes.h)(0x5625076A)
 I (C:\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x5475F300)
@@ -709,7 +709,7 @@ I (..\USER\Johnbee_dbg.h)(0x56AAEFC6)
 I (..\BSP\bsp_TIM.h)(0x56D14D78)
 I (..\BSP\bsp_CAN.h)(0x56531813)
 I (..\BSP\bsp_ADC.h)(0x566EE3B6)
-I (..\BSP\bsp_Commutation.h)(0x56CD61F8)
+I (..\BSP\bsp_Commutation.h)(0x56D18719)
 I (..\BSP\bsp_Bluetooth.h)(0x56531AD7)
 I (..\BSP\bsp_Encoder.h)(0x56546181)
 I (..\BSP\bsp_HallTIM.h)(0x56D14D7C)
