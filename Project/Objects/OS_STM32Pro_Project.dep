@@ -1,7 +1,7 @@
 Dependencies for Project 'OS_STM32Pro', Target 'Project': (DO NOT MODIFY !)
-F (..\APP\app.c)(0x56CD61F7)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\app.o --omf_browse .\objects\app.crf --depend .\objects\app.d)
+F (..\APP\app.c)(0x56CD61F7)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\app.o --omf_browse .\objects\app.crf --depend .\objects\app.d)
 I (..\APP\app.h)(0x56B593A3)
-I (..\USER\includes.h)(0x5625076A)
+I (..\USER\includes.h)(0x56D24F4E)
 I (C:\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\string.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\ctype.h)(0x5475F300)
@@ -16,7 +16,7 @@ I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -39,11 +39,13 @@ I (..\FreeRTOS\inc\list.h)(0x55208B6C)
 I (..\FreeRTOS\inc\queue.h)(0x55208B6D)
 I (..\FreeRTOS\inc\timers.h)(0x55208B6D)
 I (..\FreeRTOS\inc\semphr.h)(0x55208B6D)
+I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\arm_math.h)(0x542209A4)
+I (C:\Keil\MDK\ARM\ARMCC\include\math.h)(0x5475F2FE)
 I (..\BSP\bsp_init.h)(0x56CD61F7)
 I (..\USER\Johnbee_dbg.h)(0x56AAEFC6)
 I (..\BSP\bsp_TIM.h)(0x56D14D78)
 I (..\BSP\bsp_CAN.h)(0x56531813)
-I (..\BSP\bsp_ADC.h)(0x566EE3B6)
+I (..\BSP\bsp_ADC.h)(0x56D2F0D2)
 I (..\BSP\bsp_Commutation.h)(0x56D18719)
 I (..\BSP\bsp_Bluetooth.h)(0x56531AD7)
 I (..\BSP\bsp_Encoder.h)(0x56546181)
@@ -51,13 +53,12 @@ I (..\BSP\bsp_HallTIM.h)(0x56D14D7C)
 I (..\APP\MainTask.h)(0x566EE3B5)
 I (..\APP\Control_Task.h)(0x566EE3B5)
 I (..\Sal\sal_PID.h)(0x566EE3B6)
-I (C:\Keil\MDK\ARM\ARMCC\include\math.h)(0x5475F2FE)
 I (..\APP\USART_Task.h)(0x56531A09)
 I (..\APP\EncoderTask.h)(0x566EE3B5)
-F (..\App\MainTask.c)(0x56B593E0)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\maintask.o --omf_browse .\objects\maintask.crf --depend .\objects\maintask.d)
+F (..\App\MainTask.c)(0x56D2F0DA)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\maintask.o --omf_browse .\objects\maintask.crf --depend .\objects\maintask.d)
 I (..\App\MainTask.h)(0x566EE3B5)
 I (..\App\app.h)(0x56B593A3)
-I (..\USER\includes.h)(0x5625076A)
+I (..\USER\includes.h)(0x56D24F4E)
 I (C:\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\string.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\ctype.h)(0x5475F300)
@@ -72,7 +73,7 @@ I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -95,24 +96,25 @@ I (..\FreeRTOS\inc\list.h)(0x55208B6C)
 I (..\FreeRTOS\inc\queue.h)(0x55208B6D)
 I (..\FreeRTOS\inc\timers.h)(0x55208B6D)
 I (..\FreeRTOS\inc\semphr.h)(0x55208B6D)
+I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\arm_math.h)(0x542209A4)
+I (C:\Keil\MDK\ARM\ARMCC\include\math.h)(0x5475F2FE)
 I (..\BSP\bsp_init.h)(0x56CD61F7)
 I (..\USER\Johnbee_dbg.h)(0x56AAEFC6)
 I (..\BSP\bsp_TIM.h)(0x56D14D78)
 I (..\BSP\bsp_CAN.h)(0x56531813)
-I (..\BSP\bsp_ADC.h)(0x566EE3B6)
+I (..\BSP\bsp_ADC.h)(0x56D2F0D2)
 I (..\BSP\bsp_Commutation.h)(0x56D18719)
 I (..\BSP\bsp_Bluetooth.h)(0x56531AD7)
 I (..\BSP\bsp_Encoder.h)(0x56546181)
 I (..\BSP\bsp_HallTIM.h)(0x56D14D7C)
 I (..\App\Control_Task.h)(0x566EE3B5)
 I (..\Sal\sal_PID.h)(0x566EE3B6)
-I (C:\Keil\MDK\ARM\ARMCC\include\math.h)(0x5475F2FE)
 I (..\App\USART_Task.h)(0x56531A09)
 I (..\App\EncoderTask.h)(0x566EE3B5)
-F (..\App\Control_Task.c)(0x56701F4D)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\control_task.o --omf_browse .\objects\control_task.crf --depend .\objects\control_task.d)
+F (..\App\Control_Task.c)(0x56701F4D)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\control_task.o --omf_browse .\objects\control_task.crf --depend .\objects\control_task.d)
 I (..\App\Control_Task.h)(0x566EE3B5)
 I (..\App\app.h)(0x56B593A3)
-I (..\USER\includes.h)(0x5625076A)
+I (..\USER\includes.h)(0x56D24F4E)
 I (C:\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\string.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\ctype.h)(0x5475F300)
@@ -127,7 +129,7 @@ I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -150,11 +152,13 @@ I (..\FreeRTOS\inc\list.h)(0x55208B6C)
 I (..\FreeRTOS\inc\queue.h)(0x55208B6D)
 I (..\FreeRTOS\inc\timers.h)(0x55208B6D)
 I (..\FreeRTOS\inc\semphr.h)(0x55208B6D)
+I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\arm_math.h)(0x542209A4)
+I (C:\Keil\MDK\ARM\ARMCC\include\math.h)(0x5475F2FE)
 I (..\BSP\bsp_init.h)(0x56CD61F7)
 I (..\USER\Johnbee_dbg.h)(0x56AAEFC6)
 I (..\BSP\bsp_TIM.h)(0x56D14D78)
 I (..\BSP\bsp_CAN.h)(0x56531813)
-I (..\BSP\bsp_ADC.h)(0x566EE3B6)
+I (..\BSP\bsp_ADC.h)(0x56D2F0D2)
 I (..\BSP\bsp_Commutation.h)(0x56D18719)
 I (..\BSP\bsp_Bluetooth.h)(0x56531AD7)
 I (..\BSP\bsp_Encoder.h)(0x56546181)
@@ -163,11 +167,10 @@ I (..\App\MainTask.h)(0x566EE3B5)
 I (..\App\USART_Task.h)(0x56531A09)
 I (..\App\EncoderTask.h)(0x566EE3B5)
 I (..\Sal\sal_PID.h)(0x566EE3B6)
-I (C:\Keil\MDK\ARM\ARMCC\include\math.h)(0x5475F2FE)
 I (..\Sal\sal_KalmanFilter.h)(0x566EE3B6)
-F (..\App\USART_Task.c)(0x56CD61F7)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\usart_task.o --omf_browse .\objects\usart_task.crf --depend .\objects\usart_task.d)
+F (..\App\USART_Task.c)(0x56CD61F7)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\usart_task.o --omf_browse .\objects\usart_task.crf --depend .\objects\usart_task.d)
 I (..\App\app.h)(0x56B593A3)
-I (..\USER\includes.h)(0x5625076A)
+I (..\USER\includes.h)(0x56D24F4E)
 I (C:\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\string.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\ctype.h)(0x5475F300)
@@ -182,7 +185,7 @@ I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -205,11 +208,13 @@ I (..\FreeRTOS\inc\list.h)(0x55208B6C)
 I (..\FreeRTOS\inc\queue.h)(0x55208B6D)
 I (..\FreeRTOS\inc\timers.h)(0x55208B6D)
 I (..\FreeRTOS\inc\semphr.h)(0x55208B6D)
+I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\arm_math.h)(0x542209A4)
+I (C:\Keil\MDK\ARM\ARMCC\include\math.h)(0x5475F2FE)
 I (..\BSP\bsp_init.h)(0x56CD61F7)
 I (..\USER\Johnbee_dbg.h)(0x56AAEFC6)
 I (..\BSP\bsp_TIM.h)(0x56D14D78)
 I (..\BSP\bsp_CAN.h)(0x56531813)
-I (..\BSP\bsp_ADC.h)(0x566EE3B6)
+I (..\BSP\bsp_ADC.h)(0x56D2F0D2)
 I (..\BSP\bsp_Commutation.h)(0x56D18719)
 I (..\BSP\bsp_Bluetooth.h)(0x56531AD7)
 I (..\BSP\bsp_Encoder.h)(0x56546181)
@@ -217,13 +222,12 @@ I (..\BSP\bsp_HallTIM.h)(0x56D14D7C)
 I (..\App\MainTask.h)(0x566EE3B5)
 I (..\App\Control_Task.h)(0x566EE3B5)
 I (..\Sal\sal_PID.h)(0x566EE3B6)
-I (C:\Keil\MDK\ARM\ARMCC\include\math.h)(0x5475F2FE)
 I (..\App\USART_Task.h)(0x56531A09)
 I (..\App\EncoderTask.h)(0x566EE3B5)
-F (..\App\EncoderTask.c)(0x566EE3B5)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\encodertask.o --omf_browse .\objects\encodertask.crf --depend .\objects\encodertask.d)
+F (..\App\EncoderTask.c)(0x566EE3B5)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\encodertask.o --omf_browse .\objects\encodertask.crf --depend .\objects\encodertask.d)
 I (..\App\EncoderTask.h)(0x566EE3B5)
 I (..\App\app.h)(0x56B593A3)
-I (..\USER\includes.h)(0x5625076A)
+I (..\USER\includes.h)(0x56D24F4E)
 I (C:\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\string.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\ctype.h)(0x5475F300)
@@ -238,7 +242,7 @@ I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -261,11 +265,13 @@ I (..\FreeRTOS\inc\list.h)(0x55208B6C)
 I (..\FreeRTOS\inc\queue.h)(0x55208B6D)
 I (..\FreeRTOS\inc\timers.h)(0x55208B6D)
 I (..\FreeRTOS\inc\semphr.h)(0x55208B6D)
+I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\arm_math.h)(0x542209A4)
+I (C:\Keil\MDK\ARM\ARMCC\include\math.h)(0x5475F2FE)
 I (..\BSP\bsp_init.h)(0x56CD61F7)
 I (..\USER\Johnbee_dbg.h)(0x56AAEFC6)
 I (..\BSP\bsp_TIM.h)(0x56D14D78)
 I (..\BSP\bsp_CAN.h)(0x56531813)
-I (..\BSP\bsp_ADC.h)(0x566EE3B6)
+I (..\BSP\bsp_ADC.h)(0x56D2F0D2)
 I (..\BSP\bsp_Commutation.h)(0x56D18719)
 I (..\BSP\bsp_Bluetooth.h)(0x56531AD7)
 I (..\BSP\bsp_Encoder.h)(0x56546181)
@@ -273,11 +279,10 @@ I (..\BSP\bsp_HallTIM.h)(0x56D14D7C)
 I (..\App\MainTask.h)(0x566EE3B5)
 I (..\App\Control_Task.h)(0x566EE3B5)
 I (..\Sal\sal_PID.h)(0x566EE3B6)
-I (C:\Keil\MDK\ARM\ARMCC\include\math.h)(0x5475F2FE)
 I (..\App\USART_Task.h)(0x56531A09)
-F (..\BSP\bsp_Init.c)(0x56CEDCEB)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\bsp_init.o --omf_browse .\objects\bsp_init.crf --depend .\objects\bsp_init.d)
+F (..\BSP\bsp_Init.c)(0x56D2E3AA)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\bsp_init.o --omf_browse .\objects\bsp_init.crf --depend .\objects\bsp_init.d)
 I (..\BSP\bsp_init.h)(0x56CD61F7)
-I (..\USER\includes.h)(0x5625076A)
+I (..\USER\includes.h)(0x56D24F4E)
 I (C:\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\string.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\ctype.h)(0x5475F300)
@@ -292,7 +297,7 @@ I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -315,18 +320,20 @@ I (..\FreeRTOS\inc\list.h)(0x55208B6C)
 I (..\FreeRTOS\inc\queue.h)(0x55208B6D)
 I (..\FreeRTOS\inc\timers.h)(0x55208B6D)
 I (..\FreeRTOS\inc\semphr.h)(0x55208B6D)
+I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\arm_math.h)(0x542209A4)
+I (C:\Keil\MDK\ARM\ARMCC\include\math.h)(0x5475F2FE)
 I (..\USER\Johnbee_dbg.h)(0x56AAEFC6)
 I (..\BSP\bsp_TIM.h)(0x56D14D78)
 I (..\BSP\bsp_CAN.h)(0x56531813)
-I (..\BSP\bsp_ADC.h)(0x566EE3B6)
+I (..\BSP\bsp_ADC.h)(0x56D2F0D2)
 I (..\BSP\bsp_Commutation.h)(0x56D18719)
 I (..\BSP\bsp_Bluetooth.h)(0x56531AD7)
 I (..\BSP\bsp_Encoder.h)(0x56546181)
 I (..\BSP\bsp_HallTIM.h)(0x56D14D7C)
-F (..\Bsp\bsp_TIM.c)(0x56D16263)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\bsp_tim.o --omf_browse .\objects\bsp_tim.crf --depend .\objects\bsp_tim.d)
+F (..\Bsp\bsp_TIM.c)(0x56D16263)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\bsp_tim.o --omf_browse .\objects\bsp_tim.crf --depend .\objects\bsp_tim.d)
 I (..\Bsp\bsp_TIM.h)(0x56D14D78)
 I (..\Bsp\bsp_init.h)(0x56CD61F7)
-I (..\USER\includes.h)(0x5625076A)
+I (..\USER\includes.h)(0x56D24F4E)
 I (C:\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\string.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\ctype.h)(0x5475F300)
@@ -341,7 +348,7 @@ I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -364,16 +371,18 @@ I (..\FreeRTOS\inc\list.h)(0x55208B6C)
 I (..\FreeRTOS\inc\queue.h)(0x55208B6D)
 I (..\FreeRTOS\inc\timers.h)(0x55208B6D)
 I (..\FreeRTOS\inc\semphr.h)(0x55208B6D)
+I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\arm_math.h)(0x542209A4)
+I (C:\Keil\MDK\ARM\ARMCC\include\math.h)(0x5475F2FE)
 I (..\USER\Johnbee_dbg.h)(0x56AAEFC6)
 I (..\Bsp\bsp_CAN.h)(0x56531813)
-I (..\Bsp\bsp_ADC.h)(0x566EE3B6)
+I (..\Bsp\bsp_ADC.h)(0x56D2F0D2)
 I (..\Bsp\bsp_Commutation.h)(0x56D18719)
 I (..\Bsp\bsp_Bluetooth.h)(0x56531AD7)
 I (..\Bsp\bsp_Encoder.h)(0x56546181)
 I (..\Bsp\bsp_HallTIM.h)(0x56D14D7C)
-F (..\Bsp\bsp_CAN.c)(0x56AB0596)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\bsp_can.o --omf_browse .\objects\bsp_can.crf --depend .\objects\bsp_can.d)
+F (..\Bsp\bsp_CAN.c)(0x56AB0596)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\bsp_can.o --omf_browse .\objects\bsp_can.crf --depend .\objects\bsp_can.d)
 I (..\Bsp\bsp_Init.h)(0x56CD61F7)
-I (..\USER\includes.h)(0x5625076A)
+I (..\USER\includes.h)(0x56D24F4E)
 I (C:\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\string.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\ctype.h)(0x5475F300)
@@ -388,7 +397,7 @@ I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -411,18 +420,20 @@ I (..\FreeRTOS\inc\list.h)(0x55208B6C)
 I (..\FreeRTOS\inc\queue.h)(0x55208B6D)
 I (..\FreeRTOS\inc\timers.h)(0x55208B6D)
 I (..\FreeRTOS\inc\semphr.h)(0x55208B6D)
+I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\arm_math.h)(0x542209A4)
+I (C:\Keil\MDK\ARM\ARMCC\include\math.h)(0x5475F2FE)
 I (..\USER\Johnbee_dbg.h)(0x56AAEFC6)
 I (..\Bsp\bsp_TIM.h)(0x56D14D78)
 I (..\Bsp\bsp_CAN.h)(0x56531813)
-I (..\Bsp\bsp_ADC.h)(0x566EE3B6)
+I (..\Bsp\bsp_ADC.h)(0x56D2F0D2)
 I (..\Bsp\bsp_Commutation.h)(0x56D18719)
 I (..\Bsp\bsp_Bluetooth.h)(0x56531AD7)
 I (..\Bsp\bsp_Encoder.h)(0x56546181)
 I (..\Bsp\bsp_HallTIM.h)(0x56D14D7C)
-F (..\Bsp\bsp_ADC.c)(0x56CEDB29)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\bsp_adc.o --omf_browse .\objects\bsp_adc.crf --depend .\objects\bsp_adc.d)
-I (..\Bsp\bsp_ADC.h)(0x566EE3B6)
+F (..\Bsp\bsp_ADC.c)(0x56D2F9A6)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\bsp_adc.o --omf_browse .\objects\bsp_adc.crf --depend .\objects\bsp_adc.d)
+I (..\Bsp\bsp_ADC.h)(0x56D2F0D2)
 I (..\Bsp\bsp_Init.h)(0x56CD61F7)
-I (..\USER\includes.h)(0x5625076A)
+I (..\USER\includes.h)(0x56D24F4E)
 I (C:\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\string.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\ctype.h)(0x5475F300)
@@ -437,7 +448,7 @@ I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -460,6 +471,8 @@ I (..\FreeRTOS\inc\list.h)(0x55208B6C)
 I (..\FreeRTOS\inc\queue.h)(0x55208B6D)
 I (..\FreeRTOS\inc\timers.h)(0x55208B6D)
 I (..\FreeRTOS\inc\semphr.h)(0x55208B6D)
+I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\arm_math.h)(0x542209A4)
+I (C:\Keil\MDK\ARM\ARMCC\include\math.h)(0x5475F2FE)
 I (..\USER\Johnbee_dbg.h)(0x56AAEFC6)
 I (..\Bsp\bsp_TIM.h)(0x56D14D78)
 I (..\Bsp\bsp_CAN.h)(0x56531813)
@@ -467,10 +480,10 @@ I (..\Bsp\bsp_Commutation.h)(0x56D18719)
 I (..\Bsp\bsp_Bluetooth.h)(0x56531AD7)
 I (..\Bsp\bsp_Encoder.h)(0x56546181)
 I (..\Bsp\bsp_HallTIM.h)(0x56D14D7C)
-F (..\Bsp\bsp_HallTIM.c)(0x56D14DA2)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\bsp_halltim.o --omf_browse .\objects\bsp_halltim.crf --depend .\objects\bsp_halltim.d)
+F (..\Bsp\bsp_HallTIM.c)(0x56D14DA2)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\bsp_halltim.o --omf_browse .\objects\bsp_halltim.crf --depend .\objects\bsp_halltim.d)
 I (..\Bsp\bsp_HallTIM.h)(0x56D14D7C)
 I (..\Bsp\bsp_init.h)(0x56CD61F7)
-I (..\USER\includes.h)(0x5625076A)
+I (..\USER\includes.h)(0x56D24F4E)
 I (C:\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\string.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\ctype.h)(0x5475F300)
@@ -485,7 +498,7 @@ I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -508,17 +521,19 @@ I (..\FreeRTOS\inc\list.h)(0x55208B6C)
 I (..\FreeRTOS\inc\queue.h)(0x55208B6D)
 I (..\FreeRTOS\inc\timers.h)(0x55208B6D)
 I (..\FreeRTOS\inc\semphr.h)(0x55208B6D)
+I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\arm_math.h)(0x542209A4)
+I (C:\Keil\MDK\ARM\ARMCC\include\math.h)(0x5475F2FE)
 I (..\USER\Johnbee_dbg.h)(0x56AAEFC6)
 I (..\Bsp\bsp_TIM.h)(0x56D14D78)
 I (..\Bsp\bsp_CAN.h)(0x56531813)
-I (..\Bsp\bsp_ADC.h)(0x566EE3B6)
+I (..\Bsp\bsp_ADC.h)(0x56D2F0D2)
 I (..\Bsp\bsp_Commutation.h)(0x56D18719)
 I (..\Bsp\bsp_Bluetooth.h)(0x56531AD7)
 I (..\Bsp\bsp_Encoder.h)(0x56546181)
-F (..\Bsp\bsp_Encoder.c)(0x56AB0243)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\bsp_encoder.o --omf_browse .\objects\bsp_encoder.crf --depend .\objects\bsp_encoder.d)
+F (..\Bsp\bsp_Encoder.c)(0x56AB0243)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\bsp_encoder.o --omf_browse .\objects\bsp_encoder.crf --depend .\objects\bsp_encoder.d)
 I (..\Bsp\bsp_Encoder.h)(0x56546181)
 I (..\Bsp\bsp_Init.h)(0x56CD61F7)
-I (..\USER\includes.h)(0x5625076A)
+I (..\USER\includes.h)(0x56D24F4E)
 I (C:\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\string.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\ctype.h)(0x5475F300)
@@ -533,7 +548,7 @@ I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -556,17 +571,19 @@ I (..\FreeRTOS\inc\list.h)(0x55208B6C)
 I (..\FreeRTOS\inc\queue.h)(0x55208B6D)
 I (..\FreeRTOS\inc\timers.h)(0x55208B6D)
 I (..\FreeRTOS\inc\semphr.h)(0x55208B6D)
+I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\arm_math.h)(0x542209A4)
+I (C:\Keil\MDK\ARM\ARMCC\include\math.h)(0x5475F2FE)
 I (..\USER\Johnbee_dbg.h)(0x56AAEFC6)
 I (..\Bsp\bsp_TIM.h)(0x56D14D78)
 I (..\Bsp\bsp_CAN.h)(0x56531813)
-I (..\Bsp\bsp_ADC.h)(0x566EE3B6)
+I (..\Bsp\bsp_ADC.h)(0x56D2F0D2)
 I (..\Bsp\bsp_Commutation.h)(0x56D18719)
 I (..\Bsp\bsp_Bluetooth.h)(0x56531AD7)
 I (..\Bsp\bsp_HallTIM.h)(0x56D14D7C)
-F (..\Bsp\bsp_Bluetooth.c)(0x56CD61F7)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\bsp_bluetooth.o --omf_browse .\objects\bsp_bluetooth.crf --depend .\objects\bsp_bluetooth.d)
+F (..\Bsp\bsp_Bluetooth.c)(0x56D24C9B)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\bsp_bluetooth.o --omf_browse .\objects\bsp_bluetooth.crf --depend .\objects\bsp_bluetooth.d)
 I (..\Bsp\bsp_Bluetooth.h)(0x56531AD7)
 I (..\Bsp\bsp_init.h)(0x56CD61F7)
-I (..\USER\includes.h)(0x5625076A)
+I (..\USER\includes.h)(0x56D24F4E)
 I (C:\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\string.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\ctype.h)(0x5475F300)
@@ -581,7 +598,7 @@ I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -604,17 +621,19 @@ I (..\FreeRTOS\inc\list.h)(0x55208B6C)
 I (..\FreeRTOS\inc\queue.h)(0x55208B6D)
 I (..\FreeRTOS\inc\timers.h)(0x55208B6D)
 I (..\FreeRTOS\inc\semphr.h)(0x55208B6D)
+I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\arm_math.h)(0x542209A4)
+I (C:\Keil\MDK\ARM\ARMCC\include\math.h)(0x5475F2FE)
 I (..\USER\Johnbee_dbg.h)(0x56AAEFC6)
 I (..\Bsp\bsp_TIM.h)(0x56D14D78)
 I (..\Bsp\bsp_CAN.h)(0x56531813)
-I (..\Bsp\bsp_ADC.h)(0x566EE3B6)
+I (..\Bsp\bsp_ADC.h)(0x56D2F0D2)
 I (..\Bsp\bsp_Commutation.h)(0x56D18719)
 I (..\Bsp\bsp_Encoder.h)(0x56546181)
 I (..\Bsp\bsp_HallTIM.h)(0x56D14D7C)
-F (..\Bsp\bsp_Commutation.c)(0x56D19A26)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\bsp_commutation.o --omf_browse .\objects\bsp_commutation.crf --depend .\objects\bsp_commutation.d)
+F (..\Bsp\bsp_Commutation.c)(0x56D1A16F)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\bsp_commutation.o --omf_browse .\objects\bsp_commutation.crf --depend .\objects\bsp_commutation.d)
 I (..\Bsp\bsp_Commutation.h)(0x56D18719)
 I (..\Bsp\bsp_init.h)(0x56CD61F7)
-I (..\USER\includes.h)(0x5625076A)
+I (..\USER\includes.h)(0x56D24F4E)
 I (C:\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\string.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\ctype.h)(0x5475F300)
@@ -629,7 +648,7 @@ I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -652,22 +671,24 @@ I (..\FreeRTOS\inc\list.h)(0x55208B6C)
 I (..\FreeRTOS\inc\queue.h)(0x55208B6D)
 I (..\FreeRTOS\inc\timers.h)(0x55208B6D)
 I (..\FreeRTOS\inc\semphr.h)(0x55208B6D)
+I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\arm_math.h)(0x542209A4)
+I (C:\Keil\MDK\ARM\ARMCC\include\math.h)(0x5475F2FE)
 I (..\USER\Johnbee_dbg.h)(0x56AAEFC6)
 I (..\Bsp\bsp_TIM.h)(0x56D14D78)
 I (..\Bsp\bsp_CAN.h)(0x56531813)
-I (..\Bsp\bsp_ADC.h)(0x566EE3B6)
+I (..\Bsp\bsp_ADC.h)(0x56D2F0D2)
 I (..\Bsp\bsp_Bluetooth.h)(0x56531AD7)
 I (..\Bsp\bsp_Encoder.h)(0x56546181)
 I (..\Bsp\bsp_HallTIM.h)(0x56D14D7C)
-F (..\Sal\sal_PID.c)(0x56701DCE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\sal_pid.o --omf_browse .\objects\sal_pid.crf --depend .\objects\sal_pid.d)
+F (..\Sal\sal_PID.c)(0x56701DCE)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\sal_pid.o --omf_browse .\objects\sal_pid.crf --depend .\objects\sal_pid.d)
 I (..\Sal\sal_PID.h)(0x566EE3B6)
 I (C:\Keil\MDK\ARM\ARMCC\include\math.h)(0x5475F2FE)
-F (..\Sal\sal_KalmanFilter.c)(0x566EE3B6)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\sal_kalmanfilter.o --omf_browse .\objects\sal_kalmanfilter.crf --depend .\objects\sal_kalmanfilter.d)
+F (..\Sal\sal_KalmanFilter.c)(0x566EE3B6)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\sal_kalmanfilter.o --omf_browse .\objects\sal_kalmanfilter.crf --depend .\objects\sal_kalmanfilter.d)
 I (..\Sal\sal_KalmanFilter.h)(0x566EE3B6)
 I (C:\Keil\MDK\ARM\ARMCC\include\math.h)(0x5475F2FE)
-F (..\USER\main.c)(0x56D19984)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (..\USER\main.c)(0x56D2F90C)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (..\BSP\bsp_init.h)(0x56CD61F7)
-I (..\USER\includes.h)(0x5625076A)
+I (..\USER\includes.h)(0x56D24F4E)
 I (C:\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\string.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\ctype.h)(0x5475F300)
@@ -682,7 +703,7 @@ I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -705,10 +726,12 @@ I (..\FreeRTOS\inc\list.h)(0x55208B6C)
 I (..\FreeRTOS\inc\queue.h)(0x55208B6D)
 I (..\FreeRTOS\inc\timers.h)(0x55208B6D)
 I (..\FreeRTOS\inc\semphr.h)(0x55208B6D)
+I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\arm_math.h)(0x542209A4)
+I (C:\Keil\MDK\ARM\ARMCC\include\math.h)(0x5475F2FE)
 I (..\USER\Johnbee_dbg.h)(0x56AAEFC6)
 I (..\BSP\bsp_TIM.h)(0x56D14D78)
 I (..\BSP\bsp_CAN.h)(0x56531813)
-I (..\BSP\bsp_ADC.h)(0x566EE3B6)
+I (..\BSP\bsp_ADC.h)(0x56D2F0D2)
 I (..\BSP\bsp_Commutation.h)(0x56D18719)
 I (..\BSP\bsp_Bluetooth.h)(0x56531AD7)
 I (..\BSP\bsp_Encoder.h)(0x56546181)
@@ -717,10 +740,9 @@ I (..\APP\app.h)(0x56B593A3)
 I (..\APP\MainTask.h)(0x566EE3B5)
 I (..\APP\Control_Task.h)(0x566EE3B5)
 I (..\Sal\sal_PID.h)(0x566EE3B6)
-I (C:\Keil\MDK\ARM\ARMCC\include\math.h)(0x5475F2FE)
 I (..\APP\USART_Task.h)(0x56531A09)
 I (..\APP\EncoderTask.h)(0x566EE3B5)
-F (..\User\stm32f4xx_it.c)(0x56CDA814)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\stm32f4xx_it.o --omf_browse .\objects\stm32f4xx_it.crf --depend .\objects\stm32f4xx_it.d)
+F (..\User\stm32f4xx_it.c)(0x56D2DBD8)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\stm32f4xx_it.o --omf_browse .\objects\stm32f4xx_it.crf --depend .\objects\stm32f4xx_it.d)
 I (..\User\stm32f4xx_it.h)(0x54ACC719)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\stm32f4xx.h)(0x5575855F)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
@@ -728,7 +750,7 @@ I (C:\Keil\MDK\ARM\ARMCC\include\stdint.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -741,7 +763,7 @@ I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\misc.h)(0x55209450)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_can.h)(0x55209450)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x55209450)
-I (..\User\includes.h)(0x5625076A)
+I (..\User\includes.h)(0x56D24F4E)
 I (C:\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\string.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\ctype.h)(0x5475F300)
@@ -760,9 +782,11 @@ I (..\FreeRTOS\inc\list.h)(0x55208B6C)
 I (..\FreeRTOS\inc\queue.h)(0x55208B6D)
 I (..\FreeRTOS\inc\timers.h)(0x55208B6D)
 I (..\FreeRTOS\inc\semphr.h)(0x55208B6D)
-F (..\USER\includes.h)(0x5625076A)()
+I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\arm_math.h)(0x542209A4)
+I (C:\Keil\MDK\ARM\ARMCC\include\math.h)(0x5475F2FE)
+F (..\USER\includes.h)(0x56D24F4E)()
 F (..\User\Johnbee_dbg.h)(0x56AAEFC6)()
-F (..\FreeRTOS\src\list.c)(0x55208B6E)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\list.o --omf_browse .\objects\list.crf --depend .\objects\list.d)
+F (..\FreeRTOS\src\list.c)(0x55208B6E)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\list.o --omf_browse .\objects\list.crf --depend .\objects\list.d)
 I (C:\Keil\MDK\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (..\FreeRTOS\inc\FreeRTOS.h)(0x55208B6C)
 I (C:\Keil\MDK\ARM\ARMCC\include\stddef.h)(0x5475F300)
@@ -773,7 +797,7 @@ I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -792,7 +816,7 @@ I (..\FreeRTOS\inc\deprecated_definitions.h)(0x55208B6C)
 I (..\FreeRTOS\inc\portmacro.h)(0x54B9078B)
 I (..\FreeRTOS\inc\mpu_wrappers.h)(0x55208B6C)
 I (..\FreeRTOS\inc\list.h)(0x55208B6C)
-F (..\FreeRTOS\src\port.c)(0x5520AA99)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\port.o --omf_browse .\objects\port.crf --depend .\objects\port.d)
+F (..\FreeRTOS\src\port.c)(0x5520AA99)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\port.o --omf_browse .\objects\port.crf --depend .\objects\port.d)
 I (..\FreeRTOS\inc\FreeRTOS.h)(0x55208B6C)
 I (C:\Keil\MDK\ARM\ARMCC\include\stddef.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\stdint.h)(0x5475F300)
@@ -802,7 +826,7 @@ I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -822,7 +846,7 @@ I (..\FreeRTOS\inc\portmacro.h)(0x54B9078B)
 I (..\FreeRTOS\inc\mpu_wrappers.h)(0x55208B6C)
 I (..\FreeRTOS\inc\task.h)(0x55208B6D)
 I (..\FreeRTOS\inc\list.h)(0x55208B6C)
-F (..\FreeRTOS\src\queue.c)(0x55208B6E)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\queue.o --omf_browse .\objects\queue.crf --depend .\objects\queue.d)
+F (..\FreeRTOS\src\queue.c)(0x55208B6E)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\queue.o --omf_browse .\objects\queue.crf --depend .\objects\queue.d)
 I (C:\Keil\MDK\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\string.h)(0x5475F300)
 I (..\FreeRTOS\inc\FreeRTOS.h)(0x55208B6C)
@@ -834,7 +858,7 @@ I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -855,7 +879,7 @@ I (..\FreeRTOS\inc\mpu_wrappers.h)(0x55208B6C)
 I (..\FreeRTOS\inc\task.h)(0x55208B6D)
 I (..\FreeRTOS\inc\list.h)(0x55208B6C)
 I (..\FreeRTOS\inc\queue.h)(0x55208B6D)
-F (..\FreeRTOS\src\tasks.c)(0x56CD61F7)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\tasks.o --omf_browse .\objects\tasks.crf --depend .\objects\tasks.d)
+F (..\FreeRTOS\src\tasks.c)(0x56CD61F7)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\tasks.o --omf_browse .\objects\tasks.crf --depend .\objects\tasks.d)
 I (C:\Keil\MDK\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\string.h)(0x5475F300)
 I (..\FreeRTOS\inc\FreeRTOS.h)(0x55208B6C)
@@ -867,7 +891,7 @@ I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -889,7 +913,7 @@ I (..\FreeRTOS\inc\task.h)(0x55208B6D)
 I (..\FreeRTOS\inc\list.h)(0x55208B6C)
 I (..\FreeRTOS\inc\timers.h)(0x55208B6D)
 I (..\FreeRTOS\inc\StackMacros.h)(0x55208B6D)
-F (..\FreeRTOS\src\timers.c)(0x55208B6E)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\timers.o --omf_browse .\objects\timers.crf --depend .\objects\timers.d)
+F (..\FreeRTOS\src\timers.c)(0x55208B6E)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\timers.o --omf_browse .\objects\timers.crf --depend .\objects\timers.d)
 I (C:\Keil\MDK\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (..\FreeRTOS\inc\FreeRTOS.h)(0x55208B6C)
 I (C:\Keil\MDK\ARM\ARMCC\include\stddef.h)(0x5475F300)
@@ -900,7 +924,7 @@ I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -922,7 +946,7 @@ I (..\FreeRTOS\inc\task.h)(0x55208B6D)
 I (..\FreeRTOS\inc\list.h)(0x55208B6C)
 I (..\FreeRTOS\inc\queue.h)(0x55208B6D)
 I (..\FreeRTOS\inc\timers.h)(0x55208B6D)
-F (..\FreeRTOS\src\heap_4.c)(0x5520AA3A)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\heap_4.o --omf_browse .\objects\heap_4.crf --depend .\objects\heap_4.d)
+F (..\FreeRTOS\src\heap_4.c)(0x5520AA3A)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\heap_4.o --omf_browse .\objects\heap_4.crf --depend .\objects\heap_4.d)
 I (C:\Keil\MDK\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (..\FreeRTOS\inc\FreeRTOS.h)(0x55208B6C)
 I (C:\Keil\MDK\ARM\ARMCC\include\stddef.h)(0x5475F300)
@@ -933,7 +957,7 @@ I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -953,7 +977,7 @@ I (..\FreeRTOS\inc\portmacro.h)(0x54B9078B)
 I (..\FreeRTOS\inc\mpu_wrappers.h)(0x55208B6C)
 I (..\FreeRTOS\inc\task.h)(0x55208B6D)
 I (..\FreeRTOS\inc\list.h)(0x55208B6C)
-F (..\FreeRTOS\src\event_groups.c)(0x55208B6D)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\event_groups.o --omf_browse .\objects\event_groups.crf --depend .\objects\event_groups.d)
+F (..\FreeRTOS\src\event_groups.c)(0x55208B6D)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\event_groups.o --omf_browse .\objects\event_groups.crf --depend .\objects\event_groups.d)
 I (C:\Keil\MDK\ARM\ARMCC\include\stdlib.h)(0x5475F300)
 I (..\FreeRTOS\inc\FreeRTOS.h)(0x55208B6C)
 I (C:\Keil\MDK\ARM\ARMCC\include\stddef.h)(0x5475F300)
@@ -964,7 +988,7 @@ I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -986,7 +1010,7 @@ I (..\FreeRTOS\inc\task.h)(0x55208B6D)
 I (..\FreeRTOS\inc\list.h)(0x55208B6C)
 I (..\FreeRTOS\inc\timers.h)(0x55208B6D)
 I (..\FreeRTOS\inc\event_groups.h)(0x55208B6C)
-F (..\FreeRTOS\os_free_task.c)(0x560F8703)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\os_free_task.o --omf_browse .\objects\os_free_task.crf --depend .\objects\os_free_task.d)
+F (..\FreeRTOS\os_free_task.c)(0x560F8703)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\os_free_task.o --omf_browse .\objects\os_free_task.crf --depend .\objects\os_free_task.d)
 I (..\FreeRTOS\inc\FreeRTOS.h)(0x55208B6C)
 I (C:\Keil\MDK\ARM\ARMCC\include\stddef.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\ARMCC\include\stdint.h)(0x5475F300)
@@ -996,7 +1020,7 @@ I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -1020,7 +1044,8 @@ I (..\FreeRTOS\inc\queue.h)(0x55208B6D)
 I (..\FreeRTOS\inc\timers.h)(0x55208B6D)
 I (..\FreeRTOS\inc\semphr.h)(0x55208B6D)
 F (..\DOC\Readme.txt)(0x5652738E)()
-F (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\src\misc.c)(0x55209450)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\misc.o --omf_browse .\objects\misc.crf --depend .\objects\misc.d)
+F (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Lib\ARM\arm_cortexM4lf_math.lib)(0x540CF30A)()
+F (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\src\misc.c)(0x55209450)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\misc.o --omf_browse .\objects\misc.crf --depend .\objects\misc.d)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\misc.h)(0x55209450)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\stm32f4xx.h)(0x5575855F)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
@@ -1028,7 +1053,7 @@ I (C:\Keil\MDK\ARM\ARMCC\include\stdint.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -1040,7 +1065,7 @@ I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x55209450)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_can.h)(0x55209450)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x55209450)
-F (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\src\stm32f4xx_adc.c)(0x55209450)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\stm32f4xx_adc.o --omf_browse .\objects\stm32f4xx_adc.crf --depend .\objects\stm32f4xx_adc.d)
+F (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\src\stm32f4xx_adc.c)(0x55209450)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\stm32f4xx_adc.o --omf_browse .\objects\stm32f4xx_adc.crf --depend .\objects\stm32f4xx_adc.d)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\stm32f4xx.h)(0x5575855F)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
@@ -1048,7 +1073,7 @@ I (C:\Keil\MDK\ARM\ARMCC\include\stdint.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_dma.h)(0x55209450)
@@ -1060,7 +1085,7 @@ I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\misc.h)(0x55209450)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_can.h)(0x55209450)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x55209450)
-F (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\src\stm32f4xx_can.c)(0x55209450)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\stm32f4xx_can.o --omf_browse .\objects\stm32f4xx_can.crf --depend .\objects\stm32f4xx_can.d)
+F (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\src\stm32f4xx_can.c)(0x55209450)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\stm32f4xx_can.o --omf_browse .\objects\stm32f4xx_can.crf --depend .\objects\stm32f4xx_can.d)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_can.h)(0x55209450)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\stm32f4xx.h)(0x5575855F)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
@@ -1068,7 +1093,7 @@ I (C:\Keil\MDK\ARM\ARMCC\include\stdint.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -1080,7 +1105,7 @@ I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x55209450)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\misc.h)(0x55209450)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x55209450)
-F (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\src\stm32f4xx_dma.c)(0x55209450)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\stm32f4xx_dma.o --omf_browse .\objects\stm32f4xx_dma.crf --depend .\objects\stm32f4xx_dma.d)
+F (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\src\stm32f4xx_dma.c)(0x55209450)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\stm32f4xx_dma.o --omf_browse .\objects\stm32f4xx_dma.crf --depend .\objects\stm32f4xx_dma.d)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_dma.h)(0x55209450)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\stm32f4xx.h)(0x5575855F)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
@@ -1088,7 +1113,7 @@ I (C:\Keil\MDK\ARM\ARMCC\include\stdint.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -1100,7 +1125,7 @@ I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\misc.h)(0x55209450)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_can.h)(0x55209450)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x55209450)
-F (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\src\stm32f4xx_flash.c)(0x55209450)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\stm32f4xx_flash.o --omf_browse .\objects\stm32f4xx_flash.crf --depend .\objects\stm32f4xx_flash.d)
+F (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\src\stm32f4xx_flash.c)(0x55209450)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\stm32f4xx_flash.o --omf_browse .\objects\stm32f4xx_flash.crf --depend .\objects\stm32f4xx_flash.d)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_flash.h)(0x55209450)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\stm32f4xx.h)(0x5575855F)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
@@ -1108,7 +1133,7 @@ I (C:\Keil\MDK\ARM\ARMCC\include\stdint.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -1120,7 +1145,7 @@ I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\misc.h)(0x55209450)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_can.h)(0x55209450)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x55209450)
-F (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\src\stm32f4xx_fsmc.c)(0x55209450)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\stm32f4xx_fsmc.o --omf_browse .\objects\stm32f4xx_fsmc.crf --depend .\objects\stm32f4xx_fsmc.d)
+F (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\src\stm32f4xx_fsmc.c)(0x55209450)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\stm32f4xx_fsmc.o --omf_browse .\objects\stm32f4xx_fsmc.crf --depend .\objects\stm32f4xx_fsmc.d)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x55209450)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\stm32f4xx.h)(0x5575855F)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
@@ -1128,7 +1153,7 @@ I (C:\Keil\MDK\ARM\ARMCC\include\stdint.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -1140,7 +1165,7 @@ I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x55209450)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\misc.h)(0x55209450)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_can.h)(0x55209450)
-F (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\src\stm32f4xx_gpio.c)(0x55209450)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\stm32f4xx_gpio.o --omf_browse .\objects\stm32f4xx_gpio.crf --depend .\objects\stm32f4xx_gpio.d)
+F (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\src\stm32f4xx_gpio.c)(0x55209450)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\stm32f4xx_gpio.o --omf_browse .\objects\stm32f4xx_gpio.crf --depend .\objects\stm32f4xx_gpio.d)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_gpio.h)(0x55209450)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\stm32f4xx.h)(0x5575855F)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
@@ -1148,7 +1173,7 @@ I (C:\Keil\MDK\ARM\ARMCC\include\stdint.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -1160,7 +1185,7 @@ I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\misc.h)(0x55209450)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_can.h)(0x55209450)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x55209450)
-F (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\src\stm32f4xx_rcc.c)(0x55209450)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\stm32f4xx_rcc.o --omf_browse .\objects\stm32f4xx_rcc.crf --depend .\objects\stm32f4xx_rcc.d)
+F (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\src\stm32f4xx_rcc.c)(0x55209450)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\stm32f4xx_rcc.o --omf_browse .\objects\stm32f4xx_rcc.crf --depend .\objects\stm32f4xx_rcc.d)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_rcc.h)(0x55209450)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\stm32f4xx.h)(0x5575855F)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
@@ -1168,7 +1193,7 @@ I (C:\Keil\MDK\ARM\ARMCC\include\stdint.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -1180,7 +1205,7 @@ I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\misc.h)(0x55209450)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_can.h)(0x55209450)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x55209450)
-F (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\src\stm32f4xx_tim.c)(0x55209450)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\stm32f4xx_tim.o --omf_browse .\objects\stm32f4xx_tim.crf --depend .\objects\stm32f4xx_tim.d)
+F (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\src\stm32f4xx_tim.c)(0x55209450)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\stm32f4xx_tim.o --omf_browse .\objects\stm32f4xx_tim.crf --depend .\objects\stm32f4xx_tim.d)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_tim.h)(0x55209450)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\stm32f4xx.h)(0x5575855F)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
@@ -1188,7 +1213,7 @@ I (C:\Keil\MDK\ARM\ARMCC\include\stdint.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -1200,7 +1225,7 @@ I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\misc.h)(0x55209450)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_can.h)(0x55209450)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_fsmc.h)(0x55209450)
-F (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\src\stm32f4xx_usart.c)(0x55209450)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\stm32f4xx_usart.o --omf_browse .\objects\stm32f4xx_usart.crf --depend .\objects\stm32f4xx_usart.d)
+F (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\src\stm32f4xx_usart.c)(0x55209450)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\stm32f4xx_usart.o --omf_browse .\objects\stm32f4xx_usart.crf --depend .\objects\stm32f4xx_usart.d)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_usart.h)(0x55209450)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\stm32f4xx.h)(0x5575855F)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
@@ -1208,7 +1233,7 @@ I (C:\Keil\MDK\ARM\ARMCC\include\stdint.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)
@@ -1223,14 +1248,14 @@ I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm
 F (RTE\Device\STM32F405RG\RTE_Device.h)(0x55209451)()
 F (RTE\Device\STM32F405RG\startup_stm32f40_41xxx.s)(0x56C96478)(--cpu Cortex-M4.fp -g --apcs=interwork --pd "__MICROLIB SETA 1"-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc--pd "__UVISION_VERSION SETA 514" --pd "_RTE_ SETA 1" --pd "STM32F40_41xxx SETA 1"--list .\listings\startup_stm32f40_41xxx.lst --xref -o .\objects\startup_stm32f40_41xxx.o --depend .\objects\startup_stm32f40_41xxx.d)
 F (RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)()
-F (RTE\Device\STM32F405RG\system_stm32f4xx.c)(0x56AAF121)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER-o .\objects\system_stm32f4xx.o --omf_browse .\objects\system_stm32f4xx.crf --depend .\objects\system_stm32f4xx.d)
+F (RTE\Device\STM32F405RG\system_stm32f4xx.c)(0x56AAF121)(--c99 -c --cpu Cortex-M4.fp -D__MICROLIB -g -O0 --apcs=interwork --split_sections --enum_is_int -I..\APP -I..\BSP -I..\USER -I..\FreeRTOS\inc -I..\Sal-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE-I D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG-I C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include-I C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc-D__UVISION_VERSION="514" -D_RTE_ -DSTM32F40_41xxx -DUSE_STDPERIPH_DRIVER -DARM_MATH_CM4 -D__FPU_PRESENT="1" -D__FPU_USED="1" -D__CC_ARM-o .\objects\system_stm32f4xx.o --omf_browse .\objects\system_stm32f4xx.crf --depend .\objects\system_stm32f4xx.d)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\stm32f4xx.h)(0x5575855F)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h)(0x53FC31DA)
 I (C:\Keil\MDK\ARM\ARMCC\include\stdint.h)(0x5475F300)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmInstr.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h)(0x53FEF2AA)
 I (C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h)(0x53FC31DA)
-I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x55209450)
+I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h)(0x56D24FB0)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h)(0x55209450)
 I (D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h)(0x56D00FEE)
 I (C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h)(0x55209450)

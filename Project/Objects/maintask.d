@@ -17,10 +17,10 @@
 .\objects\maintask.o: C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h
 .\objects\maintask.o: C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h
 .\objects\maintask.o: C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h
+.\objects\maintask.o: C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\stm32f4xx.h
 .\objects\maintask.o: D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h
 .\objects\maintask.o: D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h
 .\objects\maintask.o: C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h
-.\objects\maintask.o: C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\stm32f4xx.h
 .\objects\maintask.o: C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_dma.h
 .\objects\maintask.o: C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_flash.h
 .\objects\maintask.o: C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_gpio.h
@@ -40,6 +40,9 @@
 .\objects\maintask.o: ..\FreeRTOS\inc\queue.h
 .\objects\maintask.o: ..\FreeRTOS\inc\timers.h
 .\objects\maintask.o: ..\FreeRTOS\inc\semphr.h
+.\objects\maintask.o: C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\arm_math.h
+.\objects\maintask.o: C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h
+.\objects\maintask.o: C:\Keil\MDK\ARM\ARMCC\Bin\..\include\math.h
 .\objects\maintask.o: ..\BSP\bsp_init.h
 .\objects\maintask.o: ..\USER\Johnbee_dbg.h
 .\objects\maintask.o: ..\BSP\bsp_TIM.h
@@ -54,6 +57,5 @@
 .\objects\maintask.o: ..\App\Control_Task.h
 .\objects\maintask.o: ..\App\app.h
 .\objects\maintask.o: ..\Sal\sal_PID.h
-.\objects\maintask.o: C:\Keil\MDK\ARM\ARMCC\Bin\..\include\math.h
 .\objects\maintask.o: ..\App\USART_Task.h
 .\objects\maintask.o: ..\App\EncoderTask.h

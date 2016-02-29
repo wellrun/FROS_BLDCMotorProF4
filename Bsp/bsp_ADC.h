@@ -11,18 +11,27 @@
 /*#include************************************************************************/
 #include "bsp_Init.h"
 
-#define  ADC_Converted_Num    (50u)
-extern uint16_t  ADC_USED_ConvertedValue1[ADC_Converted_Num];//缓冲区1
-//extern uint16_t  ADC_USED_ConvertedValue2[ADC_Converted_Num];//缓冲区2
-//extern u8   DMA_TC_Flag;//DMA传输完成标志
+#define  ADC_Converted_Num1    (30u)
+#define  ADC_Converted_Num2    (10u)
+
+extern uint16_t  ADC_USED_ConvertedValue1[ADC_Converted_Num1];//缓冲区1
+extern uint16_t  ADC_USED_ConvertedValue2[ADC_Converted_Num2];//缓冲区2
+extern float Current_Value;
 
 void Bsp_ADC_Init(void);
-void DMA_ADC_NVIC(u8 prePriority,u8 subPriority);
-s16 Get_ADC_Value(void);
+void DMA_Phase_ADC_NVIC(u8 prePriority,u8 subPriority);
+void DMA_Current_ADC_NVIC(u8 prePriority,u8 subPriority);
 
-static void ADC_GPIO_Config(void);
-static void ADC_Config(void);
-static void ADC_DMA_Config(void);
+void Get_Current_ADC_Value(void);
+
+static void ADC_Start(void);
+static void Phase_ADC_GPIO_Config(void);
+static void Phase_ADC_Config(void);
+static void Phase_ADC_DMA_Config(void);
+static void Current_ADC_GPIO_Config(void);
+static void Current_ADC_Config(void);
+static void Current_ADC_DMA_Config(void);
+
 #endif
 /**************************End of this file***************************************
  

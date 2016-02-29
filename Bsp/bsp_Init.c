@@ -77,6 +77,8 @@ void Bsp_NVIC_Config(void)
     Hall_TIM_NVIC_Config(0,0);
 	TIM1_TRG_COM_NVIC_Config(1,0);
     BLE_NVIC_Config(2,0);
+    DMA_Phase_ADC_NVIC(3,0);  
+    DMA_Current_ADC_NVIC(4,0);       
 }
 
 /********************************************************************************

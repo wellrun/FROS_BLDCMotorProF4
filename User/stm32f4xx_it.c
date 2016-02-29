@@ -183,7 +183,7 @@ void UsageFault_Handler(void)
   * @}
   */
 extern void BLE_IRQPandler(void);
-void USART3_IRQHandler(void)
+void UART5_IRQHandler(void)
 {
     BLE_IRQPandler();
 }
@@ -205,5 +205,14 @@ void TIM1_TRG_COM_TIM11_IRQHandler(void)
 {
     TIM1_TRG_COM_IRQPandler();
 }
-
+extern void  DMA_Phase_ADC_IRQPendle(void);
+void DMA2_Stream0_IRQHandler(void)
+{
+    DMA_Phase_ADC_IRQPendle();
+}
+extern void  DMA_Current_ADC_IRQPendle(void);
+void DMA2_Stream2_IRQHandler(void)
+{
+    DMA_Current_ADC_IRQPendle();
+}
 /******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/

@@ -37,7 +37,7 @@ void Main_Task_Create(u8 myPrio)
 */
 static void Main_Task(void *pdata)
 {
-    s16 adc_value = 0;
+    float adc_value = 0;
 
     (void)pdata;   // 'pdata' 并没有用到，防止编译器提示警告
     while(1)
@@ -54,8 +54,8 @@ static void Main_Task(void *pdata)
         PID_Speed.ki = ComData[ID_Psi_Ki1]/10;
         PID_Speed.kd = ComData[ID_Psi_Kd1]/10;
         
-        adc_value = Get_ADC_Value();
-        Send_Data(-adc_value/10.0,ID_Osc_CH1);      
+        Get_Current_ADC_Value();
+        Send_Data(-adc_value/10.0f,ID_Osc_CH1);      
     }
 }
 

@@ -17,10 +17,10 @@
 .\objects\control_task.o: C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h
 .\objects\control_task.o: C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h
 .\objects\control_task.o: C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h
+.\objects\control_task.o: C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\stm32f4xx.h
 .\objects\control_task.o: D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h
 .\objects\control_task.o: D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h
 .\objects\control_task.o: C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h
-.\objects\control_task.o: C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\stm32f4xx.h
 .\objects\control_task.o: C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_dma.h
 .\objects\control_task.o: C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_flash.h
 .\objects\control_task.o: C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_gpio.h
@@ -40,6 +40,9 @@
 .\objects\control_task.o: ..\FreeRTOS\inc\queue.h
 .\objects\control_task.o: ..\FreeRTOS\inc\timers.h
 .\objects\control_task.o: ..\FreeRTOS\inc\semphr.h
+.\objects\control_task.o: C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\arm_math.h
+.\objects\control_task.o: C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h
+.\objects\control_task.o: C:\Keil\MDK\ARM\ARMCC\Bin\..\include\math.h
 .\objects\control_task.o: ..\BSP\bsp_init.h
 .\objects\control_task.o: ..\USER\Johnbee_dbg.h
 .\objects\control_task.o: ..\BSP\bsp_TIM.h
@@ -56,5 +59,4 @@
 .\objects\control_task.o: ..\App\USART_Task.h
 .\objects\control_task.o: ..\App\EncoderTask.h
 .\objects\control_task.o: ..\Sal\sal_PID.h
-.\objects\control_task.o: C:\Keil\MDK\ARM\ARMCC\Bin\..\include\math.h
 .\objects\control_task.o: ..\Sal\sal_KalmanFilter.h

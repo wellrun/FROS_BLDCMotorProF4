@@ -56,34 +56,44 @@ int main(void)
  * @出口参数  无
 *********************************************************************************/
 float temp_speed = 0;
+s16 temp_encordee = 0;
 int main(void)
 {
     u32 ii = 0;
     u8 n = 0;
-    StateLED_Init();
+    float jj = 0;
+//    StateLED_Init();
     Bsp_NVIC_Config();
+    Bsp_ADC_Init();
     TIM1_PWM_Config();
-    
+    BlueToothInit();
+    Bsp_Encoder_Config();    
     RCC_ClocksTypeDef mysystemclock;
     RCC_GetClocksFreq(&mysystemclock);
-    temp_speed = -150;    
+    temp_speed = 250;    
     Set_MotorSpeed(temp_speed);
     Hall_PrepareCommutation();/*预换相,启动时需要*/
     Manual_COMevent();
     while (1)   //可以在这里对某些功能进行单独的测试
     {
+        jj = 123;
+        for(int aa = 0;aa<0x03ff;aa++)
+        {
+            ii = 0xffff;
+            MyDelay(ii);
+
+            temp_encordee = Get_Encoder_Value();
+            Send_Data(Current_Value,ID_Osc_CH2);           
+        }
         Set_MotorSpeed(temp_speed);
-        ii = 0x04f0000f;
-        MyDelay(ii);
-        TurnStateLED(n);
         n = !n;
         if(n)
         {
-            temp_speed = 150;
+            temp_speed = -250;
         }
         else
         {
-            temp_speed = -150;            
+            temp_speed = 250;            
         }
     }
 }

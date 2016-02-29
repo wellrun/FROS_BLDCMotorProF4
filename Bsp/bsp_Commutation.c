@@ -12,7 +12,6 @@
 #define  MyAbs(a)    (a>0?a:-a)
     
 /*全局变量声明******************************************************************/
-static u8 State_TabIndex = 0; //换相时电流状态表的下标
 static float Motor_SetedSpeed = 0;  //电机速度-100~100
 static s16 Middle_PWM_Duty = 500;
 
@@ -36,15 +35,15 @@ static const s8 BLDC_STATE_TAB[8][3] =  //正向表
     {I_OFF, I_OFF, I_OFF},  //CBA = 111,120度霍尔不会出现这种情况,如果出现了一定有问题,所以马上刹车
     */
     /*霍尔值转十进制后查表*/
-    /*1.A+C-    5.B+C-   4.C+B-    6.C+A-   2.B+A-    3.B+C-*///正向    
-    {I_OFF, I_OFF, I_OFF},  //CBA = 000时ABC三相电流方向
-    {I_IN , I_OFF, I_OUT},  //A+C-;这个在1会正转,速度较快           
-    {I_OFF, I_IN , I_OUT},  //B+C-; 这个在1会正转,速度感觉也不快                   
-    {I_OUT, I_IN , I_OFF},  //B+A-; 这个在1会反转,速度感觉不快        
+    /* 1.C+A-   5.B+A-    4.B+C-    6.A+C-    2.B+C-   3.C+B- *///正向    
+    {I_OFF, I_OFF, I_OFF},  //CBA = 000时ABC三相电流方向    
     {I_OUT, I_OFF, I_IN },  //C+A-; 这个在1会反转,速度较快 
     {I_OFF, I_OUT, I_IN },  //C+B-; 这个在1会振动    
-    {I_IN,  I_OUT, I_OFF},  //A+B-; 这个在1会振动      
-    {I_OFF, I_OFF, I_OFF},  //CBA = 111,120度霍尔不会出现这种情况,如果出现了一定有问题,所以马上刹车  
+    {I_IN,  I_OUT, I_OFF},  //A+B-; 这个在1会振动  
+    {I_IN , I_OFF, I_OUT},  //A+C-;这个在1会正转,速度较快       
+    {I_OFF, I_IN , I_OUT},  //B+C-; 这个在1会正转,速度感觉也不快               
+    {I_OUT, I_IN , I_OFF},  //B+A-; 这个在1会反转,速度感觉不快    
+    {I_OFF, I_OFF, I_OFF},  //CBA = 111,120度霍尔不会出现这种情况,如果出现了一定有问题,所以马上刹车 
 };
 static const s8 BLDC_STATE_TAB_Fan[8][3] =  //反向表
 {
@@ -59,6 +58,16 @@ static const s8 BLDC_STATE_TAB_Fan[8][3] =  //反向表
   */  
     /*霍尔值转十进制后查表*/
    /*正向速度的反向表
+    {I_OFF, I_OFF, I_OFF},  //CBA = 000时ABC三相电流方向  
+    {I_IN , I_OFF, I_OUT},  //A+C-;这个在1会正转,速度较快       
+    {I_OFF, I_IN , I_OUT},  //B+C-; 这个在1会正转,速度感觉也不快               
+    {I_OUT, I_IN , I_OFF},  //B+A-; 这个在1会反转,速度感觉不快       
+    {I_OUT, I_OFF, I_IN },  //C+A-; 这个在1会反转,速度较快 
+    {I_OFF, I_OUT, I_IN },  //C+B-; 这个在1会振动    
+    {I_IN,  I_OUT, I_OFF},  //A+B-; 这个在1会振动  
+    {I_OFF, I_OFF, I_OFF},  //CBA = 111,120度霍尔不会出现这种情况,如果出现了一定有问题,所以马上刹车            
+    */
+   /*反向速度的反向表*/
     {I_OFF, I_OFF, I_OFF},  //CBA = 000时ABC三相电流方向    
     {I_OUT, I_OFF, I_IN },  //C+A-; 这个在1会反转,速度较快 
     {I_OFF, I_OUT, I_IN },  //C+B-; 这个在1会振动    
@@ -67,16 +76,6 @@ static const s8 BLDC_STATE_TAB_Fan[8][3] =  //反向表
     {I_OFF, I_IN , I_OUT},  //B+C-; 这个在1会正转,速度感觉也不快               
     {I_OUT, I_IN , I_OFF},  //B+A-; 这个在1会反转,速度感觉不快    
     {I_OFF, I_OFF, I_OFF},  //CBA = 111,120度霍尔不会出现这种情况,如果出现了一定有问题,所以马上刹车 
-    */
-   /*反向速度的反向表*/
-    {I_OFF, I_OFF, I_OFF},  //CBA = 000时ABC三相电流方向  
-    {I_IN , I_OFF, I_OUT},  //A+C-;这个在1会正转,速度较快       
-    {I_OFF, I_IN , I_OUT},  //B+C-; 这个在1会正转,速度感觉也不快               
-    {I_OUT, I_IN , I_OFF},  //B+A-; 这个在1会反转,速度感觉不快       
-    {I_OUT, I_OFF, I_IN },  //C+A-; 这个在1会反转,速度较快 
-    {I_OFF, I_OUT, I_IN },  //C+B-; 这个在1会振动    
-    {I_IN,  I_OUT, I_OFF},  //A+B-; 这个在1会振动  
-    {I_OFF, I_OFF, I_OFF},  //CBA = 111,120度霍尔不会出现这种情况,如果出现了一定有问题,所以马上刹车        
     
 };
 
@@ -90,12 +89,10 @@ static const s8 BLDC_STATE_TAB_Fan[8][3] =  //反向表
  */
 void Hall_PrepareCommutation(void)
 {
-    static u8 lasthallpos = 0;
-    float temp_duty = 0,temp_speed = 0;  //临时占空比
+    float temp_duty = 0;  //临时占空比
     s8 hall_state[3] = {0, 0, 0}; //ABC三相状态数组
     u8 newhallpos =  Get_HallInputValue();
     newhallpos = HallCode2Decimal(newhallpos);
-    State_TabIndex = newhallpos;
 #if 0   //拉低一桥的换相
     for (u8 ii = 0; ii < 3; ii++) /*先找到off的桥先拉低*/
     {
@@ -145,12 +142,10 @@ void Hall_PrepareCommutation(void)
         #if 0 //双表换相
         if(Motor_SetedSpeed>=0)
         {
-            temp_speed = Motor_SetedSpeed;
            hall_state[ii] = BLDC_STATE_TAB[newhallpos][ii];//正向         
         }
         else
         {
-            temp_speed = -Motor_SetedSpeed;            
            hall_state[ii] = BLDC_STATE_TAB_Fan[newhallpos][ii]; //反向                    
         }       
         #endif
@@ -168,10 +163,8 @@ void Hall_PrepareCommutation(void)
         temp_duty = hall_state[ii] * Motor_SetedSpeed / 2;      
         temp_duty += Middle_PWM_Duty;
         TIM1_Set_PWMDuty(ii + 1, temp_duty); 
-    }
-    
+    }   
 #endif    
-    lasthallpos = newhallpos;
 }
 /*
  *@ <function name=>Set_MotorSpeed() </function>
@@ -185,7 +178,7 @@ void Set_MotorSpeed(float speed)
 {
 #if 1  //只负责改变占空比,使能在换相事件中改变,双表换相
     s8 hall_state[3] = {0, 0, 0}; //ABC三相状态数组
-    float temp_duty = 0,temp_speed = 0;  //临时占空比
+    float temp_duty = 0;  //临时占空比
     static float last_speed = 0;
     u8 newhallpos =  Get_HallInputValue();
     newhallpos = HallCode2Decimal(newhallpos);
@@ -204,15 +197,12 @@ void Set_MotorSpeed(float speed)
             #if 0 //双表换相
             if(Motor_SetedSpeed>=0)
             {
-                temp_speed = speed;
                hall_state[ii] = BLDC_STATE_TAB[newhallpos][ii];//正向         
             }
             else
             {
-               temp_speed = -speed;      
                hall_state[ii] = BLDC_STATE_TAB_Fan[newhallpos][ii]; //反向                    
             }
-
             #endif
             #if 1 //单表换相
             hall_state[ii] = BLDC_STATE_TAB[newhallpos][ii];//正向  

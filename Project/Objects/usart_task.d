@@ -16,10 +16,10 @@
 .\objects\usart_task.o: C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmFunc.h
 .\objects\usart_task.o: C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cmSimd.h
 .\objects\usart_task.o: C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\system_stm32f4xx.h
+.\objects\usart_task.o: C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\stm32f4xx.h
 .\objects\usart_task.o: D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\Device\STM32F405RG\stm32f4xx_conf.h
 .\objects\usart_task.o: D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE\RTE_Components.h
 .\objects\usart_task.o: C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_adc.h
-.\objects\usart_task.o: C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\Include\stm32f4xx.h
 .\objects\usart_task.o: C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_dma.h
 .\objects\usart_task.o: C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_flash.h
 .\objects\usart_task.o: C:\Keil\MDK\ARM\PACK\Keil\STM32F4xx_DFP\1.0.8\Device\StdPeriph_Driver\inc\stm32f4xx_gpio.h
@@ -39,6 +39,9 @@
 .\objects\usart_task.o: ..\FreeRTOS\inc\queue.h
 .\objects\usart_task.o: ..\FreeRTOS\inc\timers.h
 .\objects\usart_task.o: ..\FreeRTOS\inc\semphr.h
+.\objects\usart_task.o: C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\arm_math.h
+.\objects\usart_task.o: C:\Keil\MDK\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include\core_cm4.h
+.\objects\usart_task.o: C:\Keil\MDK\ARM\ARMCC\Bin\..\include\math.h
 .\objects\usart_task.o: ..\BSP\bsp_init.h
 .\objects\usart_task.o: ..\USER\Johnbee_dbg.h
 .\objects\usart_task.o: ..\BSP\bsp_TIM.h
@@ -53,6 +56,5 @@
 .\objects\usart_task.o: ..\App\app.h
 .\objects\usart_task.o: ..\App\Control_Task.h
 .\objects\usart_task.o: ..\Sal\sal_PID.h
-.\objects\usart_task.o: C:\Keil\MDK\ARM\ARMCC\Bin\..\include\math.h
 .\objects\usart_task.o: ..\App\USART_Task.h
 .\objects\usart_task.o: ..\App\EncoderTask.h

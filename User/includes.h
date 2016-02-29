@@ -21,6 +21,7 @@
 #include "timers.h"
 #include "semphr.h"
 
+#include "arm_math.h"
 
 #endif
 /****************** end of this file ********************************************
