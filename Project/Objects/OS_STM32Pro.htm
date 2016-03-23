@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\OS_STM32Pro.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\OS_STM32Pro.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Wed Mar 02 15:32:09 2016
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5050106: Last Updated: Wed Mar 23 18:44:03 2016
 <BR><P>
 <H3>Maximum Stack Usage =        232 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -620,7 +620,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADvalue2Voltag
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_Current_ADC_Value
+<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Current_ADC_IRQPendle
 </UL>
 
 <P><STRONG><a name="[7e]"></a>ADvalue2Voltag</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, bsp_adc.o(i.ADvalue2Voltag))
@@ -743,7 +743,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f40_41xxx.o(RESET)
 </UL>
 <P><STRONG><a name="[44]"></a>DMA2_Stream2_IRQHandler</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, stm32f4xx_it.o(i.DMA2_Stream2_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = DMA2_Stream2_IRQHandler &rArr; DMA_Current_ADC_IRQPendle &rArr; DMA_GetITStatus
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = DMA2_Stream2_IRQHandler &rArr; DMA_Current_ADC_IRQPendle &rArr; DMA_GetITStatus
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Current_ADC_IRQPendle
 </UL>
@@ -759,13 +759,14 @@ Global Symbols
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Current_ADC_DMA_Config
 </UL>
 
-<P><STRONG><a name="[b9]"></a>DMA_Current_ADC_IRQPendle</STRONG> (Thumb, 146 bytes, Stack size 8 bytes, bsp_adc.o(i.DMA_Current_ADC_IRQPendle))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = DMA_Current_ADC_IRQPendle &rArr; DMA_GetITStatus
+<P><STRONG><a name="[b9]"></a>DMA_Current_ADC_IRQPendle</STRONG> (Thumb, 198 bytes, Stack size 16 bytes, bsp_adc.o(i.DMA_Current_ADC_IRQPendle))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = DMA_Current_ADC_IRQPendle &rArr; DMA_GetITStatus
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_GetITStatus
 <LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_ClearITPendingBit
 <LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_Current_ADC_Value
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADvalue2Voltag
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADvalue2Current
 </UL>
 <BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA2_Stream2_IRQHandler
 </UL>
@@ -865,12 +866,8 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_HallInputValue
 </UL>
 
-<P><STRONG><a name="[bc]"></a>Get_Current_ADC_Value</STRONG> (Thumb, 86 bytes, Stack size 4 bytes, bsp_adc.o(i.Get_Current_ADC_Value))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Get_Current_ADC_Value &rArr; ADvalue2Current
-</UL>
-<BR>[Calls]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADvalue2Current
-</UL>
-<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Current_ADC_IRQPendle
+<P><STRONG><a name="[bc]"></a>Get_Current_ADC_Value</STRONG> (Thumb, 60 bytes, Stack size 0 bytes, bsp_adc.o(i.Get_Current_ADC_Value))
+<BR><BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DMA_Current_ADC_IRQPendle
 </UL>
 
 <P><STRONG><a name="[a4]"></a>Get_Encoder_Lenth</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, encodertask.o(i.Get_Encoder_Lenth))
