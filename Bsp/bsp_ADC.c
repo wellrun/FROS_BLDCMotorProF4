@@ -49,9 +49,12 @@ uint16_t  ADC_USED_ConvertedValue1[ADC_Converted_Num1];//缓冲区1
 uint16_t  ADC_USED_ConvertedValue2[ADC_Converted_Num2];//缓冲区2
 
 float Current_Value = 0;
-
-u8   DMA_TC_Flag = 0;//DMA传输完成标志
-u8   DMA_HT_Flag = 0; //DMA半传输完成标志
+float Current_Zero = 0;   //电流零点
+float Voltag_Zero  = 0;   //电压零点
+s32   Current_AD_Value = 0;
+u8    Current_CalibrateState = 0;  //启动时电流环零点校准标志
+u8    DMA_TC_Flag = 0;//DMA传输完成标志
+u8    DMA_HT_Flag = 0; //DMA半传输完成标志
 /*
  *@ <function name=>Bsp_ADC_Init() </function>
  *@ <summary>
@@ -446,28 +449,50 @@ void DMA_Phase_ADC_IRQPendle(void)
 */
 void DMA_Current_ADC_IRQPendle(void)
 {
+    s8 times = 50;
+    static s8 ii = 0;
+    static float temp = 0;
+    float now_ad_value = 0;
 #ifdef _STM32F4xx_
     if(DMA_GetITStatus(Current_ADC_DMA_Stream,DMA_IT_TCIF2))
     {
         DMA_ClearITPendingBit(Current_ADC_DMA_Stream,DMA_IT_TCIF2);
-        Get_Current_ADC_Value();
+        now_ad_value = Get_Current_ADC_Value();
+        if(Current_CalibrateState == 0)  //电流零点校准
+        {
+            if(ii < times)
+            {
+                temp += now_ad_value;
+                ii++;
+            }
+            else
+            {
+                temp = temp/times;
+                Current_Zero = ADvalue2Current(temp);
+                Voltag_Zero = ADvalue2Voltag(temp);
+                Current_CalibrateState = 1;
+            }
+        }
+        else  //校准完成后正式采电流
+        {
+            Current_Value = ADvalue2Current(now_ad_value) - Current_Zero;
+        }
     }
     if(DMA_GetITStatus(Current_ADC_DMA_Stream,DMA_IT_HTIF2))
     {
         DMA_ClearITPendingBit(Current_ADC_DMA_Stream,DMA_IT_HTIF2);
-//        DMA_HT_Flag = 1;
     } 
 #endif
 }
 /*
  *@ <function name=>Get_ADC_Value() </function>
  *@ <summary>
-    获取ADC的采样值
+    获取ADC的采样值的平均值
  *@ </summary>
  *@ <param name="xxx"></param>
- *@ <returns> </returns>
+ *@ <returns> 多次平均之后的AD值 </returns>
 */
-void Get_Current_ADC_Value(void)
+float Get_Current_ADC_Value(void)
 {
     u32 temp = 0;
     float temp_sesult = 0;
@@ -476,10 +501,43 @@ void Get_Current_ADC_Value(void)
         temp += ADC_USED_ConvertedValue2[ii];
     }
     temp_sesult = 1.0f*temp/ADC_Converted_Num2;
-    
-//    temp_sesult = 4*temp_sesult - 12498;
-    Current_Value = 1000*(25 - 33*temp_sesult/4095)/*mA*/;
+    return temp_sesult;
+//    Current_AD_Value = (s32)temp_sesult;
+//    
+////    Current_Value = ADvalue2Voltag(temp_sesult)/100.0f;//to mV    
+//    Current_Value = ADvalue2Current(temp_sesult);//to mA
 }
+/*
+ *@ <function name=>ADvalue2Voltag() </function>
+ *@ <summary>
+    ADC Value 转化为电压
+ *@ </summary>
+ *@ <param name="adValue">采集到的ADC原始值</param>
+ *@ <returns> 换算成电压值mV </returns>
+*/
+float ADvalue2Voltag(float adValue)
+{
+    float ref = 0;
+    float temp = adValue;
+    ref = 3.3f*1000*temp/4095;
+    return ref;
+}
+/*
+ *@ <function name=>ADvalue2Current() </function>
+ *@ <summary>
+    ADC Value  转化为电流mA
+ *@ </summary>
+ *@ <param name="voltagValue">采集到的电压值</param>
+ *@ <returns> 换算成电流值mA </returns>
+*/
+float ADvalue2Current(float adValue)
+{
+    float ref = 0;
+    float temp = ADvalue2Voltag(adValue);
+    ref = 10*(2500 - temp);//mA
+    return ref;
+}
+
 /**************************End of this file***************************************
 
 

@@ -25,10 +25,9 @@
 
 /*#define************************************************************************/
 #define  MyDelay(n)  while(n--)
-#define  OS_Debug
+//#define  OS_Debug
 
 #ifndef  OS_Debug  //实际用
-
 /*********************************************************************************
  * @函数名称  main()
  * @函数功能  主函数
@@ -38,10 +37,9 @@
 int main(void)
 {
     xQueueHandle queue = xQueueCreate(1, sizeof( unsigned long ));
-
     if(queue != NULL)
     {
-        Start_Task_Create();  //创建开始任务       
+        Start_Task_Create();  //创建开始任务  
         vTaskStartScheduler();   //启动调度器，开始执行任务
     }
     while(1);

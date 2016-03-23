@@ -41,17 +41,16 @@ void Start_Task_Create(void)
 *********************************************************************************/
 static void Start_Task(void *pvParameters)
 {
-    (void)pvParameters;
-    taskENTER_CRITICAL();             //关中断
-    
-    Bsp_Init();  //各种初始化
+    (void)pvParameters; 
+    vTaskDelay(60*configTICK_RATE_HZ);  //延时60s等待电流稳定后再采样        
 
+    Bsp_Init();  //各种初始化      
+    taskENTER_CRITICAL();             //关中断    
     /*在这里创建其他任务*/
     Main_Task_Create(MAIN_TASK_PRIO);
     Control_Task_Create(CONTROL_TASK_PRIO);
     USART_Task_Create(USART_TASK_PRIO);
-    Encoder_Task_Create(Encoder_TASK_PRIO);
-    
+    Encoder_Task_Create(Encoder_TASK_PRIO);    
     taskEXIT_CRITICAL();         //开中断
     vTaskDelete(NULL);   //删除自己
 }

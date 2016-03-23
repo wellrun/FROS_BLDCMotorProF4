@@ -37,14 +37,14 @@ void Main_Task_Create(u8 myPrio)
 */
 static void Main_Task(void *pdata)
 {
-    float adc_value = 0;
+//    float adc_value = 0;
 
     (void)pdata;   // 'pdata' 并没有用到，防止编译器提示警告
     while(1)
     {
         vTaskDelay(5*configTICK_RATE_HZ/1000);  //延时函数
-       // Iface_MyMotor.speed = ComData[ID_Loc_Kp3];//速度闭环
-       Iface_MyMotor.lenth = ComData[ID_Loc_Kp3];//位移闭环
+        Iface_MyMotor.speed = ComData[ID_Loc_Ki3];//速度闭环
+        Iface_MyMotor.lenth = 5*ComData[ID_Loc_Kp3];//位移闭环
 
         PID_Loction.kp = ComData[ID_Loc_Kp1]/10;
         PID_Loction.ki = ComData[ID_Loc_Ki1]/10;
@@ -53,9 +53,15 @@ static void Main_Task(void *pdata)
         PID_Speed.kp = ComData[ID_Psi_Kp1]/10;
         PID_Speed.ki = ComData[ID_Psi_Ki1]/10;
         PID_Speed.kd = ComData[ID_Psi_Kd1]/10;
-        
-        Get_Current_ADC_Value();
-        Send_Data(-adc_value/10.0f,ID_Osc_CH1);      
+        if(Iface_MyMotor.speed != 0)
+        {
+            Set_MotorState(1);
+        }
+        else
+        {
+            Set_MotorState(0);            
+        }
+        Send_Data(Current_Value,ID_Osc_CH1);      
     }
 }
 

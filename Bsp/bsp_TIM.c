@@ -60,22 +60,22 @@ void Manual_COMevent(void)
  *@ <param name="void">null</param>
  *@ <returns> null </returns>
  */
-u8 Temp_value = 0;
-u8 value[10] = {0};
+//u8 Temp_value = 0;
+//u8 value[10] = {0};
 void TIM1_TRG_COM_IRQPandler(void)
 {
-    static u8 index = 0,lastvalue = 0;
-    static u32 temp = 0;
+//    static u8 index = 0,lastvalue = 0;
+//    static u32 temp = 0;
     TIM_ClearITPendingBit(TIM1, TIM_IT_COM); 
-    Temp_value = Get_HallInputValue();
-    value[index] = Temp_value;
-    index++;
-    if(index > 9)
-    {
-        index = 0;
-    }
-    lastvalue = Temp_value;    
-    temp++;
+//    Temp_value = Get_HallInputValue();
+//    value[index] = Temp_value;
+//    index++;
+//    if(index > 9)
+//    {
+//        index = 0;
+//    }
+//    lastvalue = Temp_value;    
+//    temp++;
 }
 
 /*
@@ -160,16 +160,14 @@ void TIM1_PWM_Config(void)
         TIM_CtrlPWMOutputs(TIM1, ENABLE); //高级定时器才要加这一句
     #endif
 #endif
-//    TIM1_Set_PWMOutput_EnableState(1, 1, 1);
-//    TIM1_Set_PWMOutput_EnableState(2, 1, 1);
-//    TIM1_Set_PWMOutput_EnableState(3, 1, 1);    
+    TIM1_Set_PWMOutput_EnableState(1, 0, 0);
+    TIM1_Set_PWMOutput_EnableState(2, 0, 0);
+    TIM1_Set_PWMOutput_EnableState(3, 0, 0);   
+    Manual_COMevent();
     TIM1_Set_PWMDuty(1, 500);
     TIM1_Set_PWMDuty(2, 500);
-    TIM1_Set_PWMDuty(3, 500);
-    
+    TIM1_Set_PWMDuty(3, 500);    
 }
-
-
 /*
  *@ <function name=>TIM1_PWM_DutyChange() </function>
  *@ <summary>
@@ -208,6 +206,7 @@ void TIM1_Set_PWMDuty(u8 myChannel, float myDuty)
             break;
     }
 }
+
 /*
  *@ <function name=>TIM1_Set_PWMOutput_EnableState() </function>
  *@ <summary>

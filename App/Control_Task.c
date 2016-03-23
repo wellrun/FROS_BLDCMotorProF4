@@ -61,16 +61,15 @@ static void Control_Task(void *pdata)
             jj = 10;
             now_lenth = Get_Encoder_Lenth();
             PID_Cal(&PID_Loction,Iface_MyMotor.lenth,now_lenth,100);//PID计算
-            Iface_MyMotor.speed = PID_Loction.ref;
         }
 
         if(ii == 0)//内环
         {
             ii = 3;
             now_speed = Get_Encoder_Speed();
-         //   now_speed = KF_Simple_Calculate(&KF_Speed,now_speed);//速度KF滤波     
-
-            PID_Cal(&PID_Speed,Iface_MyMotor.speed,now_speed,10);//PID计算
+            now_speed = KF_Simple_Calculate(&KF_Speed,now_speed);//速度KF滤波     
+//            Iface_MyMotor.speed = PID_Loction.ref;//位移环输出作为速度环输入
+            PID_Cal(&PID_Speed,Iface_MyMotor.speed,now_speed,100);//PID计算
             PID_Speed.ref += PID_Speed.fd * Iface_MyMotor.speed; //加前馈
     //        PID_Speed.ref = Iface_MyMotor.speed;//开环测试
             

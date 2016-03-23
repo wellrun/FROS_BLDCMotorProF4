@@ -49,8 +49,8 @@ void Encoder_Task(void *pdata)
     {
         vTaskDelay(5*configTICK_RATE_HZ/1000);  //延时函数
         temp = Get_Encoder_Value();
-        Encoder_Lenth -= temp;
-        Encoder_Speed = -3000.0*temp/Encoder_Resolution;//测速r/min
+        Encoder_Lenth += temp;
+        Encoder_Speed = 3000.0*temp/Encoder_Resolution;//测速r/min
     }
 }
 /*

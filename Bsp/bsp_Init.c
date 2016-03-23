@@ -54,12 +54,11 @@ void Bsp_Init(void)
     
     TIM1_PWM_Config();
     BlueToothInit();
-//    Bsp_ADC_Init();
+    Bsp_ADC_Init();
     Bsp_Encoder_Config();
 //    Bsp_CAN_Init();
     
-    Hall_PrepareCommutation();//预处理
-
+    while(Current_CalibrateState == 0); //等待电流零点校准完成
 }
 /********************************************************************************
  *@函数名称    Bsp_NVIC_Config()

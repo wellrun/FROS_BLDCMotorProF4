@@ -104,3 +104,4 @@ D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Lunala\Lunala\obj\Re
 D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Lunala\Lunala\obj\Release\Lunala.csproj.GenerateResource.Cache
 D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Lunala\Lunala\obj\Release\Lunala.exe.manifest
 D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Lunala\Lunala\obj\Release\Lunala.application
+D:\MyProject\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Lunala\Lunala\obj\Release\Lunala.App_Code.FormSet.resources
