@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Code\FormPID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App_Code\FormPID.Designer.cs">
+      <DependentUpon>FormPID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\FormSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App_Code\FormSet.Designer.cs">
+      <DependentUpon>FormSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\Osclloscope.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App_Code\Osclloscope.Designer.cs">
+      <DependentUpon>Osclloscope.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,12 +74,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="User\JohnbeeDraw.cs" />
     <Compile Include="User\JohnbeeSerialPort.cs" />
-    <Compile Include="User\Osclloscope.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="User\Osclloscope.Designer.cs">
+    <EmbeddedResource Include="App_Code\FormPID.resx">
+      <DependentUpon>FormPID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Code\FormSet.resx">
+      <DependentUpon>FormSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_Code\Osclloscope.resx">
       <DependentUpon>Osclloscope.cs</DependentUpon>
-    </Compile>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -74,9 +95,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="User\Osclloscope.resx">
-      <DependentUpon>Osclloscope.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

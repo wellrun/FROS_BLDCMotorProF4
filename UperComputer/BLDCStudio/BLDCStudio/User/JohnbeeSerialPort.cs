@@ -101,28 +101,28 @@ namespace Johnbee
         public delegate void ComDataChangeDelegate(decimal myValue, byte topId,byte myId);
         public static event ComDataChangeDelegate ComDataChangeEvent;/*串口接收完成事件*/
         public static byte[] RecBuffer = new byte[8];
-
+        private static int SerialPort_Flag = 0;
         public static int SerialPort_Init(string comName,string myBps)
         {
-            MySerialPort.WriteBufferSize = 50000;
-            MySerialPort.DataReceived += MySerialPort_DataReceived;
             try
             {
-                if (!MySerialPort.IsOpen)
+                if (MySerialPort.IsOpen)
                 {
-                    MySerialPort.PortName = comName;
-                    MySerialPort.BaudRate = Convert.ToInt32(myBps);
-                    MySerialPort.StopBits = StopBits.One;
-                    MySerialPort.DataBits = 8;
-                    MySerialPort.ReadBufferSize = 500000;
-                    MySerialPort.ReadTimeout = 500;
-                    MySerialPort.Open();
+                    MySerialPort.Close();
                 }
+                MySerialPort.WriteBufferSize = 50000;
+              //  MySerialPort.PortName = comName;
+              //  MySerialPort.BaudRate = Convert.ToInt32(myBps);
+                MySerialPort.StopBits = StopBits.One;
+                MySerialPort.DataBits = 8;
+                MySerialPort.ReadBufferSize = 500000;
+                MySerialPort.ReadTimeout = 500;
+                SerialPort_Flag = 1;//初始化成功
             }
             catch
             {
                 System.Media.SystemSounds.Asterisk.Play();
-                MessageBox.Show("Can't Open the Port!!!", "ERROR");
+                MessageBox.Show("Can't Set the Param!!!", "ERROR");
                 return -1;
             }
             return 0;
@@ -131,6 +131,27 @@ namespace Johnbee
         {
             string[] mys = SerialPort.GetPortNames();
             return mys;
+        }
+        public static int SerialPort_Open()
+        {
+            if(MySerialPort.IsOpen)
+            {
+                return 0;
+            }
+            try
+            {
+                MySerialPort.Open();
+                if(MySerialPort.IsOpen)
+                {
+                    return 0;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Open fiale!");
+                return -1;
+            }
+            return 0;
         }
         public static int SerialPort_Close()
         {
@@ -144,6 +165,24 @@ namespace Johnbee
                 MessageBox.Show("Closed Failed!!!", "ERROR");
                 return -1;
             }
+            return 0;
+        }
+        public static int Set_PortName(string myName)
+        {
+            if(MySerialPort.IsOpen)
+            {
+                return -1;
+            }
+            MySerialPort.PortName = myName;
+            return 0;
+        }
+        public static int Set_PortBps(string myBps)
+        {
+            if (MySerialPort.IsOpen)
+            {
+                return -1;
+            }
+            MySerialPort.BaudRate = Convert.ToInt32(myBps);
             return 0;
         }
         /// <summary>

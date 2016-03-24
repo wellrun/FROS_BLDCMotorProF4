@@ -1,6 +1,6 @@
-﻿namespace BLDCStudio.User
+﻿namespace BLDCStudio.App_Code
 {
-    partial class Osclloscope
+    partial class FormSet
     {
         /// <summary>
         /// Required designer variable.
@@ -28,29 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // timer1
-            // 
-            this.timer1.Interval = 5;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // Osclloscope
+            // FormSet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 337);
-            this.Name = "Osclloscope";
-            this.Text = "Osclloscope";
-            this.Load += new System.EventHandler(this.Osclloscope_Load);
+            this.ClientSize = new System.Drawing.Size(396, 261);
+            this.Name = "FormSet";
+            this.Text = "FormSet";
+            this.Load += new System.EventHandler(this.FormSet_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Timer timer1;
     }
 }

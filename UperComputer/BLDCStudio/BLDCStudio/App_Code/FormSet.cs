@@ -9,14 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Johnbee;
 
-namespace BLDCStudio.User
+namespace BLDCStudio.App_Code
 {
-    public partial class Osclloscope : Form
+    public partial class FormSet : Form
     {
         #region 控件附属ID设置不能大于0x0f
-        public enum ComId : byte
+        public enum FormSetId : byte
         {
-            ID_Osc_CH1,  //示波器通道1
+            ID_Osc_CH1 = 0,  //示波器通道1
             ID_Osc_CH2,  //示波器通道2
             ID_Osc_CH3,  //示波器通道3
 
@@ -38,20 +38,22 @@ namespace BLDCStudio.User
                 return _TopId;
             }
         }
-        public decimal[] ComData = new decimal[(int)ComId.ComId_Num];
-        public Osclloscope(byte topId)
+
+        public FormSet(byte topId)
         {
             InitializeComponent();
             TopId = topId;
-        }
-        private void Osclloscope_Load(object sender, EventArgs e)
-        {
-
+            this.Text += "    TopId = " + topId.ToString();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void FormSet_Load(object sender, EventArgs e)
         {
+            JohnbeeSerialPort.ComDataChangeEvent += Reflash_Form;
+        }
 
+        private void Reflash_Form(decimal myValue, byte topId, byte myId)
+        {
+            throw new NotImplementedException();
         }
     }
 }

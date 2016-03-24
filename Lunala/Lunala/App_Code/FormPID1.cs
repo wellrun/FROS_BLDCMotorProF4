@@ -79,7 +79,6 @@ namespace Lunala.App_Code
                 button_Panel_Start.BackColor = Color.Red;
 
             }
-
         }
         /// <summary>
         /// 示波器清屏
