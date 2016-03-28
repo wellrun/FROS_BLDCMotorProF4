@@ -19,8 +19,7 @@ namespace BLDCStudio.App_Code
             ID_Osc_CH1 = 0,  //示波器通道1
             ID_Osc_CH2,  //示波器通道2
             ID_Osc_CH3,  //示波器通道3
-
-            ComId_Num,          /*指令数目总是在最后*/
+            ComId_Num,   /*指令数目总是在最后*/
         }
         #endregion
         private byte _TopId;//组Id属性不能大于0x0f
@@ -93,11 +92,11 @@ namespace BLDCStudio.App_Code
             if (checkBox_CH1.Checked == true)
             {
                 Point_Now_CH1.X = ScanX_Value;
-                numericUpDown_Value_CH1.Value++;
-                if(numericUpDown_Value_CH1.Value > 100)
-                {
-                    numericUpDown_Value_CH1.Value = 0;
-                }
+                //numericUpDown_Value_CH1.Value++;
+                //if(numericUpDown_Value_CH1.Value > 100)
+                //{
+                //    numericUpDown_Value_CH1.Value = 0;
+                //}
                 Point_Now_CH1.Y = Point_Origin.Y - (int)(numericUpDown_YCH1.Value + numericUpDown_Value_CH1.Value * numericUpDown_Dam_CH1.Value);
                 Pen CH1_Pen = new Pen(Color.FromName(comboBox_ColorCH1.Text));
                 JohnbeeDraw.Drawline(pictureBox1, CH1_Pen, Point_Now_CH1, Point_Pre_CH1);
@@ -173,7 +172,6 @@ namespace BLDCStudio.App_Code
                 }
             }
         }
-
         private void numericUpDown_TimeDiv_ValueChanged(object sender, EventArgs e)
         {
             try
@@ -185,13 +183,11 @@ namespace BLDCStudio.App_Code
                 MessageBox.Show("can't set timer1's Interval!");
             }
         }
-
         private void comboBox_BGColor_SelectedIndexChanged(object sender, EventArgs e)
         {
             pictureBox1.BackColor = Color.FromName(comboBox_BGColor.Text);
             ScanX_Value = 0;
         }
-
         /// <summary>
         /// 示波器清屏
         /// </summary>
@@ -223,17 +219,14 @@ namespace BLDCStudio.App_Code
                 button_Panel_Start.BackColor = Color.Red;
             }
         }
-
         private void numericUpDown_YCH1_ValueChanged(object sender, EventArgs e)
         {
             button_OSCClear_Click(sender, e);
         }
-
         private void numericUpDown_YCH2_ValueChanged(object sender, EventArgs e)
         {
             button_OSCClear_Click(sender, e);
         }
-
         private void numericUpDown_YCH3_ValueChanged(object sender, EventArgs e)
         {
             button_OSCClear_Click(sender, e);

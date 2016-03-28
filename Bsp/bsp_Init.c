@@ -51,14 +51,14 @@
 void Bsp_Init(void)
 {
     Bsp_NVIC_Config();/*中断配置*/
-    
+
     TIM1_PWM_Config();
     BlueToothInit();
     Bsp_ADC_Init();
     Bsp_Encoder_Config();
 //    Bsp_CAN_Init();
-    
-    while(Current_CalibrateState == 0); //等待电流零点校准完成
+
+    while (Current_CalibrateState == 0); //等待电流零点校准完成
 }
 /********************************************************************************
  *@函数名称    Bsp_NVIC_Config()
@@ -73,11 +73,11 @@ void Bsp_NVIC_Config(void)
     /*中断分组配置*/
     NVIC_PriorityGroupConfig(NVIC_PriorityGroup_4);
 
-    Hall_TIM_NVIC_Config(0,0);
-	TIM1_TRG_COM_NVIC_Config(1,0);
-    BLE_NVIC_Config(2,0);
-    DMA_Phase_ADC_NVIC(3,0);  
-    DMA_Current_ADC_NVIC(4,0);       
+    Hall_TIM_NVIC_Config(0, 0);
+    TIM1_TRG_COM_NVIC_Config(1, 0);
+    BLE_NVIC_Config(2, 0);
+    DMA_Phase_ADC_NVIC(3, 0);
+    DMA_Current_ADC_NVIC(4, 0);
 }
 
 /********************************************************************************
@@ -110,11 +110,11 @@ void StateLED_Init(void)
     GPIO_InitStructure.GPIO_OType = GPIO_OType_OD;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
-    GPIO_Init(StateLED_Port, &GPIO_InitStructure); 
+    GPIO_Init(StateLED_Port, &GPIO_InitStructure);
 }
-void  TurnStateLED(u8 n)        
+void  TurnStateLED(u8 n)
 {
-    GPIO_WriteBit(StateLED_Port,StateLED_Pin,(BitAction)n);
+    GPIO_WriteBit(StateLED_Port, StateLED_Pin, (BitAction)n);
 }
 
 /*
@@ -130,7 +130,7 @@ void Key_GPIO_Init(void)
 
 #ifdef  _STM32F10x_
     EXTI_InitTypeDef EXTI_InitStructure;
-     GPIO_InitTypeDef GPIO_InitStructure;
+    GPIO_InitTypeDef GPIO_InitStructure;
     RCC_APB2PeriphClockCmd(RCC_KeyA_Port , ENABLE);
 
     GPIO_InitStructure.GPIO_Pin = KeyA_Pin;

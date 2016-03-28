@@ -39,34 +39,10 @@ compiling bsp_HallTIM.c...
 compiling bsp_Encoder.c...
 compiling bsp_Bluetooth.c...
 compiling bsp_Commutation.c...
-compiling sal_PID.c...
-compiling sal_KalmanFilter.c...
 compiling main.c...
-compiling stm32f4xx_it.c...
-compiling list.c...
-compiling port.c...
-..\FreeRTOS\src\port.c(494): warning: A1581W: Added 2 bytes of padding at address 0xae
-compiling queue.c...
-compiling tasks.c...
-compiling timers.c...
-compiling heap_4.c...
-compiling event_groups.c...
-compiling os_free_task.c...
-compiling misc.c...
-compiling stm32f4xx_adc.c...
-compiling stm32f4xx_can.c...
-compiling stm32f4xx_dma.c...
-compiling stm32f4xx_flash.c...
-compiling stm32f4xx_fsmc.c...
-compiling stm32f4xx_gpio.c...
-compiling stm32f4xx_rcc.c...
-compiling stm32f4xx_tim.c...
-compiling stm32f4xx_usart.c...
-assembling startup_stm32f40_41xxx.s...
-compiling system_stm32f4xx.c...
 linking...
-Program Size: Code=19844 RO-data=468 RW-data=208 ZI-data=74560  
-".\Objects\OS_STM32Pro.axf" - 0 Error(s), 1 Warning(s).
+Program Size: Code=19932 RO-data=468 RW-data=212 ZI-data=74644  
+".\Objects\OS_STM32Pro.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -79,19 +55,19 @@ Package Vendor: ARM
 
 Package Vendor: Keil
                 http://www.keil.com/pack/Keil.STM32F4xx_DFP.1.0.8.pack
-                Keil::Device:StdPeriph Drivers:ADC:1.3.0
+                Keil::Device:StdPeriph Drivers:Flash:1.3.0
                 STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
-   * Component: ADC Version: 1.3.0
-   * Component: Startup Version: 1.3.1
-   * Component: Framework Version: 1.3.1
-   * Component: CAN Version: 1.3.0
+   * Component: Flash Version: 1.3.0
    * Component: RCC Version: 1.3.0
    * Component: FSMC Version: 1.3.0
+   * Component: Framework Version: 1.3.1
+   * Component: CAN Version: 1.3.0
    * Component: DMA Version: 1.3.0
    * Component: GPIO Version: 1.3.0
-   * Component: Flash Version: 1.3.0
-   * Component: USART Version: 1.3.0
+   * Component: ADC Version: 1.3.0
+   * Component: Startup Version: 1.3.1
    * Component: TIM Version: 1.3.0
+   * Component: USART Version: 1.3.0
 
 <h2>Collection of Component include folders:</h2>
   D:\Project\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\Project\RTE
@@ -106,38 +82,30 @@ Package Vendor: Keil
       Source file:   CMSIS\UserCodeTemplates\ARM\ITM_Retarget.c
 
    * Component: ARM::CMSIS:DSP:1.4.2
-      Include file:  CMSIS\Include\arm_math.h
       Library file:  CMSIS\Lib\ARM\arm_cortexM4lf_math.lib
+      Include file:  CMSIS\Include\arm_math.h
 
-   * Component: Keil::Device:StdPeriph Drivers:ADC:1.3.0
-      Include file:  Device\StdPeriph_Driver\inc\stm32f4xx_adc.h
-      Source file:   Device\StdPeriph_Driver\src\stm32f4xx_adc.c
-
-   * Component: Keil::Device:Startup:1.3.1
-      Source file:   Device\Source\ARM\STM32F40xxx_41xxx_OPT.s
-      Source file:   Device\Source\ARM\STM32F4xx_OTP.s
-      Include file:  Device\Include\stm32f4xx.h
-      Source file:   Device\Source\ARM\startup_stm32f40_41xxx.s
-      Source file:   Device\Source\system_stm32f4xx.c
-      Include file:  RTE_Driver\Config\RTE_Device.h
-
-   * Component: Keil::Device:StdPeriph Drivers:Framework:1.3.1
-      Source file:   Device\StdPeriph_Driver\templates\stm32f4xx_it.c
-      Source file:   Device\StdPeriph_Driver\src\misc.c
-      Source file:   Device\StdPeriph_Driver\templates\stm32f4xx_conf.h
-      Include file:  Device\StdPeriph_Driver\templates\stm32f4xx_it.h
-
-   * Component: Keil::Device:StdPeriph Drivers:CAN:1.3.0
-      Source file:   Device\StdPeriph_Driver\src\stm32f4xx_can.c
-      Include file:  Device\StdPeriph_Driver\inc\stm32f4xx_can.h
+   * Component: Keil::Device:StdPeriph Drivers:Flash:1.3.0
+      Source file:   Device\StdPeriph_Driver\src\stm32f4xx_flash.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f4xx_flash.h
 
    * Component: Keil::Device:StdPeriph Drivers:RCC:1.3.0
-      Include file:  Device\StdPeriph_Driver\inc\stm32f4xx_rcc.h
       Source file:   Device\StdPeriph_Driver\src\stm32f4xx_rcc.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f4xx_rcc.h
 
    * Component: Keil::Device:StdPeriph Drivers:FSMC:1.3.0
       Source file:   Device\StdPeriph_Driver\src\stm32f4xx_fsmc.c
       Include file:  Device\StdPeriph_Driver\inc\stm32f4xx_fsmc.h
+
+   * Component: Keil::Device:StdPeriph Drivers:Framework:1.3.1
+      Include file:  Device\StdPeriph_Driver\templates\stm32f4xx_it.h
+      Source file:   Device\StdPeriph_Driver\templates\stm32f4xx_it.c
+      Source file:   Device\StdPeriph_Driver\templates\stm32f4xx_conf.h
+      Source file:   Device\StdPeriph_Driver\src\misc.c
+
+   * Component: Keil::Device:StdPeriph Drivers:CAN:1.3.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f4xx_can.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f4xx_can.c
 
    * Component: Keil::Device:StdPeriph Drivers:DMA:1.3.0
       Source file:   Device\StdPeriph_Driver\src\stm32f4xx_dma.c
@@ -147,17 +115,25 @@ Package Vendor: Keil
       Include file:  Device\StdPeriph_Driver\inc\stm32f4xx_gpio.h
       Source file:   Device\StdPeriph_Driver\src\stm32f4xx_gpio.c
 
-   * Component: Keil::Device:StdPeriph Drivers:Flash:1.3.0
-      Source file:   Device\StdPeriph_Driver\src\stm32f4xx_flash.c
-      Include file:  Device\StdPeriph_Driver\inc\stm32f4xx_flash.h
+   * Component: Keil::Device:StdPeriph Drivers:ADC:1.3.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f4xx_adc.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f4xx_adc.c
 
-   * Component: Keil::Device:StdPeriph Drivers:USART:1.3.0
-      Source file:   Device\StdPeriph_Driver\src\stm32f4xx_usart.c
-      Include file:  Device\StdPeriph_Driver\inc\stm32f4xx_usart.h
+   * Component: Keil::Device:Startup:1.3.1
+      Source file:   Device\Source\ARM\startup_stm32f40_41xxx.s
+      Source file:   Device\Source\ARM\STM32F40xxx_41xxx_OPT.s
+      Source file:   Device\Source\ARM\STM32F4xx_OTP.s
+      Include file:  Device\Include\stm32f4xx.h
+      Source file:   Device\Source\system_stm32f4xx.c
+      Include file:  RTE_Driver\Config\RTE_Device.h
 
    * Component: Keil::Device:StdPeriph Drivers:TIM:1.3.0
-      Include file:  Device\StdPeriph_Driver\inc\stm32f4xx_tim.h
       Source file:   Device\StdPeriph_Driver\src\stm32f4xx_tim.c
+      Include file:  Device\StdPeriph_Driver\inc\stm32f4xx_tim.h
+
+   * Component: Keil::Device:StdPeriph Drivers:USART:1.3.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f4xx_usart.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f4xx_usart.c
 </pre>
 </body>
 </html>

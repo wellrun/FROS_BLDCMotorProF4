@@ -21,13 +21,14 @@ namespace BLDCStudio
             Osclloscope2,
             FormPid1,
             FormPid2,
+            FormSet,
         }
         #endregion
         Osclloscope MyOsclloscope1 = new Osclloscope((byte)TopId.Osclloscope1);
         Osclloscope MyOsclloscope2 = new Osclloscope((byte)TopId.Osclloscope2);
         FormPID MyFormPid1 = new FormPID((byte)TopId.FormPid1);
         FormPID MyFormPid2 = new FormPID((byte)TopId.FormPid2);
-
+        FormSet MyFormSet = new FormSet((byte)TopId.FormSet);
         public Form1()
         {
             InitializeComponent();
@@ -54,6 +55,7 @@ namespace BLDCStudio
                     btn_open.Text = "Colse";
                     Comb_Bps.Enabled = false;
                     Comb_Port.Enabled = false;
+                    btn_Refresh.Enabled = false;
                 }
             }
             else if(btn_open.Text == "Colse")
@@ -63,9 +65,22 @@ namespace BLDCStudio
                     btn_open.Text = "Open";
                     Comb_Bps.Enabled = true;
                     Comb_Port.Enabled = true;
+                    btn_Refresh.Enabled = true;
                 }
             }
         }
+        private void btn_Refresh_Click(object sender, EventArgs e)
+        {
+            Comb_Port.Items.Clear();
+            JohnbeeSerialPort.SerialPort_Search();
+            string[] coms = JohnbeeSerialPort.SerialPort_Search();
+            foreach (string com in coms)
+            {
+                Comb_Port.Items.Add(com);
+                Comb_Port.Text = com;
+            }
+        }
+
         private void Comb_Port_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (JohnbeeSerialPort.SerialPort_Close() == 0)
@@ -127,6 +142,16 @@ namespace BLDCStudio
             }
             MyFormPid2.MdiParent = this;
             MyFormPid2.Show();
+        }
+        private void setWindowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MyFormSet.IsDisposed)
+            {
+               FormSet MyFormSet = new FormSet((byte)TopId.FormSet);
+            }
+            MyFormSet.MdiParent = this;
+            MyFormSet.Show();
+
         }
     }
 }

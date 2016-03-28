@@ -34,6 +34,9 @@
             this.viewVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMune_Scope1 = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMenu_Scope2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pID1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pID2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
@@ -57,10 +60,7 @@
             this.Comb_Port = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btn_open = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.pID1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pID2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.setWindowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_Refresh = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -108,6 +108,27 @@
             this.TSMenu_Scope2.Size = new System.Drawing.Size(152, 22);
             this.TSMenu_Scope2.Text = "Scope2";
             this.TSMenu_Scope2.Click += new System.EventHandler(this.TSMenu_Scope2_Click);
+            // 
+            // pID1ToolStripMenuItem
+            // 
+            this.pID1ToolStripMenuItem.Name = "pID1ToolStripMenuItem";
+            this.pID1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pID1ToolStripMenuItem.Text = "PID1";
+            this.pID1ToolStripMenuItem.Click += new System.EventHandler(this.pID1ToolStripMenuItem_Click);
+            // 
+            // pID2ToolStripMenuItem
+            // 
+            this.pID2ToolStripMenuItem.Name = "pID2ToolStripMenuItem";
+            this.pID2ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pID2ToolStripMenuItem.Text = "PID2";
+            this.pID2ToolStripMenuItem.Click += new System.EventHandler(this.pID2ToolStripMenuItem_Click);
+            // 
+            // setWindowToolStripMenuItem
+            // 
+            this.setWindowToolStripMenuItem.Name = "setWindowToolStripMenuItem";
+            this.setWindowToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.setWindowToolStripMenuItem.Text = "SetWindow";
+            this.setWindowToolStripMenuItem.Click += new System.EventHandler(this.setWindowToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -229,7 +250,7 @@
             this.Comb_Port,
             this.toolStripSeparator2,
             this.btn_open,
-            this.toolStripButton1});
+            this.btn_Refresh});
             this.toolStrip1.Location = new System.Drawing.Point(0, 25);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1072, 25);
@@ -280,34 +301,15 @@
             this.btn_open.Text = "Open";
             this.btn_open.Click += new System.EventHandler(this.btn_open_Click);
             // 
-            // toolStripButton1
+            // btn_Refresh
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
-            // 
-            // pID1ToolStripMenuItem
-            // 
-            this.pID1ToolStripMenuItem.Name = "pID1ToolStripMenuItem";
-            this.pID1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.pID1ToolStripMenuItem.Text = "PID1";
-            this.pID1ToolStripMenuItem.Click += new System.EventHandler(this.pID1ToolStripMenuItem_Click);
-            // 
-            // pID2ToolStripMenuItem
-            // 
-            this.pID2ToolStripMenuItem.Name = "pID2ToolStripMenuItem";
-            this.pID2ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.pID2ToolStripMenuItem.Text = "PID2";
-            this.pID2ToolStripMenuItem.Click += new System.EventHandler(this.pID2ToolStripMenuItem_Click);
-            // 
-            // setWindowToolStripMenuItem
-            // 
-            this.setWindowToolStripMenuItem.Name = "setWindowToolStripMenuItem";
-            this.setWindowToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.setWindowToolStripMenuItem.Text = "SetWindow";
+            this.btn_Refresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btn_Refresh.Image = ((System.Drawing.Image)(resources.GetObject("btn_Refresh.Image")));
+            this.btn_Refresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_Refresh.Name = "btn_Refresh";
+            this.btn_Refresh.Size = new System.Drawing.Size(56, 22);
+            this.btn_Refresh.Text = "Refresh";
+            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
             // 
             // Form1
             // 
@@ -356,7 +358,7 @@
         private System.Windows.Forms.ToolStripComboBox Comb_Port;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripButton btn_open;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton btn_Refresh;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;

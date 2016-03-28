@@ -8,93 +8,6 @@ using System.Windows.Forms;
 
 namespace Johnbee
 {
-    #region 串口发送的ID定义
-    public enum MyComId : byte
-    {
-        #region  PIDFORM的pid参数
-        ID_Loc_Kp1,
-        ID_Loc_Ki1,
-        ID_Loc_Kd1,
-
-        ID_Psi_Kp1,
-        ID_Psi_Ki1,
-        ID_Psi_Kd1,
-
-        ID_Loc_Kp2,
-        ID_Loc_Ki2,
-        ID_Loc_Kd2,
-
-        ID_Psi_Kp2,
-        ID_Psi_Ki2,
-        ID_Psi_Kd2,
-
-        ID_Loc_Kp3,
-        ID_Loc_Ki3,
-        ID_Loc_Kd3,
-        #endregion
-        #region  PIDFORM2的pid参数
-        ID1_Loc_Kp1,
-        ID1_Loc_Ki1,
-        ID1_Loc_Kd1,
-
-        ID1_Psi_Kp1,
-        ID1_Psi_Ki1,
-        ID1_Psi_Kd1,
-
-        ID1_Loc_Kp2,
-        ID1_Loc_Ki2,
-        ID1_Loc_Kd2,
-
-        ID1_Psi_Kp2,
-        ID1_Psi_Ki2,
-        ID1_Psi_Kd2,
-
-        ID1_Loc_Kp3,
-        ID1_Loc_Ki3,
-        ID1_Loc_Kd3,
-        #endregion
-        IDs_Remote,  //
-        ID_SavsFlag,
-
-
-        ID_Osc_CH1,  //示波器通道1
-        ID_Osc_CH2,  //示波器通道2
-        ID_Osc_CH3,  //示波器通道3
-
-        ID1_Osc_CH1,  //示波器2通道1
-        ID1_Osc_CH2,  //示波器2通道2
-        ID1_Osc_CH3,  //示波器2通道3
-
-        ID_Acc_X,
-        ID_Acc_Y,
-        ID_Acc_Z,
-
-        ID_Omega_X,
-        ID_Omega_Y,
-        ID_Omega_Z,
-
-        ID_Mag_X,  //地磁场
-        ID_Mag_Y,
-        ID_Mag_Z,
-
-        ID_Pitch,
-        ID_Roll,
-        ID_Yaw,
-        ID_Pressure,
-
-        ID_Pulse1,
-        ID_Pulse2,
-        ID_Pulse3,
-        ID_Pulse4,
-
-        ID_ExpectX,
-        ID_ExpectY,
-
-        MyComId_Num,          /*指令数目总是在最后*/
-
-    }
-    #endregion
-
     class JohnbeeSerialPort
     {
         public static SerialPort MySerialPort = new SerialPort();
@@ -214,6 +127,7 @@ namespace Johnbee
 #endif
             if (MySerialPort.IsOpen)
             {
+                Send_Buffer[6] = comId;
                 MySerialPort.Write(Send_Buffer, 0, 7); //发送
                 MySerialPort.Write(Send_Buffer, 0, 7); //发送两次确保收到
             }

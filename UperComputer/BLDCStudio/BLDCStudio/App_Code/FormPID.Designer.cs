@@ -148,6 +148,7 @@
             this.numericUpDown_Loc_Kd1.Size = new System.Drawing.Size(84, 23);
             this.numericUpDown_Loc_Kd1.TabIndex = 54;
             this.numericUpDown_Loc_Kd1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown_Loc_Kd1.ValueChanged += new System.EventHandler(this.numericUpDown_Loc_Kd1_ValueChanged_1);
             // 
             // numericUpDown_Loc_Ki1
             // 
@@ -169,6 +170,7 @@
             this.numericUpDown_Loc_Ki1.Size = new System.Drawing.Size(84, 23);
             this.numericUpDown_Loc_Ki1.TabIndex = 53;
             this.numericUpDown_Loc_Ki1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown_Loc_Ki1.ValueChanged += new System.EventHandler(this.numericUpDown_Loc_Ki1_ValueChanged_1);
             // 
             // numericUpDown_Loc_Kp1
             // 
@@ -190,6 +192,7 @@
             this.numericUpDown_Loc_Kp1.Size = new System.Drawing.Size(84, 23);
             this.numericUpDown_Loc_Kp1.TabIndex = 52;
             this.numericUpDown_Loc_Kp1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown_Loc_Kp1.ValueChanged += new System.EventHandler(this.numericUpDown_Loc_Kp1_ValueChanged_1);
             // 
             // label41
             // 
@@ -268,6 +271,7 @@
             this.numericUpDown_Psi_Kd1.Size = new System.Drawing.Size(77, 23);
             this.numericUpDown_Psi_Kd1.TabIndex = 53;
             this.numericUpDown_Psi_Kd1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown_Psi_Kd1.ValueChanged += new System.EventHandler(this.numericUpDown_Psi_Kd1_ValueChanged_1);
             // 
             // numericUpDown_Psi_Ki1
             // 
@@ -289,6 +293,7 @@
             this.numericUpDown_Psi_Ki1.Size = new System.Drawing.Size(77, 23);
             this.numericUpDown_Psi_Ki1.TabIndex = 52;
             this.numericUpDown_Psi_Ki1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown_Psi_Ki1.ValueChanged += new System.EventHandler(this.numericUpDown_Psi_Ki1_ValueChanged_1);
             // 
             // numericUpDown_Psi_Kp1
             // 
@@ -310,6 +315,7 @@
             this.numericUpDown_Psi_Kp1.Size = new System.Drawing.Size(77, 23);
             this.numericUpDown_Psi_Kp1.TabIndex = 51;
             this.numericUpDown_Psi_Kp1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown_Psi_Kp1.ValueChanged += new System.EventHandler(this.numericUpDown_Psi_Kp1_ValueChanged_1);
             // 
             // label45
             // 
@@ -400,6 +406,7 @@
             this.numericUpDown_Loc_Kd2.Size = new System.Drawing.Size(76, 23);
             this.numericUpDown_Loc_Kd2.TabIndex = 54;
             this.numericUpDown_Loc_Kd2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown_Loc_Kd2.ValueChanged += new System.EventHandler(this.numericUpDown_Loc_Kd2_ValueChanged_1);
             // 
             // numericUpDown_Loc_Ki2
             // 
@@ -421,6 +428,7 @@
             this.numericUpDown_Loc_Ki2.Size = new System.Drawing.Size(76, 23);
             this.numericUpDown_Loc_Ki2.TabIndex = 53;
             this.numericUpDown_Loc_Ki2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown_Loc_Ki2.ValueChanged += new System.EventHandler(this.numericUpDown_Loc_Ki2_ValueChanged_1);
             // 
             // numericUpDown_Loc_Kp2
             // 
@@ -442,6 +450,7 @@
             this.numericUpDown_Loc_Kp2.Size = new System.Drawing.Size(76, 23);
             this.numericUpDown_Loc_Kp2.TabIndex = 52;
             this.numericUpDown_Loc_Kp2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown_Loc_Kp2.ValueChanged += new System.EventHandler(this.numericUpDown_Loc_Kp2_ValueChanged_1);
             // 
             // label1
             // 
@@ -520,6 +529,7 @@
             this.numericUpDown_Psi_Kd2.Size = new System.Drawing.Size(78, 23);
             this.numericUpDown_Psi_Kd2.TabIndex = 53;
             this.numericUpDown_Psi_Kd2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown_Psi_Kd2.ValueChanged += new System.EventHandler(this.numericUpDown_Psi_Kd2_ValueChanged_1);
             // 
             // numericUpDown_Psi_Ki2
             // 
@@ -541,6 +551,7 @@
             this.numericUpDown_Psi_Ki2.Size = new System.Drawing.Size(78, 23);
             this.numericUpDown_Psi_Ki2.TabIndex = 52;
             this.numericUpDown_Psi_Ki2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown_Psi_Ki2.ValueChanged += new System.EventHandler(this.numericUpDown_Psi_Ki2_ValueChanged_1);
             // 
             // numericUpDown_Psi_Kp2
             // 
@@ -562,6 +573,7 @@
             this.numericUpDown_Psi_Kp2.Size = new System.Drawing.Size(78, 23);
             this.numericUpDown_Psi_Kp2.TabIndex = 51;
             this.numericUpDown_Psi_Kp2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown_Psi_Kp2.ValueChanged += new System.EventHandler(this.numericUpDown_Psi_Kp2_ValueChanged_1);
             // 
             // label5
             // 
@@ -651,6 +663,7 @@
             this.numericUpDown_Loc_Kd3.Size = new System.Drawing.Size(76, 23);
             this.numericUpDown_Loc_Kd3.TabIndex = 54;
             this.numericUpDown_Loc_Kd3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown_Loc_Kd3.ValueChanged += new System.EventHandler(this.numericUpDown_Loc_Kd3_ValueChanged_1);
             // 
             // numericUpDown_Loc_Ki3
             // 
@@ -672,6 +685,7 @@
             this.numericUpDown_Loc_Ki3.Size = new System.Drawing.Size(76, 23);
             this.numericUpDown_Loc_Ki3.TabIndex = 53;
             this.numericUpDown_Loc_Ki3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown_Loc_Ki3.ValueChanged += new System.EventHandler(this.numericUpDown_Loc_Ki3_ValueChanged_1);
             // 
             // numericUpDown_Loc_Kp3
             // 
@@ -693,6 +707,7 @@
             this.numericUpDown_Loc_Kp3.Size = new System.Drawing.Size(76, 23);
             this.numericUpDown_Loc_Kp3.TabIndex = 52;
             this.numericUpDown_Loc_Kp3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDown_Loc_Kp3.ValueChanged += new System.EventHandler(this.numericUpDown_Loc_Kp3_ValueChanged_1);
             // 
             // label12
             // 
@@ -753,6 +768,7 @@
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
             this.Name = "FormPID";
             this.Text = "FormPID";
             this.Load += new System.EventHandler(this.FormPID_Load);
