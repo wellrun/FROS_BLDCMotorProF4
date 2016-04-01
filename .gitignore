@@ -44,3 +44,4 @@ Temporary Items
 #keil build files
 *.o
 *.crf
+doc/
