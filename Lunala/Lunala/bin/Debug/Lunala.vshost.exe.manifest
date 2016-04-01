@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Lunala.exe" size="122304">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Lunala.exe" size="122816">
       <assemblyIdentity name="Lunala" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>miRHfDPwMCF7xa1ZV9awprn3Rrz8X9qliW4EVPKK44E=</dsig:DigestValue>
+        <dsig:DigestValue>kGSNEie3Nu27JmBQD2RB4mKrLsSbqdoCgis6xOjBb+4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

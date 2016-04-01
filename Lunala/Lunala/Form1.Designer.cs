@@ -32,6 +32,8 @@
             this.fileFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.formToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pIDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pID1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pID2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.watchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
@@ -45,8 +47,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button_New = new System.Windows.Forms.Button();
             this.button_Open = new System.Windows.Forms.Button();
-            this.pID1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pID2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox15.SuspendLayout();
@@ -60,14 +60,14 @@
             this.formToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1273, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1273, 25);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // fileFToolStripMenuItem
             // 
             this.fileFToolStripMenuItem.Name = "fileFToolStripMenuItem";
-            this.fileFToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.fileFToolStripMenuItem.Size = new System.Drawing.Size(53, 21);
             this.fileFToolStripMenuItem.Text = "File(&F)";
             // 
             // formToolStripMenuItem
@@ -76,7 +76,7 @@
             this.pIDToolStripMenuItem,
             this.watchToolStripMenuItem});
             this.formToolStripMenuItem.Name = "formToolStripMenuItem";
-            this.formToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.formToolStripMenuItem.Size = new System.Drawing.Size(50, 21);
             this.formToolStripMenuItem.Text = "Form";
             // 
             // pIDToolStripMenuItem
@@ -87,6 +87,20 @@
             this.pIDToolStripMenuItem.Name = "pIDToolStripMenuItem";
             this.pIDToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.pIDToolStripMenuItem.Text = "PID";
+            // 
+            // pID1ToolStripMenuItem
+            // 
+            this.pID1ToolStripMenuItem.Name = "pID1ToolStripMenuItem";
+            this.pID1ToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.pID1ToolStripMenuItem.Text = "PID1";
+            this.pID1ToolStripMenuItem.Click += new System.EventHandler(this.pID1ToolStripMenuItem_Click);
+            // 
+            // pID2ToolStripMenuItem
+            // 
+            this.pID2ToolStripMenuItem.Name = "pID2ToolStripMenuItem";
+            this.pID2ToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.pID2ToolStripMenuItem.Text = "PID2";
+            this.pID2ToolStripMenuItem.Click += new System.EventHandler(this.pID2ToolStripMenuItem_Click);
             // 
             // watchToolStripMenuItem
             // 
@@ -101,10 +115,11 @@
             this.panel1.Controls.Add(this.groupBox15);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 24);
+            this.panel1.Location = new System.Drawing.Point(0, 25);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(144, 726);
+            this.panel1.Size = new System.Drawing.Size(144, 725);
             this.panel1.TabIndex = 6;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // groupBox15
             // 
@@ -234,20 +249,6 @@
             this.button_Open.Text = "Open";
             this.button_Open.UseVisualStyleBackColor = false;
             this.button_Open.Click += new System.EventHandler(this.button_Open_Click);
-            // 
-            // pID1ToolStripMenuItem
-            // 
-            this.pID1ToolStripMenuItem.Name = "pID1ToolStripMenuItem";
-            this.pID1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.pID1ToolStripMenuItem.Text = "PID1";
-            this.pID1ToolStripMenuItem.Click += new System.EventHandler(this.pID1ToolStripMenuItem_Click);
-            // 
-            // pID2ToolStripMenuItem
-            // 
-            this.pID2ToolStripMenuItem.Name = "pID2ToolStripMenuItem";
-            this.pID2ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.pID2ToolStripMenuItem.Text = "PID2";
-            this.pID2ToolStripMenuItem.Click += new System.EventHandler(this.pID2ToolStripMenuItem_Click);
             // 
             // Form1
             // 
