@@ -37,8 +37,6 @@ void Main_Task_Create(u8 myPrio)
 */
 static void Main_Task(void *pdata)
 {
-//    float adc_value = 0;
-
     (void)pdata;   // 'pdata' 并没有用到，防止编译器提示警告
     while(1)
     {

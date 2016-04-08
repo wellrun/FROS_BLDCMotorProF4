@@ -22,6 +22,7 @@
 #include "Control_Task.h"
 #include "USART_Task.h"
 #include "EncoderTask.h"
+#include  "LedTask.h"
 
 void Start_Task_Create(void);
 static void Start_Task(void *pdata); //开始任务

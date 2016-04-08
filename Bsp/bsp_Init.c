@@ -32,10 +32,14 @@
 //#define RCC_KeyC_Port          RCC_APB2Periph_GPIOA  //| RCC_APB2Periph_AFIO
 #endif
 #ifdef  _STM32F4xx_
-#define      StateLED_Port          GPIOB
-#define      StateLED_Pin           GPIO_Pin_6
-#define      RCC_StateLED           RCC_AHB1Periph_GPIOB// | RCC_APB2Periph_AFIO
-#define      _TurnStateLED(n)       GPIO_WriteBit(StateLED_Port,StateLED_Pin,(BitAction)n)
+#define      RLED_Port          GPIOC
+#define      RLED_Pin           GPIO_Pin_11
+#define      GLED_Port          GPIOC
+#define      GLED_Pin           GPIO_Pin_10
+#define      BLED_Port          GPIOA
+#define      BLED_Pin           GPIO_Pin_15
+#define      RCC_LED_Port       RCC_AHB1Periph_GPIOA|RCC_AHB1Periph_GPIOC
+
 #endif
 
 
@@ -56,6 +60,7 @@ void Bsp_Init(void)
     BlueToothInit();
     Bsp_ADC_Init();
     Bsp_Encoder_Config();
+    Bsp_LED_Init();
 //    Bsp_CAN_Init();
 
     while (Current_CalibrateState == 0); //等待电流零点校准完成
@@ -94,29 +99,59 @@ void SysTick_init(void)
 //    SysTick_Config(rcc_clocks.HCLK_Frequency/OS_TICKS_PER_SEC);//初始化并使能SysTick定时器
 }
 /*
- *@ <function name=> StateLED_Init() </function>
+ *@ <function name=> Bsp_LED_Init() </function>
  *@ <summary>
      config the gpio for the state LED
  *@ </summary>
  *@ <param name="void">null</param>
  *@ <returns> null </returns>
  */
-void StateLED_Init(void)
+void Bsp_LED_Init(void)
 {
     GPIO_InitTypeDef GPIO_InitStructure;
-    RCC_AHB1PeriphClockCmd(RCC_StateLED, ENABLE);
-    GPIO_InitStructure.GPIO_Pin = StateLED_Pin;
+    RCC_AHB1PeriphClockCmd(RCC_LED_Port, ENABLE);
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
     GPIO_InitStructure.GPIO_OType = GPIO_OType_OD;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
-    GPIO_Init(StateLED_Port, &GPIO_InitStructure);
-}
-void  TurnStateLED(u8 n)
-{
-    GPIO_WriteBit(StateLED_Port, StateLED_Pin, (BitAction)n);
-}
+    GPIO_InitStructure.GPIO_Pin = RLED_Pin;
+    GPIO_Init(RLED_Port, &GPIO_InitStructure);
 
+    GPIO_InitStructure.GPIO_Pin = GLED_Pin;
+    GPIO_Init(GLED_Port, &GPIO_InitStructure);
+    GPIO_InitStructure.GPIO_Pin = BLED_Pin;
+    GPIO_Init(BLED_Port, &GPIO_InitStructure);
+}
+void Set_LED(u8 led, u8 state)
+{
+    GPIO_TypeDef * led_port;
+    uint16_t led_pin;
+    u8 led_flag;
+    if (led == RedLed)
+    {
+        led_port = RLED_Port;
+        led_pin = RLED_Pin;
+    }
+    else if (led == GreenLed)
+    {
+        led_port = GLED_Port;
+        led_pin = GLED_Pin;
+    }
+    else if (led == BlueLed)
+    {
+        led_port = BLED_Port;
+        led_pin = BLED_Pin;
+    }
+    if (state == Led_ON)
+    {
+        led_flag = Bit_SET;
+    }
+    else
+    {
+        led_flag = Bit_RESET;
+    }
+    GPIO_WriteBit(led_port,led_pin,led_flag);
+}
 /*
  *@ <function name=>Key_GPIO_Init() </function>
  *@ <summary>

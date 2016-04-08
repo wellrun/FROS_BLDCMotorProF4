@@ -14,7 +14,7 @@
 #define CONTROL_TASK_PRIO         2u 
 #define USART_TASK_PRIO           9u
 #define Encoder_TASK_PRIO         1u
-
+#define LED_TASK_PRIO             8u
 
 /*
  *@<function name=> Start_Task_Create() </function>
@@ -50,7 +50,8 @@ static void Start_Task(void *pvParameters)
     Main_Task_Create(MAIN_TASK_PRIO);
     Control_Task_Create(CONTROL_TASK_PRIO);
     USART_Task_Create(USART_TASK_PRIO);
-    Encoder_Task_Create(Encoder_TASK_PRIO);    
+    Encoder_Task_Create(Encoder_TASK_PRIO);  
+    LED_Task_Create(LED_TASK_PRIO);    
     taskEXIT_CRITICAL();         //开中断
     vTaskDelete(NULL);   //删除自己
 }
