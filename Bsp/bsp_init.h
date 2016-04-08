@@ -28,14 +28,19 @@
 #include "bsp_Encoder.h"
 #include "bsp_HallTIM.h"
 
-
+#define   RedLed     0
+#define   GreenLed   1
+#define   BlueLed    2
+#define   Led_ON     1
+#define   Led_OFF    0
 void Bsp_Init(void);
 void Bsp_NVIC_Config(void);
 void SysTick_init(void);
 void StateLED_Init(void);
 void EXTI15_10_NVIC_Config(u8 preemPriority, u8 subPriority);
-void Key_GPIO_Init(void);
-void  TurnStateLED(u8 n);
+void Bsp_LED_Init(void);
+void Set_LED(u8 led, u8 state);
+
 #endif
 /****************** end of this file ********************************************
 

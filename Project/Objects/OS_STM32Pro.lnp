@@ -4,6 +4,7 @@
 ".\objects\control_task.o"
 ".\objects\usart_task.o"
 ".\objects\encodertask.o"
+".\objects\ledtask.o"
 ".\objects\bsp_init.o"
 ".\objects\bsp_tim.o"
 ".\objects\bsp_can.o"

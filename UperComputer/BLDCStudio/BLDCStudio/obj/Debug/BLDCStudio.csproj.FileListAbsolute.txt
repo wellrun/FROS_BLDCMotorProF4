@@ -10,3 +10,15 @@ D:\Project\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\UperComputer\BLDCStudi
 D:\Project\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\UperComputer\BLDCStudio\BLDCStudio\obj\Debug\BLDCStudio.App_Code.FormPID.resources
 D:\Project\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\UperComputer\BLDCStudio\BLDCStudio\obj\Debug\BLDCStudio.App_Code.Osclloscope.resources
 D:\Project\2015ElmoCoProject\App_Code\FROS_BLDCMotorProF4\UperComputer\BLDCStudio\BLDCStudio\obj\Debug\BLDCStudio.App_Code.FormSet.resources
+C:\Users\Johnbee\Desktop\FROS_BLDCMotorProF4\UperComputer\BLDCStudio\BLDCStudio\bin\Debug\BLDCStudio.exe.config
+C:\Users\Johnbee\Desktop\FROS_BLDCMotorProF4\UperComputer\BLDCStudio\BLDCStudio\obj\Debug\BLDCStudio.exe
+C:\Users\Johnbee\Desktop\FROS_BLDCMotorProF4\UperComputer\BLDCStudio\BLDCStudio\obj\Debug\BLDCStudio.pdb
+C:\Users\Johnbee\Desktop\FROS_BLDCMotorProF4\UperComputer\BLDCStudio\BLDCStudio\bin\Debug\BLDCStudio.exe
+C:\Users\Johnbee\Desktop\FROS_BLDCMotorProF4\UperComputer\BLDCStudio\BLDCStudio\bin\Debug\BLDCStudio.pdb
+C:\Users\Johnbee\Desktop\FROS_BLDCMotorProF4\UperComputer\BLDCStudio\BLDCStudio\obj\Debug\BLDCStudio.csprojResolveAssemblyReference.cache
+C:\Users\Johnbee\Desktop\FROS_BLDCMotorProF4\UperComputer\BLDCStudio\BLDCStudio\obj\Debug\BLDCStudio.App_Code.FormPID.resources
+C:\Users\Johnbee\Desktop\FROS_BLDCMotorProF4\UperComputer\BLDCStudio\BLDCStudio\obj\Debug\BLDCStudio.App_Code.FormSet.resources
+C:\Users\Johnbee\Desktop\FROS_BLDCMotorProF4\UperComputer\BLDCStudio\BLDCStudio\obj\Debug\BLDCStudio.App_Code.Osclloscope.resources
+C:\Users\Johnbee\Desktop\FROS_BLDCMotorProF4\UperComputer\BLDCStudio\BLDCStudio\obj\Debug\BLDCStudio.Form1.resources
+C:\Users\Johnbee\Desktop\FROS_BLDCMotorProF4\UperComputer\BLDCStudio\BLDCStudio\obj\Debug\BLDCStudio.Properties.Resources.resources
+C:\Users\Johnbee\Desktop\FROS_BLDCMotorProF4\UperComputer\BLDCStudio\BLDCStudio\obj\Debug\BLDCStudio.csproj.GenerateResource.Cache

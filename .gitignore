@@ -43,5 +43,9 @@ Temporary Items
 .apdisk
 #keil build files
 *.o
+*.d
 *.crf
-doc/
+DOC/
+Project/Objects/*.o
+Project/Listings/
+FreeRTOS/

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Johnbee;
+
 namespace BLDCStudio.App_Code
 {
     public partial class FormPID : Form
@@ -61,7 +62,7 @@ namespace BLDCStudio.App_Code
             this.Text += "    TopId = " + topId.ToString();
         }
 
-        private void FormPID_Load(object sender, EventArgs e)
+        private void FormPIDnew_Load(object sender, EventArgs e)
         {
             JohnbeeSerialPort.ComDataChangeEvent += Reflash_Form;
         }
@@ -73,7 +74,7 @@ namespace BLDCStudio.App_Code
         /// <param name="myId"></param>
         private void Reflash_Form(decimal myValue, byte topId, byte myId)
         {
-            if(topId == TopId)
+            if (topId == TopId)
             {
                 #region PID1
                 if (myId == (byte)FormPIDId.ID_Psi_Kp1)
@@ -157,91 +158,89 @@ namespace BLDCStudio.App_Code
         #region //PID1发送
         private void numericUpDown_Loc_Kp1_ValueChanged(object sender, EventArgs e)
         {
-            JohnbeeSerialPort.Send_ComData(numericUpDown_Loc_Kp1.Value, TopId,(byte) FormPIDId.ID_Loc_Kp1);
+            JohnbeeSerialPort.Send_ComData(numericUpDown_Loc_Kp1.Value, TopId, (byte)FormPIDId.ID_Loc_Kp1);
         }
 
         private void numericUpDown_Loc_Ki1_ValueChanged(object sender, EventArgs e)
         {
-            JohnbeeSerialPort.Send_ComData(numericUpDown_Loc_Ki1.Value, TopId,(byte) FormPIDId.ID_Loc_Ki1);
+            JohnbeeSerialPort.Send_ComData(numericUpDown_Loc_Ki1.Value, TopId, (byte)FormPIDId.ID_Loc_Ki1);
 
         }
 
         private void numericUpDown_Loc_Kd1_ValueChanged(object sender, EventArgs e)
         {
-            JohnbeeSerialPort.Send_ComData(numericUpDown_Loc_Kd1.Value, TopId,(byte) FormPIDId.ID_Loc_Kd1);
+            JohnbeeSerialPort.Send_ComData(numericUpDown_Loc_Kd1.Value, TopId, (byte)FormPIDId.ID_Loc_Kd1);
 
         }
 
         private void numericUpDown_Psi_Kp1_ValueChanged(object sender, EventArgs e)
         {
-            JohnbeeSerialPort.Send_ComData(numericUpDown_Psi_Kp1.Value, TopId,(byte) FormPIDId.ID_Psi_Kp1);
+            JohnbeeSerialPort.Send_ComData(numericUpDown_Psi_Kp1.Value, TopId, (byte)FormPIDId.ID_Psi_Kp1);
 
         }
 
         private void numericUpDown_Psi_Ki1_ValueChanged(object sender, EventArgs e)
         {
-            JohnbeeSerialPort.Send_ComData(numericUpDown_Psi_Ki1.Value, TopId,(byte) FormPIDId.ID_Psi_Ki1);
+            JohnbeeSerialPort.Send_ComData(numericUpDown_Psi_Ki1.Value, TopId, (byte)FormPIDId.ID_Psi_Ki1);
         }
 
         private void numericUpDown_Psi_Kd1_ValueChanged(object sender, EventArgs e)
         {
-            JohnbeeSerialPort.Send_ComData(numericUpDown_Psi_Kd1.Value, TopId,(byte) FormPIDId.ID_Psi_Kd1);
+            JohnbeeSerialPort.Send_ComData(numericUpDown_Psi_Kd1.Value, TopId, (byte)FormPIDId.ID_Psi_Kd1);
 
         }
         #endregion
         #region //PID2发送
         private void numericUpDown_Loc_Kp2_ValueChanged(object sender, EventArgs e)
         {
-            JohnbeeSerialPort.Send_ComData(numericUpDown_Loc_Kp2.Value, TopId,(byte) FormPIDId.ID_Loc_Kp2);
+            JohnbeeSerialPort.Send_ComData(numericUpDown_Loc_Kp2.Value, TopId, (byte)FormPIDId.ID_Loc_Kp2);
         }
 
-        private void numericUpDown_Loc_Ki2_ValueChanged(object sender,  EventArgs e)
+        private void numericUpDown_Loc_Ki2_ValueChanged(object sender, EventArgs e)
         {
-            JohnbeeSerialPort.Send_ComData(numericUpDown_Loc_Ki2.Value, TopId,(byte) FormPIDId.ID_Loc_Ki2);
+            JohnbeeSerialPort.Send_ComData(numericUpDown_Loc_Ki2.Value, TopId, (byte)FormPIDId.ID_Loc_Ki2);
 
         }
 
         private void numericUpDown_Loc_Kd2_ValueChanged(object sender, EventArgs e)
         {
-            JohnbeeSerialPort.Send_ComData(numericUpDown_Loc_Kd2.Value, TopId,(byte) FormPIDId.ID_Loc_Kd2);
+            JohnbeeSerialPort.Send_ComData(numericUpDown_Loc_Kd2.Value, TopId, (byte)FormPIDId.ID_Loc_Kd2);
 
         }
 
-        private void numericUpDown_Psi_Kp2_ValueChanged(object sender,  EventArgs e)
+        private void numericUpDown_Psi_Kp2_ValueChanged(object sender, EventArgs e)
         {
-            JohnbeeSerialPort.Send_ComData(numericUpDown_Psi_Kp2.Value, TopId,(byte)FormPIDId.ID_Psi_Kp2);
+            JohnbeeSerialPort.Send_ComData(numericUpDown_Psi_Kp2.Value, TopId, (byte)FormPIDId.ID_Psi_Kp2);
 
         }
 
         private void numericUpDown_Psi_Ki2_ValueChanged(object sender, EventArgs e)
         {
-            JohnbeeSerialPort.Send_ComData(numericUpDown_Psi_Ki2.Value, TopId,(byte) FormPIDId.ID_Psi_Ki2);
+            JohnbeeSerialPort.Send_ComData(numericUpDown_Psi_Ki2.Value, TopId, (byte)FormPIDId.ID_Psi_Ki2);
         }
 
         private void numericUpDown_Psi_Kd2_ValueChanged(object sender, EventArgs e)
         {
-            JohnbeeSerialPort.Send_ComData(numericUpDown_Psi_Kd2.Value, TopId,(byte) FormPIDId.ID_Psi_Kd2);
+            JohnbeeSerialPort.Send_ComData(numericUpDown_Psi_Kd2.Value, TopId, (byte)FormPIDId.ID_Psi_Kd2);
 
         }
         #endregion
         #region //PID3发送
         private void numericUpDown_Loc_Kp3_ValueChanged(object sender, EventArgs e)
         {
-            JohnbeeSerialPort.Send_ComData(numericUpDown_Loc_Kp3.Value, TopId,(byte) FormPIDId.ID_Loc_Kp3);
+            JohnbeeSerialPort.Send_ComData(numericUpDown_Loc_Kp3.Value, TopId, (byte)FormPIDId.ID_Loc_Kp3);
         }
 
         private void numericUpDown_Loc_Ki3_ValueChanged(object sender, EventArgs e)
         {
-            JohnbeeSerialPort.Send_ComData(numericUpDown_Loc_Ki3.Value, TopId,(byte) FormPIDId.ID_Loc_Ki3);
+            JohnbeeSerialPort.Send_ComData(numericUpDown_Loc_Ki3.Value, TopId, (byte)FormPIDId.ID_Loc_Ki3);
 
         }
 
         private void numericUpDown_Loc_Kd3_ValueChanged(object sender, EventArgs e)
         {
-            JohnbeeSerialPort.Send_ComData(numericUpDown_Loc_Kd3.Value, TopId,(byte)(byte)(byte)FormPIDId.ID_Loc_Kd3);
-
+            JohnbeeSerialPort.Send_ComData(numericUpDown_Loc_Kd3.Value, TopId, (byte)(byte)(byte)FormPIDId.ID_Loc_Kd3);
         }
         #endregion
-
     }
 }
