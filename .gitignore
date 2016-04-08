@@ -46,4 +46,5 @@ Temporary Items
 *.d
 *.crf
 DOC/
-Project/Objects/.o
+Project/Objects/*.o
+Project/Listings/
